@@ -7,13 +7,6 @@ gem "jekyll-gist"
 gem "redcarpet"
 gem "pygments.rb"
 
-title: Marisa Vasconcelos
-google_analytics: [Your Google Analytics tracking ID]
-markdown:         redcarpet
-pygments:         true
-highlighter:      pygments
 
-# Permalinks
-permalink:        pretty
 
 
