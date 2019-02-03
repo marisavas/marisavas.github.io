@@ -1,7 +1,10 @@
-theme: minimal-mistakes-jekyll
-minimal_mistakes_skin: "contrast"
-gem "github-pages", group: :jekyll_plugins
 title: Marisa Vasconcelos
 google_analytics: [Your Google Analytics tracking ID]
+markdown:         redcarpet
+pygments:         true
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
 
 
