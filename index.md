@@ -28,4 +28,6 @@ EPIA 2017 (BAAI), WinDS @SIAM SDM 17 (chair), Panel at SIAM SDM 18 (chair) and W
 ## Contact:  
 marisa [dot ] vasconcelos [at] gmail [dot] com
 
+[LinkedIn](http://br.linkedin.com/pub/marisa-affonso-vasconcelos/6/6b1/11/).  [DLPB](http://dblp.uni-trier.de/pers/hd/v/Vasconcelos:Marisa_A=.html).  [Google Scholar](https://scholar.google.com.br/citations?user=e5IvuJgAAAAJ&hl=en) [Lattes](http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=P093832)
+
 
