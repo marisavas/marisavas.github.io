@@ -3,7 +3,7 @@ layout: page
 title:
 ---
 
-#Marisa Vasconcelos
+# Marisa Vasconcelos
 
 I am interested in exploring how data can be used to answer multidisciplinary research questions. My Ph.D. studies focused on large-scale studies on characterizing user behavior and predicting content popularity.
 
