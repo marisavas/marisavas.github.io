@@ -1,0 +1,41 @@
+---
+layout: post
+title: About me
+image: Belo_Horizonte.jpg
+date: 2021-06-13 11:00:20 +0200
+tags:
+categories: decoration
+future: true
+---
+<style>
+th, td{
+text-align: left;
+padding: 5px 10px;
+border-bottom: 1px solid #e5e5e5;
+}
+h4{
+   color:#494949;
+}
+
+tbody > tr:last-child > td {
+  border-bottom: 0;
+}
+</style>
+
+<br>
+
+<p align="justify">
+Welcome! My name is Marisa Vasconcelos. I'm a social computing researcher. My research is typically interdisciplinary and encompasses multiple subfields of computer science, particularly those related to data science. Within this domain, I employ a range of techniques, including network analysis, data mining, machine learning, and natural language processing, to tackle various research problems.</p>
+
+<p align="justify">
+I am interested in using social data to understand people's behavior, focusing on societal problems such as misinformation dissemination, hate speech, and gender inequality.
+Currently, I'm a research scientist at <a href="https://research.ibm.com/labs/brazil/">IBM Research Labs</a>. I am interested in using social data to understand people's behavior, focusing on societal problems such as misinformation dissemination, hate speech, and gender inequality.</p>
+
+<p align="justify">I have served in various program committees of the main web conferences, including WWW, ICWSM, and ASONAM, and as a reviewer in journals such as TOIT, TSC, TOIT and, PLOS One. My recent publications include papers on prestigious venues such as The Web Conference, CHI, and WebScience. I am also involved in initiatives for increasing women's participation in STEM areas such as the co-creation of the WINDS (Women in Data Science) workshop co-located with the Web Conference. </p>
+
+<p align="justify">
+I received my Ph.D. in <a href="https://dcc.ufmg.br/">Computer Science</a> at the <a href="https://ufmg.br/">Universidade Federal de Minas Gerais</a> in 2015. I worked under the supervision of Prof. Jussara Almeida and Prof. Virgílio Almeida. Before that, I received my M.A. degree from Boston University, where my research was estimating the location of sensor networks. At that time, I worked under the supervision of Prof. Mark Crovella. Prior that time, I also received an M.Sc. and B.Sc. from Department of Computer Science at the Universidade Federal de Minas Gerais in 2003 and 2000, respectively.</p>
+
+<p align="justify">
+I am a recipient of a Fulbright award for my M.A. studies and I am also a recipient of Google Women in Technology (Anita Borg) award.
+</p>
