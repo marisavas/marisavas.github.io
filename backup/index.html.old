@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title>Page 1</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<style type="text/css">
+<!--
+
+-->
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+<link href="styles.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body bgcolor="#efe9e4" vlink="blue" link="blue">
+<!--div id="page1-div" style="position:relative;width:1536px;height:864px;"-->
+
+<div class="container">
+<div class="box">
+<p class="ft00" style="position:absolute;top:69px;left:86px;white-space:nowrap">Marisa</p>
+<p class="ft00" style="position:absolute;top:152px;left:86px;white-space:nowrap">Vasconcelos</p>
+<p style="position:absolute;top:298px;left:86px;white-space:nowrap" class="ft06"><b>RESEARCH SCIENTIST</b></p>
+</div>
+
+<div class="justify">
+<p class="ft08">
+  I'm currently a postdoctoral researcher at the <a href="https://ciia-saude.dcc.ufmg.br"> Center for Innovation in Artificial Intelligence for Health (CIIA-Health) </a> at <a href="https://ufmg.br/">UFMG</a>. I'm interested in using data to understand people's behavior, focusing on societal problems such as misinformation dissemination, hate speech, gender inequality, and population-based health indicators.</p>
+</div>
+</div>
+
+<div class="box">
+<p style="position:absolute;top:85px;left:799px;white-space:nowrap" class="ft03">MORE&#160;ABOUT ME</p>
+
+<p style="position:absolute;top:189px;left:799px;white-space:nowrap" class="ft03">PROJECTS</p>
+
+<p style="position:absolute;top:293px;left:799px;white-space:nowrap" class="ft03">PUBLICATIONS</p>
+</div>
+
+<div class="third-box">
+<a href="http://br.linkedin.com/pub/marisa-affonso-vasconcelos/6/6b1/11/">
+<i class="fa-brands fa-linkedin" style="color:black"></i>
+</a>
+</div>
+
+
+<a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=P093832">
+<img src="images/lattes-trans.png" width="30px">
+</a>
+</div>
+
+<a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=P093832">
+<img src="images/lattes-trans.png" width="30px">
+</a>
+</div>
+
+
+
+</body>
+</html>

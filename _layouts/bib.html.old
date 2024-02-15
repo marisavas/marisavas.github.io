@@ -1,0 +1,60 @@
+---
+---
+
+
+<div style="width:1130px;">
+{% if entry.series %}
+<div style="float:left;position:relative;width:200px;text-align:left;font-size:16px;padding-top:10px;padding-left:80px;">[{{entry.series}}]</div>
+<div style="float:left;position:relative;width:930px;text-align:left;font-size: 16px;padding-left:20px;line-height:20px;">{{reference}}</div>
+</div>
+{% else %}
+<div style="float:left;position:relative;width:200px;text-align:left;font-size:16px;padding-top:20px;padding-left:80px;"> [{{entry.howpublished}}] </div>
+<div style="float:left;position:relative;width:930px;text-align:left;font-size:16px;padding-left:20px;line-height:20px;">
+<!-- {% assign currentdate = entry.date | date: "%B %Y" %} -->
+{{entry.date}}
+{% for author in entry.author_array %}
+{{ author.first }} {{ author.last }}{% unless forloop.last %},{% endunless %}{% if forloop.last %}.{% endif%}
+{% endfor %}<b>{{ entry.title }}</b>. {{ entry.month_string }} {{ entry.year }}, {{entry.note}}.
+</div>
+
+</div>
+{% endif %}
+
+
+
+<!-- {% if entry.doi %}
+    <a href="{{ entry.doi | prepend: 'http://doi.org/' }}">
+      <input class="button1" type="button" value="doi" /></a>
+{% endif %}
+
+{% if entry.preprint %}
+    <a href="{{ entry.preprint }}">
+      <input class="button2" type="button" value="preprint" /></a>
+{% endif %}
+-->
+
+{% if entry.series %}
+<div style="width:1130px;">
+<div style="float:left;position:relative;width:200px;text-align:right;padding-left: 5px;position:relative">&nbsp;</div>
+<div style="float:left;position:relative;width:930px;text-align:left;padding-left:20px">
+  <button onclick="toggleBibtex{{entry.key}}()">Bib</button>
+{% if link %}
+<a href="{{ link }}"><button class="btn btnId btnPub--download" style="outline:none; position:relative;white-space:
+      normal;">Pdf</button></a>
+{% endif %}
+</div>
+
+{% if entry.code %}
+    <a href="{{ entry.code }}"><input class="button3" type="button" value="code" /></a>
+{% endif %}
+
+<div id="a{{entry.key}}" style="display: none;"><pre>{{entry.bibtex}}</pre></div>
+</div>
+{% endif %}
+
+
+<!-- <br style="clear: left;" />
+<br style="clear: left;" /> -->
+
+<p class="bottom-three">&nbsp;</p>
+{% unless entry.label %}<div style= "border: 1px solid #e5e5e5"> </div>{% endunless %}
