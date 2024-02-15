@@ -1,0 +1,56 @@
+roles:
+  - name: Organization
+    description:
+      - { text: Workshop Women in Data Science at The Web Conference (2018-2020) }
+      - { text: Workshop Women in Data Science at SIAM SDM (2017) }
+
+  - name: Editorial Board
+    description:
+      - { text: IEEE Transactions on Technology and Society }
+
+  - name: Program Commitee
+    description:
+      - { text: The Web Conference (2021-2022) }
+      - { text: ICWSM (2021-present) }
+      - { text: IEEE/ACM ASONAM (2019-2021) }
+      - { text: DEVIANCE Workshop @IEEE-BigData (2020) }
+      - { text: BAAI @EPIA (2017, 2019)}
+      - { text: PAPi LATAM (2019)}
+
+  - name: Journal Reviewer
+    description:
+      - { text: PLOS ONE (2020 - present)}
+      - { text: ACM Transactions on Social Computing (TSC) (2019 - present)}
+      - { text: ACM Transactions on Internet Technology (TOIT) (2019)}
+      - { text: Elsevier Information Processing & Management (2018)}
+
+talks:
+  - date: March 2023
+    title: Round table with undergraduate students about Opportunities and Perspectives in CS, UFMG, Belo Horizonte, Brazil
+
+  - date: March 2022
+    title: Misinformation Dissemination on WhatsApp Groups, Universidad Pompeu Fabra, Spain
+
+  - date: October 2021
+    title: Misinformation Dissemination on WhatsApp Groups, Saint Louis University, USA
+
+  - date: February 2021
+    title: Misinformation Dissemination on WhatsApp Groups, Universidad Pompeu Fabra, Spain
+
+  - date: November 2019
+    title: Women in Technology. Invited Panelist, Education Show (LER), Rio de Janeiro, Brazil
+
+  - date: October 2019
+    title: Artificial Intelligence Concepts, Applications and Challenges. IBM Diversity Week, Sao Paulo, Brazil
+
+  - date: May 2019
+    title: Artificial Intelligence Inclusion Challenges. Swissness, Sao Paulo, Brazil
+
+  - date: April 2019
+    title: From Social Data Bias to Algorithm Discrimination. UFMG, Belo Horizonte, Brazil
+
+  - date: August 2017
+    title: Big Data Applications. IBM, Sao Paulo, Brazil
+
+  - date: October 2016
+    title: Women in Computer Science. UFMG, Belo Horizonte, Brazil
