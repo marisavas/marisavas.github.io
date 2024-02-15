@@ -34,8 +34,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with: 
-          persist-credentials: false
-          ref: ${{ github.event.inputs.checkoutRef }}
+          token: ${{ secrets.YOUR_CUSTOM_GITHUB_TOKEN }}
         
       - name: Configure Ruby
         uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
