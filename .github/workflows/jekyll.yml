@@ -36,7 +36,6 @@ jobs:
       - name: Configure Ruby
         uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
         with:
-          ruby-version: 2.7.2
           bundler-cache: true
           cache-version: 0
       - name: Setup Pages
