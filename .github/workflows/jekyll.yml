@@ -38,6 +38,8 @@ jobs:
         with:
           bundler-cache: true
           cache-version: 0
+      - name: Configure Bundler
+        run: gem install bundler -v 2.4.22
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@main
