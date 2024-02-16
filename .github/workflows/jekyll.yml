@@ -33,12 +33,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
         uses: actions/checkout@main
-      - run: gem install bundler -v 2.4.22  
       - name: Configure Ruby
         uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
         with:
           bundler-cache: true
-          cache-version: 0   
+          cache-version: 0 
+      - run: bundle install    
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@main
