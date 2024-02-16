@@ -1,7 +1,8 @@
 repository: marisavas/marisavas.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Marisa Vasconcelos" # the name of your site, e.g. ACME Corp.
-description: Marisa Vasconcelos site
+description: >- # this means to ignore newlines until "baseurl:"
+   Marisa Vasconcelos site.
 domain: marisavas.github.io
 url: https://marisavas.github.io  # the base hostname and protocol for your site, e.g. http://example.com
 
