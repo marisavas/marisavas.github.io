@@ -38,7 +38,7 @@ jobs:
         with:
           bundler-cache: true
           cache-version: 0 
-      - run: bundle install    
+          bundler: default
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@main
