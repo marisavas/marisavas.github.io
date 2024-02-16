@@ -41,7 +41,7 @@ jobs:
           cache-version: 0
       - name: Setup Pages
         id: pages
-        uses: action/configure-pages@main
+        uses: actions/configure-pages@main
       - name: Build with Jekyll
         run: bundle exec jekyll --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
