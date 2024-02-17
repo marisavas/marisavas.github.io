@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
 
-
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap')
 
 body {
   background-color: #efe9e4;
@@ -39,6 +39,7 @@ a:hover {
   text-decoration: underline;
 }
 
+
 p.ft00{font-size:80px;font-family:MyFont2;color:#000000;}
 p.ft01{font-size:18px;font-family:AAAAAA+OpenSauceOne;color:#000000;}
 p.ft02{font-size:84px;font-family:BAAAAA+OpenSauceOne;color:#000000;}
@@ -50,6 +51,18 @@ p.ft07{font-size:15px;line-height:31px;font-family:CAAAAA+Garbata;color:#5d5342;
 p.ft08{font-size:20px;line-height:31px;font-family:MyFont;color:#5d5342;align=justify}
 
 
+p.projects00{margin: 0; padding: 0;font-size:60px;font-family:Cardo;color:#000000;}
+
+p.about00{margin: 0; padding: 0;font-size:18px;font-family:Cardo;color:#000000;}
+p.about01{margin: 0; padding: 0;font-size:18px;font-family:Cardo;color:#000000;}
+p.about02{margin: 0; padding: 0;font-size:60px;font-family:MyFont3;color:#000000;}
+p.about03{
+  margin: 0; padding: 0;font-size:21px;line-height:29px;
+  font-family:Cardo;color:#000000;
+}
+
+
+
 @font-face {
   font-family: MyFont;
   src:url("../font/GarbataTrial-Regular.ttf");
@@ -58,6 +71,12 @@ p.ft08{font-size:20px;line-height:31px;font-family:MyFont;color:#5d5342;align=ju
 @font-face {
   font-family: myFont2;
   src:url("../font/Bogart-Regular-trial.ttf")
+}
+
+@font-face {
+  font-family: myFont3;
+  unicode-range: U+0041-005A;
+  src:url("../font/Atteron.ttf")
 }
 
 
