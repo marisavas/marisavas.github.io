@@ -49,7 +49,7 @@ tbody > tr:last-child > td {
 </style>
 
 <div id="page1-div" style="position:relative;width:1400px;height:864px;">
-<p style="position:absolute;top:15px;left:86px;white-space:nowrap" class="projects00">PROJECTS</p>
+<p style="position:absolute;top:15px;left:86px;white-space:nowrap" class="about02">PROJECTS</p>
 
 
 <div class="c-article__footer2 u-clearfix">
