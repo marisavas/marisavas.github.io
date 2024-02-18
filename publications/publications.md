@@ -8,16 +8,7 @@ permalink: /publications/
 
 ---
 
-<script>
-function toggleBibtex{{entry.key}}(parameter) {
-    var x= document.getElementById('a{{entry.key}}');
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
-    }
-}
-</script>
+
 
 <style>
 
@@ -70,16 +61,18 @@ function toggleBibtex{{entry.key}}(parameter) {
 
 </style>
 
-<div class=".c-wrap-content font_bib">
-<header class="c-article__header">
+
+
+<p style="position:absolute;top:67px;left:86px;white-space:nowrap" class="about02">PUBLICATIONS</p>
+<!-- <header class="c-article__header">
 <h1 class="c-article__title">{{page.title}}</h1>
 
-</header>
+</header> -->
 
 
-<div class="c-article__footer u-clearfix">
+<div class="c-article__footer u-clearfix"> <!-- barra de links -->
 <div class="c-article__tag">
-<a href="#conferences">#conferences</a>&nbsp;<a href="#journals">#journals</a> <a href="#patents">#patents</a> <a href="#professional_service">#professional Service</a>&nbsp;<a href="#talks">#talks</a>
+<a href="#conferences">#conferences</a>&nbsp;<a href="#journals">#journals</a> <a href="#patents">#patents</a> <a href="#awards">#awards</a> <a href="#professional_service">#professional Service</a>&nbsp;<a href="#talks">#talks</a>&nbsp;
 </div></div>
 
 <style>
@@ -89,7 +82,7 @@ padding: 5px 10px;
 border-bottom: 1px solid #e5e5e5;
 }
 
-h4{
+h4 {
    color:#494949;
    font-size:20px;
    font-family:"Volkhov","Times New Roman",Times,serif;
@@ -103,6 +96,7 @@ tbody > tr:last-child > td {
   border-bottom: 0;
 }
 </style>
+<div class=".c-wrap-content font_bib" style="position:absolute;top:150px">
 <table>
 
 <tr><td>
@@ -122,6 +116,26 @@ tbody > tr:last-child > td {
 <h4>Patents</h4></a>  
 {% bibliography --file patents --sort_by year,month --order descending %}
 </td></tr>
+
+<tr><td>
+<br><a id="awards">
+<h4>Awards/Honors</h4></a>
+<ol class="bibliography">
+{% for award in site.data.services.awards %}
+<li>
+<div style="width:1100px;">
+<div style="float:left;position:relative;width:200px;text-align:left;font-size:16px;padding-left:80px;">{{award.date}}</div>
+<div style="float:left;position:relative;width:900px;text-align:left;font-size:16px;padding-left:50px;line-height:20px;padding-bottom:20px">{{award.description}}</div>
+
+</div>
+
+<p class="bottom-three" style="margin-bottom:20px">&nbsp;</p>
+{% unless forloop.last %}<div style= "border: 1px solid #e5e5e5"> </div>{% endunless %}
+</li>
+{% endfor %}
+</ol>
+</td>
+</tr>
 
 <tr><td>
 <br>
@@ -167,6 +181,9 @@ tbody > tr:last-child > td {
 </ol>
 </td>
 </tr>
+
+
+
 
 </table>
 </div>
