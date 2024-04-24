@@ -2,10 +2,12 @@
 <html lang="en">
 {% include head.html %}
 
-<body>
   {% if site.google-analytics %}
     {% include analytics.html %}
   {% endif %}
+  
+<body>
+
   <div class="o-wrapper">
     {{ content }}
   </div> <!-- /.o-wrapper -->
