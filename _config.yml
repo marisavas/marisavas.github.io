@@ -12,6 +12,7 @@ plugins:
   # - jekyll-paginate
   - jekyll-scholar
 
+
 paginate: 7
 paginate_path: '/page/:num/'
 future: true
@@ -44,3 +45,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+
+google_analytics: G-438134671
+
