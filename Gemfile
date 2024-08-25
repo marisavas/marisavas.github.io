@@ -6,6 +6,11 @@ source "https://rubygems.org"
 #     bundle exec jekyll serve
 #
 
+if RUBY_VERSION >= '3.0.0'
+  gem 'nokogiri', '>= 1.16.2'
+else
+  gem 'nokogiri', '< 1.16.2'
+end
 
 
 # This will help ensure the proper Jekyll version is running.
