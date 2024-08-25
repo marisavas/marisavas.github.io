@@ -292,6 +292,7 @@ DEPENDENCIES
   github-pages
   jekyll-paginate
   jekyll-scholar
+  nokogiri (< 1.16.2)
 
 BUNDLED WITH
    2.1.4
