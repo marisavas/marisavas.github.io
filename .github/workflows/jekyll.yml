@@ -34,11 +34,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@main
       - name: Configure Ruby
-        uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
+        uses: ruby/setup-ruby@v1 
         with:
           bundler-cache: true
           cache-version: 0 
-          bundler: 2.4.22
+          bundler: "Gemfile.lock"
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@main
