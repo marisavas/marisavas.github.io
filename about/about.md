@@ -4,18 +4,111 @@ title: About
 permalink: /about/
 ---
 
+<style>
 
+.secao {
+  color: #000000;
+  font-size: 18px;
+  font-family: Cardo;
+  font-weight: bolder;
+}
+
+.key-achievements {
+    list-style-type: none;
+    padding: 0;
+}
+.key-achievements li {
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    font-size:18px;
+}
+
+.about04 {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+
+}
+.about04 h3 {
+    color: #000000 !important;
+    font-weight: bolder !important;
+    font-size: 10px !important;
+}
+
+
+.about04 li {
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.hashtags {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+    font-family: Arial, sans-serif;
+}
+.cta {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #0056b3;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+</style>
 
 <div id="page1-div" style="position:relative;width:1536px;height:864px;">
-  <div style="position:relative;width:860px;height:864px;text-align: justify;">
+<div style="position:relative;width:860px;height:864px;text-align: justify;">
 
-    <p style="position:absolute;top:180px;left:86px;line-height: 1.6;" class="about00">
-      My name is Marisa Vasconcelos, and I am currently seeking new research opportunities in the dynamic field of Artificial Intelligence. With a robust background that spans both academia and the corporate world, I am well-prepared to make significant contributions to organizations and institutions that are dedicated to pushing the boundaries of AI innovation. My journey in Computer Science has been marked by a diverse array of research projects, each of which has enriched my knowledge and sharpened my skills. Starting from my undergraduate studies, I was deeply involved in research on information systems, with a keen focus on understanding system performance and addressing user needs.
+    <p style="position:absolute;top:67px;left:90px;white-space:nowrap" class="about02">ABOUT ME</p>
+    <p style="position:absolute;top:180px;left:90px;line-height: 1.6;" class="about04">
+      <b>Welcome!</b> I'm Marisa Vasconcelos, a passionate researcher in the dynamic field of Artificial Intelligence. My journey has taken me across both academia and industry, where I've consistently pushed the boundaries of innovation in AI.
     </p>
 
-    <p style="position:absolute;top:330px;left:86px;line-height: 1.6;" class="about00">
-      As I progressed to my doctoral studies, I immersed myself in the field of Social Computing, where I explored how the use of social media systems could impact performance, reveal vulnerabilities, and influence both individual and societal behaviors. This research culminated in my doctoral dissertation, which was my first major venture into the world of Artificial Intelligence, specifically focusing on predictive models for determining content popularity on social networks. The academic rigor and depth of this experience provided me with a strong theoretical foundation, which I have since built upon through significant publications and collaborations with leading researchers at international conferences.
-    </p>
+    <h3 style="position:absolute;top:285px;left:90px;line-height:1.6;font-size:20px;color:#000000; font-weight: bolder;">Key Achievements</h3>
+      <ul class="about04">
+      <li style="position:absolute;top:325px;left:90px;line-height:1.6;" class="about04"><strong>Academic Background</strong>: Ph.D. and Master's in Computer Science, with the Master's degree completed at Boston University
+      </li>
+      <li style="position:absolute;top:385px;left:90px;line-height:1.6;" class="about04"><strong>Professional Experience</strong>: 25 years of research experience, including 7 years at IBM Research with expertise in Responsible AI. Author of 40 publications and 14 granted patents.</li>
 
-    <p style="position:absolute;top:480px;left:86px;line-height: 1.6;" class="about00">
-      In industry, I worked as a research scientist at IBM Research Brazil, where I had the opportunity to bridge theory with practical application. During this time, I developed tools for conversational agents, or chatbots, evaluating and enhancing user interactions, and explored the impact of language and contextual factors on the user experience. This experience allowed me to deepen my knowledge of systems while acquiring and applying skills in the field of human-computer interaction (HCI)
+
+      <li style="position:absolute;top:445px;left:90px;line-height:1.6;" class="about04">
+      <strong>International Experience</strong>: Extensive international experience, including participation, presentations, and publications at international conferences, as well as working with global teams at IBM.
+      </li>
+
+      <li style="position:absolute;top:505px;left:90px;line-height:1.6;" class="about04"><strong>Commitment to Responsible AI</strong>: Conducts innovative research to assess and  mitigate AI risks, staying updated with advancements and sharing findings in prominent publications, while ensuring the consistent application of Responsible AI policies across technological frameworks.</li>
+
+      <li style="position:absolute;top:590px;left:90px;line-height:1.6;" class="about04"><strong>STEM Advocate</strong>: Co-created the WINDS (Women in Data Science) workshop to promote diversity in tech.</li>
+      </ul>
+
+      <h3 style="position:absolute;top:645px;left:90px;line-height:1.6;font-size:20px;color:#000000; font-weight:bolder;">My Research Focus</h3>
+
+      <p class="about04" style="position:absolute;top:685px;left:90px;line-height: 1.6;">
+      At the heart of my work is the intersection of technology and society. My research dives into Social Computing to uncover insights into human behavior and tackle critical issues like misinformation, hate speech, and cultural representation.
+      </p>
+
+      <p class="about04" style="position:absolute;top:770px;left:90px;line-height: 1.6;">I'm particularly passionate about the ethical dimensions of technology. In the realm of <strong>Responsible AI</strong>, I explore key topics like fairness, transparency, and governance, striving to ensure that AI solutions are not only innovative but also ethically sound.</p>
+
+      <h3 style="position:absolute;top:870px;left:90px;line-height:1.6;font-size:20px;color:#000000; font-weight:bolder;">Industry Experience</h3>
+
+
+      <p class="about04" style="position:absolute;top:910px;left:90px;line-height: 1.6;">During my time as a <strong>Research Scientist at IBM Research Brazil</strong>, I had the opportunity to bridge theory and practice. I conducted advanced analyses of conversational agents (chatbots), improving user interactions, and exploring the impact of language and context on user experience. Additionally, I participated in Tech for Justice projects, analyzing the presence of underrepresented communities on social media , I also developed patents, including a method for auditing bias in AI systems. This experience deepened my understanding of systems and improved my skills in <strong>Human-Computer Interaction (HCI)</strong>.</p>
+
+
+
+
+      <h3 style="position:absolute;top:1085px;left:90px;line-height:1.6;font-size:20px;color:#000000; font-weight: bolder;">What Drives Me</h3>
+      <p class="about04" style="position:absolute;top:1120px;left:90px;line-height: 1.6;">I believe in the power of AI to solve complex problems and make a positive impact on society. With a strong foundation in both the theoretical and practical aspects of AI, I’m committed to developing solutions that are not only cutting-edge but also align with the highest ethical standards.</p>
+
+      <p class="cta" style="position:absolute;top:1200px;left:90px;line-height: 1.6;">Let's Collaborate</p>
+      <p class="about04" style="position:absolute;top:1255px;left:90px;line-height: 1.6;">If you're interested in pushing the boundaries of AI, whether in industry or academia, I'd love to connect! Let’s explore how we can work together to create innovative and responsible AI solutions.</p>
+
+      <!--
+      <p style="position:absolute;top:1280px;left:86px;line-height: 1.6;" class="hashtags">#ResponsibleAI #SocialComputing #MachineLearning #ResearchInnovation #STEMAdvocate #DiversityInTech</p> -->
+
+    </div>
+    </div>
