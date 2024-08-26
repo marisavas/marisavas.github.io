@@ -12,6 +12,13 @@ permalink: /publications/
 
 <style>
 
+
+
+body {
+  background-color: #efe9e4;
+}
+
+
   .bottom-three {
      margin-bottom: 5px;
      margin-top:7px;
