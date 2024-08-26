@@ -6,6 +6,10 @@ permalink: /about/
 
 <style>
 
+body {
+  background-color: #efe9e4;
+}
+
 .secao {
   color: #000000;
   font-size: 18px;
