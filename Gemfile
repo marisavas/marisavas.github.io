@@ -7,9 +7,9 @@ source "https://rubygems.org"
 #
 
 if RUBY_VERSION >= '3.0.0'
-  gem 'nokogiri', '>= 1.16.2'
+  gem 'nokogiri', '>= 1.16.5'
 else
-  gem 'nokogiri', '< 1.16.2'
+  gem 'nokogiri', '< 1.16.5'
 end
 
 
