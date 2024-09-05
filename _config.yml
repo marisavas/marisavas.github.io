@@ -46,5 +46,7 @@ exclude:
   - Gemfile.lock
   - vendor
 
-google_analytics: G-2ZK8Y6NZWJ
 
+
+
+google_analytics: G-2ZK8Y6NZWJ

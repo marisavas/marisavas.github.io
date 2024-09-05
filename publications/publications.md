@@ -7,28 +7,23 @@ future: true
 permalink: /publications/
 
 ---
-
-
-
 <style>
-
-
 
 body {
   background-color: #efe9e4;
 }
 
 
-  .bottom-three {
-     margin-bottom: 5px;
-     margin-top:7px;
-  }
+.bottom-three {
+  margin-bottom: 5px;
+  margin-top:7px;
+}
 
-   ol.bibliography li {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
- }
+ol.bibliography li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
  ol.bibliography li:before {
       list-style-type: none;
