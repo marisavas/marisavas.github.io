@@ -11,7 +11,7 @@ else
   gem 'nokogiri', '< 1.16.5'
   gem 'commonmarker', '~> 0.21.0'
   # gem 'jekyll', '~> 3.9.5'
-
+  gem 'ffi', '~> 1.15'
 end
 
 
