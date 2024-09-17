@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #f4f4f4;
+  padding: 10px 0;  
+  display: flex;
+  flex-direction: column;
+}
+
+.name h1 {
+  margin: 0;
+  font-size: 32px;
+  color:#333;
+  font-weight: bold;;
+}
+
+nav.links {
+  display: flex;
+  gap: 15px;
+  justify-content: center !important;
+  margin-top: 12px; 
+}
+
+nav.links a {
+  text-decoration: none;
+  color: #666;
+  font-size: 16px;
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+nav.links a:hover {
+  color: #007bff; /* Darker gray on hover for better contrast */
+}
+
+main {
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 900px; /* Maximum width for the centralized content */
+  margin: 0 auto; /* Auto margin left and right to center content */
+  padding: 20px; /* Add padding to the sides */
+  text-align: center;
+}
+
+.container_header {
+  margin-right: auto !important;
+  margin-bottom: auto !important;
+  margin: 0 auto; /*Auto margin left and right to center content */
+}
+
+
+.bottom-three {
+  margin-bottom: 5px;
+  margin-top: 7px;
+}
+
+ol.bibliography li {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px; 
+}
+
+ol.bibliography li:before {
+  content: "";
+}
+
+button {
+  font-size: 14px;
+}
+
+.my_text {
+  font-size: 14px;
+}
+
+.leftcell {
+  float: left;
+  text-align: right;
+}
+
+.rightcell {
+  float: left;
+  text-align: left;
+  font-size: 14px;
+  padding-left: 5px; /* Fake cell padding */
+}
+
+.font_bib {
+  font-family: "Open Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 28px;
+  color: #404040;
+}
+
+th, td {
+  text-align: left;
+  padding: 5px 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+h4 {
+  color: #494949;
+  font-size: 20px;
+  font-family: "Volkhov", "Times New Roman", Times, serif;
+  font-weight: 400;
+  line-height: initial;
+  position: relative;
+  left: 86px;
+}
+
+tbody > tr:last-child > td {
+  border-bottom: 0;
+}
+
+.hr-publications {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+
+
+.c-wrap-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Publication sections */
+
+.navbar-section {
+  margin-bottom: 40px;
+  max-width: 600px;
+  font-size: 16px;
+  text-align: left;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.publication-section {
+    margin-bottom: 40px;
+    max-width: 600px;
+    font-size: 16px;
+    text-align: left;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.publication-section h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  /* border-bottom: 2px solid #ddd;
+  padding-bottom: 10px; */
+  margin-bottom: 10px;
+}
+
+
+/* Bibliography styling */
+.bibliography {
+  font-size: 14px;
+  color: #404040;
+  text-align: justify;
+  margin: 0 auto;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bibliography a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.bibliography a:hover {
+  text-decoration: underline;
+}
+
+.publication-item {
+  display: inline;
+  /* padding-bottom: 5px; */
+}
+
+.bibliography-entry {
+  width: 600px; 
+  font-size: 14px; 
+  text-align: justify; 
+  margin-bottom: 20px;
+}
+
+.bibliography-entry strong {
+  font-weight: bold;
+}
+
+.bibliography-entry i {
+  font-style: italic;
+}
+
+/* Ensure table styling matches site */
+table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.item {
+  max-width: 500px;
+  font-size: 16px;
+  text-align: left;
+  margin: 0 auto;
+  line-height: 1.6;
+  /* margin-right: 50px; */
+}
+
+.item h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.item p {
+  font-size: 16px;
+  color: #404040;
+  text-align: justify;
+  margin-bottom: 20px;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.c-article__footer { 
+  /* margin: 30px 0 0; */
+  padding-bottom: 30px;
+  text-align: center;
+  /* border-bottom: 1px solid #f0f0f0; */
+  box-sizing: border-box;
+}
+
+.u-clearfix::before, .u-clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.c-article__footer .c-article__tag {
+  margin-bottom:5px;
+  box-sizing: border-box;
+}
+
+.c-article__footer .c-article__tag a {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 5px 10px;
+  font-size: 10px;
+  line-height: 10px;
+  text-transform: uppercase;
+  background-color:#f4f4f4;
+  color:#000;
+  text-decoration: none;
+  transition: .35s;
+  /* margin-bottom:5px;
+  box-sizing: border-box; */
+}
+
+.c-article__footer .c-article__tag a:hover {
+  /* background-color:rgba(80,100,118,0.6) */
+  background-color:rgba(115,138,160,0.6);
+}
+.c-article__footer .c-article__tag a:last-child {
+  margin-right:0
+}

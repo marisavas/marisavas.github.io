@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    /* display: flex;
+    flex-direction: column;
+    min-height: 100vh; */
+}
+
+.container_header {
+    margin-right: auto !important;
+    margin-bottom: auto !important;
+    /* max-width: 900px; Maximum width for the centralized content */
+    margin: 0 auto; /*Auto margin left and right to center content */
+    /* padding: 20px; Add padding to the sides */
+    /* text-align: center; */
+}
+
+
+.container {
+    max-width: 900px; /* Maximum width for the centralized content */
+    margin: 0 auto; /* Auto margin left and right to center content */
+    padding: 20px; /* Add padding to the sides */
+    text-align: center;
+}
+
+
+header {
+    background-color: #f4f4f4;
+    padding: 10px 0;  
+    display: flex;
+    flex-direction: column;/*
+    justify-content: space-between;*/
+    align-items: center;
+    /*text-align: center;
+    padding: 10px 20px; */
+    
+}
+
+
+.name h1 {
+    margin: 0;
+    font-size: 32px;
+    color:#333;
+    font-weight: bold;;
+    /* padding-bottom: 10px; */
+}
+
+nav.links {
+    /* display: inline-flex; */
+    display: flex;
+    /* justify-content: center; */
+    gap: 15px;
+    justify-content: center !important;
+    margin-top: 12px; 
+}
+
+nav.links a {
+    text-decoration: none;
+    color: #666;
+    font-size: 16px;
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+nav.links a:hover {
+    color: #007bff; /* Darker gray on hover for better contrast */
+}
+
+main {
+    /* display: flex;
+    flex-direction: column; */
+    /* padding: 20px; */
+    padding: 20px 0;
+
+}
+
+.bio {
+    max-width: 500px;
+    font-size: 16px;
+    text-align: left;
+    margin: 0 auto;
+    line-height: 1.6;
+    /* margin-right: 50px; */
+}
+
+.bio h2 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.bio p {
+    font-size: 16px;
+    color: #404040;
+    text-align: justify;
+    margin-bottom: 20px;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+
+
+.highlight {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.link-section {
+    margin-top: 20px; /* Space above the links */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /*width: 100%; Ensures full width */
+}
+
+.link-section a {
+    margin: 0 10px;
+}
+
+.email {
+    display: flex;
+    justify-content: center;
+    text-align: center; /* Center the email horizontally */
+    margin-top: 20px; /* Add space between the email and the icons */
+    font-size: 16px;
+}
