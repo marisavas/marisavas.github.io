@@ -60,7 +60,7 @@ jobs:
           
       - name: Build Jekyll site
         run: | 
-          bundle exec jekyll build || { echo 'Jekyll build failed'; exit 1; }
+          bundle exec jekyll build --verbose || { echo 'Jekyll build failed'; exit 1; }
           ls -al _site
 
       - name: List contents after build
