@@ -46,7 +46,7 @@ jobs:
         uses: actions/configure-pages@main
         
       - name: Install dependencies
-        run: bundle install path vendor/bundle 
+        run: bundle install --path vendor/bundle 
         
       - name: Deploy to github pages
         uses: peaceiris/actions-gh-pages@v3
