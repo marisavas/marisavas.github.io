@@ -33,7 +33,6 @@ nbproject
 *.sublime-workspace
 .idea
 .bundle
-.ruby-version
 .sass-cache
 .jekyll-metadata
 script
