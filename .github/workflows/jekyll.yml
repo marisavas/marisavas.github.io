@@ -60,8 +60,8 @@ jobs:
           
       - name: Build Jekyll site
         run: | 
-          bundle exec jekyll build --verbose || { echo 'Jekyll build failed'; exit 1; }
-          ls -al _site
+          bundle exec jekyll build --verbose 
+          
 
  
       - name: Deploy to github pages
