@@ -37,7 +37,7 @@ jobs:
           ref: gh-pages
       
       - name: Configure Ruby
-        uses: ruby/setup-ruby@main
+        uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
           cache-version: 0 
