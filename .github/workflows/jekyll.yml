@@ -39,7 +39,8 @@ jobs:
       - name: List files
         run: |
           ls -la
-          cat .ruby-version || echo ".ruby-version not found"    
+          cat .ruby-version || echo ".ruby-version not found"
+          ls -al /Users/runner/work/marisavas.github.io/marisavas.github.io/_site
       
       - name: Configure Ruby
         uses: ruby/setup-ruby@v1
