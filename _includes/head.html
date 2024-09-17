@@ -5,7 +5,17 @@
   <meta http-equiv='pragma' content='no-cache'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Marisa Vasconcelos</title>
+  
+{% if site.google_analytics %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+{% endif %}
 
 <title>
   {% if page.title %}
