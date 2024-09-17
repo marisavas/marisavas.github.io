@@ -66,4 +66,6 @@ jobs:
           github_token: ${{ secrets.GH_TOKEN }}
           publish_dir: ./_site  
           target_branch: gh-pages
+          keep_files: true
+
         
