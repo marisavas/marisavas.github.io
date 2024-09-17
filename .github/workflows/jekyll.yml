@@ -64,7 +64,7 @@ jobs:
           ls -al _site
 
       - name: List contents after build
-        run: ls -R    
+        run: ls -al _site    
         
       - name: Deploy to github pages
         uses: peaceiris/actions-gh-pages@v3
