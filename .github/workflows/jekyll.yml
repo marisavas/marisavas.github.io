@@ -39,7 +39,7 @@ jobs:
       - name: List files
         run: |
           ls -la
-          cat .ruby-version || echo ".ruby-version not found"
+          
        
       
       - name: Configure Ruby
@@ -60,8 +60,11 @@ jobs:
           
       - name: Build Jekyll site
         run: | 
-          bundle exec jekyll build
+          bundle exec jekyll build || { echo 'Jekyll build failed'; exit 1; }
           ls -al _site
+
+      - name: List contents after build
+        run: ls -R    
         
       - name: Deploy to github pages
         uses: peaceiris/actions-gh-pages@v3
