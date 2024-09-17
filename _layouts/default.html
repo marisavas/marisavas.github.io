@@ -1,16 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include head.html %}
 
+    {% include head.html %}
 
-  
-<body>
+    <body>
+        {% assign jekyll_env = jekyll.environment %}
+        {% assign site_url = site.url %}
+        {% if site.github.url %}
+            {% assign site_url = site.github.url %}
+        {% endif %}
+        {% if jekyll_env == "development" %}
+            {% assign site_url = "http://localhost:4000" %}
+        {% endif %}
 
-  <div class="o-wrapper">
-    {{ content }}
-  </div> <!-- /.o-wrapper -->
-  <!-- <div class="c-top" data-icon='ei-chevron-up' data-size='s' title="Scroll To Top"></div>  -->
+        <header>
+            <div class="container_header"> <!-- New container to centralize content -->
+                <div class="name">
+                    <h1>Marisa Vasconcelos</h1>
+                <hr style="color:inherit;border:0;border-top:1px solid;opacity:.25;">
+                </div>
+            
+                <nav class="links">
+                    <a href="#about">More About Me</a>
+                    <a href="{{ '/publications/' | relative_url }}">Publications</a>
+                    <a href="#projects">Projects</a>
+                </nav>
+            </div>
+        </header>
 
-  {% include javascripts.html %}
-</body>
+        
+        {{ content }}
+ 
+    </body>
 </html>
+
