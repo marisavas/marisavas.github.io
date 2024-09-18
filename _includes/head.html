@@ -5,27 +5,26 @@
   <meta http-equiv='pragma' content='no-cache'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Marisa Vasconcelos</title>
-  
-
-
-<title>
-  {% if page.title %}
+  <!-- <title> -->
+  <!-- {% if page.title %}
     {{ page.title | escape }} : {{ site.title }}
   {% else %}
     {{ site.title }} : {{ site.tagline | escape }}
   {% endif %}
-</title>
+  </title> -->
 
- <!-- CSS -->
- <link rel="stylesheet" href="{{ site.baseurl }}/public/css/styles_index.css">
- <link rel="stylesheet" href="{{ site.baseurl }}/public/css/styles_publications.css">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/public/css/styles_header.css">
 
 {% if page.custom_css %}
     {% for stylesheet in page.custom_css %}
-    <link rel="stylesheet" href="{{ site.baseurl }}/public/css/{{ stylesheet }}.css">
+      <link rel="stylesheet" href="{{ site.baseurl }}/public/css/{{ stylesheet }}.css">
     {% endfor %}
- {% endif %}
+{% endif %}
+
+
+
 
 {% if site.google_analytics %}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
