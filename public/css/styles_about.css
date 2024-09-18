@@ -1,0 +1,87 @@
+main {
+    padding: 20px 0;
+}
+
+.highlight {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+.about-section {
+    max-width: 500px;
+    font-size: 16px;
+    text-align: left;
+    margin: 0 auto;
+    line-height: 1.6;
+    /* margin-bottom: 40px; */
+    
+}
+
+
+.about-section hr { 
+    width:100%;
+    height:10px;
+    color:inherit;
+    border:0;
+    border-top:1px solid;
+    opacity:.25;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.about-section h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.about-section h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+   
+}
+
+.about-section p {
+    font-size: 16px;
+    color: #404040;
+    text-align: justify;
+    margin-bottom: 20px;
+    -moz-osx-font-smoothing:grayscale; 
+}
+
+
+
+.about-section ul {
+    list-style-type: disc; /* Change to 'circle', 'square', or 'none' as needed */
+    padding-left: 20px; /* Adjust the padding to suit your design */
+    font-size: 16px;
+    color: #404040;
+    -moz-osx-font-smoothing:grayscale;
+    text-align: justify;
+}
+
+.about-section li {
+    margin-bottom: 10px; /* Add space between list items */
+    color: #333; /* Change text color if needed */
+    font-weight: normal; /* Change to 'bold' if you want bold list items */
+}
+
+p.hashtags {
+    line-height: 1.6;
+    font-size:0.9em;
+    color:#666;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+
+ 
+

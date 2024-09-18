@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 10px 0;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 900px; /* Maximum width for the centralized content */
+    margin: 0 auto; /* Auto margin left and right to center content */
+    padding: 20px; /* Add padding to the sides */
+    text-align: center;
+}
+
+/* .container_header {
+    margin-right: auto !important;
+    margin-bottom: auto !important;
+    margin: 0 auto; 
+} */
+
+.container_header {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    margin: 0 auto; /* Center the container horizontally */
+    text-align: center; /* Center text */
+}
+
+
+.name h1 {
+    margin: 0;
+    font-size: 32px;
+    color:#333;
+    font-weight: bold;;
+}
+
+/* Styling for the hr */
+.name hr {
+    width: 100%; /* Full width inside the container */
+    /* max-width: 200px;  */
+    margin: 10px auto 20px; /* Add space above and below */
+}
+
+
+
+
+nav.links {
+    display: flex;
+    gap: 15px;
+    /* justify-content: center !important; */
+    justify-content: center; /* Center horizontally */
+    /* margin-top: 12px;  */
+}
+
+
+nav.links a {
+    text-decoration: none;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+
+nav.links a.active {
+    color: #007bff; /* Highlight active link */
+    font-weight: bold; /* Make the active link bold */
+}
+
+nav.links a:hover {
+    color: #007bff;
+}
+
+nav.links a.inactive {
+    pointer-events: none; /* Disable clicking */
+    color: gray; /* Change the color to gray */
+    text-decoration: none; /* Remove underline */
+    cursor: default; /* Show the default cursor instead of the pointer */
+}
+
+
+
+
