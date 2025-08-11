@@ -35,5 +35,5 @@ nbproject
 .sass-cache
 .jekyll-metadata
 script
-
+node_modules/
 
