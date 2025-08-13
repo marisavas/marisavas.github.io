@@ -57,38 +57,29 @@ header {
 
 
 
-nav.links {
-    display: flex;
-    gap: 15px;
-    /* justify-content: center !important; */
-    justify-content: center; /* Center horizontally */
-    /* margin-top: 12px;  */
-}
-
-
 nav.links a {
     text-decoration: none;
     color: #666;
     transition: color 0.3s ease;
+    padding: 6px 10px; /* Pequeno espaçamento para área clicável maior */
+    border-bottom: 2px solid transparent; /* Espaço para efeito de borda */
 }
 
-
 nav.links a.active {
-    color: #007bff; /* Highlight active link */
-    font-weight: bold; /* Make the active link bold */
+    color: #007bff; /* Azul */
+    font-weight: bold;
+    border-bottom-color: #007bff; /* Linha azul embaixo do link ativo */
 }
 
 nav.links a:hover {
-    color: #007bff;
+    color: #0056b3; /* Azul mais escuro no hover */
+    border-bottom-color: #0056b3; /* Linha azul no hover */
 }
 
 nav.links a.inactive {
-    pointer-events: none; /* Disable clicking */
-    color: gray; /* Change the color to gray */
-    text-decoration: none; /* Remove underline */
-    cursor: default; /* Show the default cursor instead of the pointer */
+    pointer-events: none;
+    color: gray;
+    text-decoration: none;
+    cursor: default;
+    border-bottom-color: transparent;
 }
-
-
-
-
