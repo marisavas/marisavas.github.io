@@ -21,15 +21,18 @@
                 </div>
 
                 <nav class="links">
-                    <a href="{% if page.url != '/' %}{{ '/' | relative_url }}{% endif %}" class="{% if page.url == '/' %}inactive{% endif %}">Home</a>
+  <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a>
+  
+  <a href="{{ '/about/' | relative_url }}" 
+     class="{% if page.url contains '/about/' %}active{% endif %}">More About Me</a>
+  
+  <a href="{{ '/publications/' | relative_url }}" 
+     class="{% if page.url contains '/publications/' %}active{% endif %}">Publications</a>
+  
+  <a href="{{ '/projects/' | relative_url }}" 
+     class="{% if page.url contains '/projects/' %}active{% endif %}">Projects</a>
+</nav>
 
-                    <a href="{% if page.url != '/about/' %}{{ '/about/' | relative_url }}{% endif %}" class="{% if page.url == '/about/' %}inactive{% endif %}">More About Me</a>
-                 
-                    <a href="{% if page.url != '/publications/' %}{{ '/publications/' | relative_url }}{% endif %}" class="{% if page.url == '/publications/' %}inactive{% endif %}">Publications</a>
-                 
-                    <a href="{% if page.url != '/projects/' %}{{ '/projects/' | relative_url }}{% endif %}" class="{% if page.url == '/projects/' %}inactive{% endif %}">Projects</a>
-
-                </nav>
                 
             </div>
         </header>
