@@ -21,16 +21,11 @@
                 </div>
 
                 <nav class="links">
-  <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a>
-  
-  <a href="{{ '/about/' | relative_url }}" 
-     class="{% if page.url contains '/about/' %}active{% endif %}">More About Me</a>
-  
-  <a href="{{ '/publications/' | relative_url }}" 
-     class="{% if page.url contains '/publications/' %}active{% endif %}">Publications</a>
-  
-  <a href="{{ '/projects/' | relative_url }}" 
-     class="{% if page.url contains '/projects/' %}active{% endif %}">Projects</a>
+  <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' or page.url == '/index.html' %}active{% endif %}">Home</a>
+<a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' or page.url == '/about/index.html' %}active{% endif %}">More About Me</a>
+<a href="{{ '/publications/' | relative_url }}" class="{% if page.url == '/publications/' or page.url == '/publications/index.html' %}active{% endif %}">Publications</a>
+<a href="{{ '/projects/' | relative_url }}" class="{% if page.url == '/projects/' or page.url == '/projects/index.html' %}active{% endif %}">Projects</a>
+
 </nav>
 
                 
