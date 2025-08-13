@@ -20,8 +20,9 @@ custom_css:
         </div>
             
         <script type="application/json" id="conferences-data">
-            {{ site.data.publications | jsonify }}
+            {{ site.data.publications | jsonify | replace: '</', '<\/' }}
         </script>
+
     </div>
         
     <!-- Journals -->
@@ -33,7 +34,7 @@ custom_css:
         <button id="journals-next" class='next'>Next</button>
       </div>
       <script type="application/json" id="journals-data">
-        {{ site.data.journals | jsonify }}
+        {{ site.data.journals | jsonify | replace: '</', '<\/' }}
       </script>
     </div>
 
@@ -46,7 +47,7 @@ custom_css:
         <button id="patents-next" class='next'>Next</button>
       </div>
       <script type="application/json" id="patents-data">
-        {{ site.data.patents | jsonify }}
+        {{ site.data.patents | jsonify | | replace: '</', '<\/' }}
       </script>
     </div>
   </div>

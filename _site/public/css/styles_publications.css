@@ -74,14 +74,18 @@ main {
     color: #555;
 }
 
-
 /* Ícones para tipo de publicação */
-.publication-item.conference::before { content: "📝 "; } 
+.publication-item.conference::before {
+    content: "🎤 ";  /* Conferences */
+}
 
+.publication-item.journal::before {
+    content: "📑 ";  /* Journals */
+}
 
-.publication-item.journal::before { content: "📑 ";  }
-
-.publication-item.patent::before { content: "🔬 ";  }
+.publication-item.patent::before {
+    content: "🔬 ";  /* Patents */
+}
 
 /* Cards de publicações */
 .publication-cards-container {
@@ -192,18 +196,6 @@ main {
   cursor: pointer;
   font-size: 0.9em;
 }
-
-/* Botão Next sempre azul */
-.pagination button#conferences-next,
-.pagination button#journals-next,
-.pagination button#patents-next {
-    background: #007bff;
-    color: white;
-    cursor: pointer;
-}
-
-
-
 
 .pagination button.active {
   background: #007bff;
