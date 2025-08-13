@@ -1,0 +1,529 @@
+- title: Analyzing Political Discourse on Discord during the 2024 US Presidential
+    Election
+  authors:
+  - Arthur Buzelin
+  - Pedro Dutenhefner
+  - Marcelo Locatelli
+  - Samira Malaquias
+  - Pedro Bento
+  - Yan Aquino
+  - Lucas Dayrell
+  - Victoria Estanislau
+  - Caio Santana
+  - Pedro Alzamora
+  - Marisa Vasconcelos
+  - Wagner Meira
+  - Virgilio Almeida
+  year: 2025
+  venue: WebSci'25
+  note: ''
+  url: https://arxiv.org/pdf/2502.03433
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: Detecção de Discursos Racistas em Português na Rede Social X
+  authors:
+  - João Vítor Vaz
+  - Fabricio Benevenuto
+  - Jussara Almeida
+  - Marcos Gonçalves
+  - Marisa Vasconcelos
+  year: 2025
+  venue: BraSNAM'25
+  note: ''
+  url: https://sol.sbc.org.br/index.php/brasnam/article/view/36381/36168
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: Avaliação do Desempenho de Abordagens Computacionais para Inferência Automática
+    de Tons de Pele
+  authors:
+  - Igor Costa
+  - Thais Silva
+  - Marisa Vasconcelos
+  - Julio Reis
+  - Jussara Almeida and Virgilio Almeida
+  year: 2024
+  venue: LAAI
+  note: ''
+  url: https://sol.sbc.org.br/index.php/laai-ethics/article/view/32463/32260
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: 'Disappearing Without a Trace: Coverage, Community, Quality, and Temporal
+    Dynamics of Wikipedia Articles on Endangered Brazilian Indigenous Languages'
+  authors:
+  - Marisa Vasconcelos
+  - Priscila Rocha
+  - Claudio Pinhanez
+  year: 2024
+  venue: ICWSM'24
+  note: ''
+  url: https://ojs.aaai.org/index.php/ICWSM/article/view/31407/33567
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: Balancing Social Impact, Opportunities, and Ethical Constraints of Using
+    AI in the Documentation and Vitalization of Indigenous Languages
+  authors:
+  - Claudio Pinhanez
+  - Paulo Cavalin
+  - Marisa Vasconcelos
+  - Julio Nogima
+  year: 2023
+  venue: IJCAI'23
+  note: ''
+  url: https://www.ijcai.org/proceedings/2023/0685.pdf
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: Elaboraçao de um Conjunto de Dados sobre o Registro de Patentes no Brasil
+  authors:
+  - Nicolas Rezende
+  - Daniel Dalip
+  - Michele Brandão
+  - Marisa Vasconcelos
+  year: 2023
+  venue: DSW'23
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: 'Characterizing the Social Ties between Black and Tech
+
+    Communities on Twitter'
+  authors:
+  - Marisa Vasconcelos
+  - Priscila Rocha
+  - Julio Nogima
+  - Rogerio de Paula
+  year: 2022
+  venue: WebSci'22
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: A Study of Misinformation in Audio Messages Shared in WhatsApp Groups
+  authors:
+  - Alexandre Maros
+  - Jussara Almeida
+  - Marisa Vasconcelos
+  year: 2021
+  venue: MISDOOM'21
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: Towards a Method to Classify Language Style for Enhancing Conversational
+    Systems
+  authors:
+  - Paulo Cavalin
+  - Victor Ribeiro
+  - Marisa Vasconcelos
+  - Claudio Pinhanez
+  - Julio Nogima
+  - Henrique Ferreira
+  year: 2021
+  venue: IJCNN'21
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: Caracterização do Debate no Twitter sobre a Vacinação contra a COVID-19 no
+    Brasil
+  authors:
+  - Larissa Malagoli
+  - Julia Stancioli
+  - Carlos Ferreira
+  - Marisa Vasconcelos
+  - Ana Paula da Silva
+  - Jussara Almeida
+  year: 2021
+  venue: BraSNAM'21
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: A Look into COVID-19 Vaccination Debate on Twitter
+  authors:
+  - Larissa Malagoli
+  - Julia Stancioli
+  - Carlos Ferreira
+  - Marisa Vasconcelos
+  - Ana Paula da Silva
+  - Jussara Almeida
+  year: 2021
+  venue: WebSci'21
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: 'Using Facebook Ads data to Assess Gender Balance in STEM: Evidences from
+    Brazil'
+  authors:
+  - Carolina Vieira
+  - Marisa Vasconcelos
+  year: 2021
+  venue: DSSGW'21
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: Connecting Underrepresented Minorities and Qualified Job Positions Using
+    Online Data
+  authors:
+  - Maysa Macedo
+  - Marisa Vasconcelos
+  - Andrea Brito
+  - Rogerio de Paula
+  year: 2021
+  venue: RDAI'21
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: 'Identificando Influências na Escolha de uma Graduação em Exatas: um Estudo
+    Qualitativo e Comparativo de Gênero'
+  authors:
+  - Maysa Macedo
+  - Andrea Britto Mattos
+  - Marisa Vasconcelos
+  - Alexandre Martinazzo
+  - Roseli Lopes
+  year: 2018
+  venue: WIT'18
+  note: ''
+  url: https://sol.sbc.org.br/index.php/wit/article/view/3377
+  pdf: ''
+  doi: 10.5753/wit.2018.3377
+  abstract: ''
+- title: From Disjoint Sets to Parallel Data to Train Seq2Seq Models for Sentiment
+    Transfer
+  authors:
+  - Paulo Cavalin
+  - Marisa Vasconcelos
+  - Marcelo Grave
+  - Claudio Pinhanez
+  - Victor Ribeiro
+  year: 2020
+  venue: EMNLP'20
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: Identifying and Characterizing Alternative News Media on Facebook
+  authors:
+  - Samuel Guimarães
+  - Julio Reis
+  - Lucas Lima
+  - Filipe Ribeiro
+  - Marisa Vasconcelos
+  - Jinsun An
+  - Haewoon Kwak
+  - Fabricio Benevenuto
+  year: 2020
+  venue: ASONAM'20
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: Creating Corpora for Seq2Seq Tone Rephrasing Using Social Media Posts
+  authors:
+  - Paulo Cavalin
+  - Marisa Vasconcelos
+  - Marcelo Grave
+  - Claudio Pinhanez
+  year: 2020
+  venue: IJCNN'20
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: Analyzing YouTube Videos Shared on Whatsapp in the Early COVID-19 Crisis
+  authors:
+  - Marisa Vasconcelos
+  - Erica Pereira
+  - Samuel Guimarães
+  - Manoel Ribeiro
+  - Philipe Melo
+  - Fabricio Benevenuto
+  year: 2020
+  venue: WebMedia'20
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: Analyzing the Use of Audio Messages in WhatsApp Groups
+  authors:
+  - Alexandre Maros
+  - Jussara Almeida
+  - Fabricio Benevenuto
+  - Marisa Vasconcelos
+  year: 2020
+  venue: TheWebConf'20
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: 'Live It Up: Analyzing Emotions and Language Use in Tweets during the Soccer
+    World Cup Final'
+  authors:
+  - Marisa Vasconcelos
+  - Jussara Almeida
+  - Paulo Cavalin
+  - Claudio Pinhanez
+  year: 2019
+  venue: WebSci'19
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: Analyzing the Spread of Textual Information in Whatsapp Groups
+  authors:
+  - Gustavo Resende
+  - Philipe Melo
+  - Julio Reis
+  - Marisa Vasconcelos
+  - Jussara Almeida
+  - Fabricio Benevenuto
+  year: 2019
+  venue: WebSci'19
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: '(Mis)Information Dissemination in WhatsApp: Gathering, Analyzing and Countermeasures'
+  authors:
+  - Gustavo Resende
+  - Philipe Melo
+  - Hugo Sousa
+  - Johnnatan Messias
+  - Marisa Vasconcelos
+  - Jussara Almeida
+  - Fabrício Benevenuto
+  year: 2019
+  venue: TheWebConf'19
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: The Effect of Audiences on the User Experience with Conversational Interfaces
+    in Physical Spaces
+  authors:
+  - Heloisa Candello
+  - Claudio Pinhanez
+  - Mauro Pichiliani
+  - Paulo Cavalin
+  - Flavio Figueiredo
+  - Marisa Vasconcelos
+  - Haylla Do Carmo
+  year: 2019
+  venue: CHI'19
+  note: Honorable Mention
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: Can Direct Address Affect User Engagement with Chatbots Embodied in Physical
+    Spaces?
+  authors:
+  - Heloisa Candello
+  - Claudio Pinhanez
+  - Mauro Pichiliani
+  - Marisa Vasconcelos
+  - Haylla Do Carmo
+  year: 2019
+  venue: CUI'19
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: 'Ravel: A MAS orchestration platform for Human-Chatbots Conversations'
+  authors:
+  - Maira de Bayser
+  - Claudio Pinhanez
+  - Heloisa Candello
+  - Marisa Vasconcelos, Mauro Pichiliani
+  - Melina Guerra
+  - Paulo Cavalin
+  - Renan Souza
+  year: 2018
+  venue: EMAS'18
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: A System for Monitoring Public Political Groups in WhatsApp
+  authors:
+  - Gustavo Resende
+  - Johnnatan Messias
+  - M{\'a}rcio Silva
+  - Jussara Almeida
+  - Marisa Vasconcelos
+  - Fabricio Benevenuto
+  year: 2018
+  venue: WebMedia'18
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: 'Bottester: Testing Conversational Systems with Simulated Users'
+  authors:
+  - Marisa Vasconcelos
+  - Heloisa Candello
+  - Claudio Pinhanez
+  year: 2017
+  venue: IHC'17
+  note: Best paper
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: Popularity Dynamics of Foursquare Micro-Reviews
+  authors:
+  - Marisa Vasconcelos
+  - Jussara Almeida
+  - Marcos Gon\c{c}alves
+  year: 2014
+  venue: COSN'14
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: What Makes Your Opinion Popular? Predicting the Popularity of Micro-Reviews
+    in Foursquare
+  authors:
+  - Marisa Vasconcelos
+  - Jussara Almeida
+  - Marcos Gon\c{c}alves
+  year: 2014
+  venue: SAC'14
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: Polarity Detection of Foursquare Tips
+  authors:
+  - Felipe Moraes
+  - Marisa Vasconcelos
+  - Patrick Prado
+  - Daniel Dalip
+  - Jussara Almeida
+  - Marcos Gon\c{c}alves
+  year: 2013
+  venue: SocInfo'13
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: 'Beware of What You Share: Inferring Home Location in Social Networks'
+  authors:
+  - Tatiana Pontes
+  - Gabriel Magno
+  - Marisa Vasconcelos
+  - Aditi Gupta
+  - Jusara Almeida
+  - Ponnurangam Kumaraguru
+  - Virgilio Almeida
+  year: 2012
+  venue: PinSoDa'12
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: 'We Know Where You Live: Privacy Characterization of Foursquare Behavior'
+  authors:
+  - Tatiana Pontes
+  - Marisa Vasconcelos
+  - Jussara Almeida
+  - Ponnurangam Kumaraguru
+  - Virgilio Almeida
+  year: 2012
+  venue: LBSN'12
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: 'Tips, Dones and Todos: Uncovering User Profiles in Foursquare'
+  authors:
+  - Vasconcelos, Marisa
+  - Ricci, Saulo
+  - Almeida, Jussara
+  - Benevenuto, Fabr\'{\i}cio
+  - Almeida, Virg\'{\i}lio
+  year: 2012
+  venue: WSDM'12
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: Impact of Peer Incentives on the Dissemination of Polluted Content
+  authors:
+  - Benevenuto, Fabr\'{\i}cio
+  - Costa, Cristiano
+  - Vasconcelos, Marisa
+  - Almeida, Virg\'{\i}lio
+  - Almeida, Jussara
+  - Mowbray, Miranda
+  year: 2006
+  venue: SAC'06
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: 'Peer-to-Peer over Ad-Hoc Networks: (Re)Configuration Algorithms'
+  authors:
+  - Franciscani, Fernanda
+  - Vasconcelos, Marisa A.
+  - Couto, Rainer
+  - Loureiro, Antonio
+  year: 2003
+  venue: IPDPS'03
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''
+- title: Quantitative Analysis of Strategies for Streaming Media Distribution
+  authors:
+  - Vasconcelos, Marisa
+  - Rocha, Leonardo
+  - Santos, Juliano
+  - Ismael,Jr., Jos{\'e}
+  - da Mata, Leonardo
+  - Almeida, Jussara
+  - Meira,Jr., Wagner
+  - Almeida, Virg\'{\i}lio
+  year: 2003
+  venue: LA-WEB'03
+  note: ''
+  url: ''
+  pdf: ''
+  doi: ''
+  abstract: ''

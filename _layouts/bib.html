@@ -1,40 +1,28 @@
----
----
 
-<!-- <script>
-function toggleBibtex{{entry.key}}(parameter) {
-    var x= document.getElementById('a{{entry.key}}');
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-    } else {
-        x.style.display = 'none';
-    }
-}
-</script> -->
 
-{% if entry.series %}
+<body>
+  <header>
+    {% include header.html %}
+  </header>
 
-    <div class="publication-item">
-        <!-- Authors -->
-        {% for author in entry.author_array %}
-            {{ author.first }} {{ author.last }}{% unless forloop.last %},{% endunless %}
-        {% endfor %}
-        :
+  <main class="container-publications">
+    <!-- Conferences -->
+    <section id="conferences">
+      <h2>Conferences</h2>
+      {% bibliography --file publications %}
+    </section>
 
-        <!-- Title -->
-        <strong>{{ entry.title }}</strong>.
+    <!-- Journals -->
+    <section id="journals">
+      <h2>Journals</h2>
+      {% bibliography --file journals %}
+    </section>
 
-        <!-- Series (Venue), Month, Year -->
-        In: <i>{{ entry.series }}</i>, {{ entry.month_string }} {{ entry.year }}.
-    </div>
-        
-
-    {% else %} 
-    {{entry.date}}
-    {% for author in entry.author_array %}
-        {{ author.first }} {{ author.last }}{% unless forloop.last %},{% endunless %}{% if forloop.last %}.{% endif%}
-    {% endfor %}
-    <b>{{ entry.title }}</b>. {{ entry.month_string }} {{ entry.year }}, {{entry.note}}.<br>
-
-{% endif %}
-
+    <!-- Patents -->
+    <section id="patents">
+      <h2>Patents</h2>
+      {% bibliography --file patents --sort_by year,month --order descending %}
+    </section>
+  </main>
+</body>
+</html>

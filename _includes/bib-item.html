@@ -1,0 +1,81 @@
+{%- comment -%}
+Template de item para jekyll-scholar.
+Usa data-atributos para filtros (ano/tipo) e bold no seu nome.
+{%- endcomment -%}
+
+{%- assign t = entry.type | downcase -%}
+{%- case t -%}
+  {%- when 'article' -%}{%- assign badge = '📄' -%}
+  {%- when 'inproceedings' -%}{%- assign badge = '🎤' -%}
+  {%- when 'phdthesis' -%}{%- assign badge = '🎓' -%}
+  {%- when 'mastersthesis' -%}{%- assign badge = '🎓' -%}
+  {%- when 'techreport' -%}{%- assign badge = '📑' -%}
+  {%- else -%}{%- assign badge = '🔍' -%}
+{%- endcase -%}
+{%- if entry.award or entry.note contains 'Best' or entry.note contains 'award' -%}{%- assign badge = '🏆' -%}{%- endif -%}
+
+{%- comment -%} Melhor link: PDF > DOI > URL {%- endcomment -%}
+{%- assign link = nil -%}
+{%- if entry.pdf -%}{%- assign link = entry.pdf -%}{%- endif -%}
+{%- if link == nil and entry.doi -%}{%- assign link = 'https://doi.org/' | append: entry.doi -%}{%- endif -%}
+{%- if link == nil and entry.url -%}{%- assign link = entry.url -%}{%- endif -%}
+
+{%- capture authors_str -%}
+  {%- if entry.author_array -%}
+    {%- for a in entry.author_array -%}
+      {%- assign full = a.first | append: ' ' | append: a.last -%}
+      {%- assign rev  = a.last | append: ', ' | append: a.first -%}
+      {%- if full contains 'Marisa' and full contains 'Vasconcelos' or
+            rev  contains 'Vasconcelos' and rev contains 'Marisa' -%}
+        <strong>{{ full }}</strong>
+      {%- else -%}
+        {{ full }}
+      {%- endif -%}
+      {%- unless forloop.last -%}, {% endunless -%}
+    {%- endfor -%}
+  {%- else -%}
+    {{ reference
+       | replace: 'Marisa Vasconcelos','<strong>Marisa Vasconcelos</strong>'
+       | replace: 'Vasconcelos, Marisa','<strong>Vasconcelos, Marisa</strong>' }}
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- assign venue = entry.journal | default: entry.booktitle | default: entry.school | default: entry.publisher -%}
+{%- assign year  = entry.year | default: '' -%}
+
+<article class="pub" data-year="{{ year }}" data-type="{{ t }}">
+  <div class="pub-badge" title="{{ t }}">{{ badge }}</div>
+
+  <div class="pub-main">
+    <h3 class="pub-title">
+      {%- if link -%}
+        <a href="{{ link }}" target="_blank" rel="noopener">{{ entry.title }}</a>
+      {%- else -%}
+        {{ entry.title }}
+      {%- endif -%}
+    </h3>
+
+    <p class="pub-authors">{{ authors_str }}</p>
+
+    <p class="pub-venue">
+      {%- if venue -%}<em>{{ venue }}</em>{%- endif -%}
+      {%- if year -%}{% if venue %} — {% endif %}{{ year }}{%- endif -%}
+    </p>
+
+    {%- if entry.abstract -%}
+      <p class="pub-abstract">{{ entry.abstract | strip_html | strip_newlines | truncate: 220 }}</p>
+    {%- endif -%}
+
+    <p class="pub-links">
+      {%- if entry.pdf -%}<a href="{{ entry.pdf }}" target="_blank" rel="noopener">PDF</a>{% endif -%}
+      {%- if entry.doi -%}
+        {%- if entry.pdf %} · {% endif -%}
+        <a href="https://doi.org/{{ entry.doi }}" target="_blank" rel="noopener">DOI</a>
+      {%- endif -%}
+      {%- if entry.url -%}
+        {%- if entry.pdf or entry.doi %} · {% endif -%}
+        <a href="{{ entry.url }}" target="_blank" rel="noopener">Link</a>
+      {%- endif -%}
+    </p>
+  </div>
+</article>
