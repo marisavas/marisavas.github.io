@@ -1,0 +1,13 @@
+<header class="site-header">
+  <div class="container-header">
+    <h1>Marisa Vasconcelos</h1>
+    <hr>
+    <nav class="links">
+      <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a>
+      <a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">About</a>
+      <a href="{{ '/research/' | relative_url }}" class="{% if page.url == '/research/' %}active{% endif %}">Research</a>
+      <a href="{{ '/publications/' | relative_url }}" class="{% if page.url == '/publications/' %}active{% endif %}">Publications</a>
+      <a href="{{ '/contact/' | relative_url }}" class="{% if page.url == '/contact/' %}active{% endif %}">Contact</a>
+    </nav>
+  </div>
+</header>

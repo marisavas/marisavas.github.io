@@ -1,77 +1,63 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = [
+    { id: "conferences", page: 1 },
+    { id: "journals", page: 1 },
+    { id: "patents", page: 1 }
+  ];
 
-    const itemsPerPage = 4;
+  const ITEMS_PER_PAGE = 4;
 
-    // Mapeia listId para a classe singular usada no CSS
-    const typeClassMap = {
-      conferences: "conference",
-      journals: "journal",
-      patents: "patent"
-  };
+  sections.forEach(section => {
+    const listElement = document.getElementById(`${section.id}-list`);
+    const dataElement = document.getElementById(`${section.id}-data`);
+    const prevBtn = document.getElementById(`${section.id}-prev`);
+    const nextBtn = document.getElementById(`${section.id}-next`);
 
-    function initPagination(listId, dataId) {
-        const listElement = document.getElementById(`${listId}-list`);
-        const data = JSON.parse(document.getElementById(`${dataId}-data`).textContent);
-        let currentPage = 0;
+    if (!listElement || !dataElement) return;
 
-        const nextButton = document.getElementById(`${listId}-next`);
-        const prevButton = document.getElementById(`${listId}-prev`);
+    const data = JSON.parse(dataElement.textContent) || [];
 
-        // Evento Next
-        nextButton.addEventListener("click", () => {
-            currentPage++;
-            if (currentPage * itemsPerPage >= data.length) {
-                currentPage = 0; // volta para primeira página se passar do limite
-            }
-            renderPage();
-        });
+    const renderPage = () => {
+      listElement.innerHTML = "";
 
-        // Evento Previous
-        prevButton.addEventListener("click", () => {
-            currentPage--;
-            if (currentPage < 0) currentPage = 0;
-            renderPage();
-        });
+      const start = (section.page - 1) * ITEMS_PER_PAGE;
+      const end = start + ITEMS_PER_PAGE;
+      const pageItems = data.slice(start, end);
 
-        function renderPage() {
-            listElement.innerHTML = "";
-            const start = currentPage * itemsPerPage;
-            const end = start + itemsPerPage;
-            const pageItems = data.slice(start, end);
+      pageItems.forEach(item => {
+        const li = document.createElement("li");
+        li.innerHTML = formatPublication(item);
+        listElement.appendChild(li);
+      });
 
-            pageItems.forEach(item => {
-                const li = document.createElement("li");
-                // li.classList.add("publication-item", listId); // adiciona classe para ícone
-                li.classList.add("publication-item", typeClassMap[listId]);
+      // Controle de botões
+      prevBtn.style.display = section.page > 1 ? "inline-block" : "none";
+      nextBtn.style.display = end < data.length ? "inline-block" : "none";
+    };
 
-                const authors = item.authors.filter(a => a.trim() !== "");
-                const authorsHTML = authors.map(a => 
-                    a === "Marisa Vasconcelos" ? `<strong>${a}</strong>` : a
-                ).join(", ");
-
-                const venue = item.venue || item.note || "";
-                li.innerHTML = `${item.url ? `<a href="${item.url}" target="_blank">${item.title}</a>` : item.title}. ${authorsHTML}. <em>${venue}</em> (${item.year || ""})`;
-
-
-                listElement.appendChild(li);
-            });
-
-            // botão Next sempre azul
-            nextButton.classList.add("enabled");
-            nextButton.disabled = false;
-
-            // Mostrar ou esconder botão Previous
-            if (currentPage === 0) {
-                prevButton.style.display = "none";
-            } else {
-                prevButton.style.display = "inline-block";
-            }
-        }
-
+    // Eventos de paginação
+    prevBtn.addEventListener("click", () => {
+      if (section.page > 1) {
+        section.page--;
         renderPage();
-    }
+      }
+    });
 
-    initPagination("conferences", "conferences");
-    initPagination("journals", "journals");
-    initPagination("patents", "patents");
+    nextBtn.addEventListener("click", () => {
+      if ((section.page * ITEMS_PER_PAGE) < data.length) {
+        section.page++;
+        renderPage();
+      }
+    });
+
+    // Primeira renderização
+    renderPage();
+  });
+
+  function formatPublication(pub) {
+    // Ajusta conforme sua estrutura de dados
+    if (typeof pub === "string") return pub;
+    if (pub.title && pub.year) return `<strong>${pub.title}</strong> (${pub.year})`;
+    return JSON.stringify(pub);
+  }
 });

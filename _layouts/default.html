@@ -1,42 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    {% include head.html %}
-
-    <body>
-        {% assign jekyll_env = jekyll.environment %}
-        {% assign site_url = site.url %}
-        {% if site.github.url %}
-            {% assign site_url = site.github.url %}
-        {% endif %}
-        {% if jekyll_env == "development" %}
-            {% assign site_url = "http://localhost:4000" %}
-        {% endif %}
-
-        <header>
-            <div class="container_header"> 
-                <div class="name">
-                    <h1>Marisa Vasconcelos</h1>
-                    <hr style="color:inherit;border:0;border-top:1px solid;opacity:.25;margin-top:10px;margin-bottom:20px;">
-                </div>
-
-                <nav class="links">
-  <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' or page.url == '/index.html' %}active{% endif %}">Home</a>
-<a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' or page.url == '/about/index.html' %}active{% endif %}">More About Me</a>
-<a href="{{ '/publications/' | relative_url }}" class="{% if page.url == '/publications/' or page.url == '/publications/index.html' %}active{% endif %}">Publications</a>
-<a href="{{ '/projects/' | relative_url }}" class="{% if page.url == '/projects/' or page.url == '/projects/index.html' %}active{% endif %}">Projects</a>
-
-</nav>
-
-                
-            </div>
-        </header>
-
-        
-        {{ content }}
- 
-    </body>
+{% include head.html %}
+<body>
+  {% include header.html %}
+  {{ content }}
+</body>
 </html>
+
 
 
 

@@ -3,47 +3,111 @@ layout: default
 title: "About"
 permalink: /about/
 custom_css:
-    - styles_about
+  - styles-global
+  - about
 ---
 
-<article class="page">
-    <div class="container"></div>
-        <main>
-            <section class="about-section">
-                <p><b>Welcome!</b> I'm Marisa Vasconcelos, a passionate researcher in the dynamic field of Artificial Intelligence. My journey has taken me across both academia and industry, where I've consistently pushed the boundaries of innovation in AI.</p>
-            </section>
-            <section class="about-section">
-                <h3>Key Achievements</h3>
-                <ul>
-                    <li><strong>Academic Background</strong>: Ph.D. and Master's in Computer Science, with the Master's degree completed at Boston University.</li>
-                    <li><strong>Professional Experience</strong>: 25 years of research experience, including 7 years at IBM Research with expertise in Responsible AI. Author of 40 publications and 14 granted patents.</li>
-                    <li><strong>International Experience</strong>: Extensive international experience, including participation, presentations, and publications at international conferences, as well as working with global teams at IBM.</li>
-                    <li><strong>Commitment to Responsible AI</strong>: Conducts innovative research to assess and  mitigate AI risks, staying updated with advancements and sharing findings in prominent publications, while ensuring the consistent application of Responsible AI policies across technological frameworks.</li>
-                    <li><strong>STEM Advocate</strong>: Co-created the WINDS (Women in Data Science) workshop to promote diversity in tech.</li>
-                </ul>
-                <hr>
-            </section>  
-            <section class="about-section">
-                <h3>My Research Focus</h3>
-                <p>At the heart of my work is the intersection of technology and society. My research dives into Social Computing to uncover insights into human behavior and tackle critical issues like misinformation, hate speech, and cultural representation.</p>
-                <p>I'm particularly passionate about the ethical dimensions of technology. In the realm of <strong>Responsible AI</strong>, I explore key topics like fairness, transparency, and governance, striving to ensure that AI solutions are not only innovative but also ethically sound.</p>
-                <hr>
-            </section>
-            <section class="about-section">
-                <h3>Industry Experience</h3>
-                    <p>During my time as a <strong>Research Scientist at IBM Research Brazil</strong>, I had the opportunity to bridge theory and practice. I conducted advanced analyses of conversational agents (chatbots), improving user interactions, and exploring the impact of language and context on user experience. Additionally, I participated in Tech for Justice projects, analyzing the presence of underrepresented communities on social media , I also developed patents, including a method for auditing bias in AI systems. This experience deepened my understanding of systems and improved my skills in <strong>Human-Computer Interaction (HCI)</strong>.</p><hr>
-            </section>
-            <section class="about-section">
-                <h3>What Drives Me</h3>
-                <p>I believe in the power of AI to solve complex problems and make a positive impact on society. With a strong foundation in both the theoretical and practical aspects of AI, I’m committed to developing solutions that are not only cutting-edge but also align with the highest ethical standards.</p><hr>
-            </section>
-            <section class="about-section">
-                <p style="font-weight: bold;color: #0056b3;">Let's Collaborate</p>
-                <p>If you're interested in pushing the boundaries of AI, whether in industry or academia, I'd love to connect! Let’s explore how we can work together to create innovative and responsible AI solutions.</p> 
-                <p class="hashtags">#ResponsibleAI #SocialComputing #MachineLearning #ResearchInnovation #STEMAdvocate #DiversityInTech</p> 
+<main class="container about-page">
 
-            </section>
+  <section class="intro-section">
+      <div class="welcome-text">Welcome!</div>
+      <p>
+        I'm Marisa Vasconcelos, a researcher at the intersection of technology and society. My current work focuses on how people perceive and engage with Artificial Intelligence, including its use in therapy, the emergence of personas in large language models, and how LLMs respond to social questions. I also explore social media as a context where technology shapes human behavior and collective perception.
+      </p>
+    </section>
 
-        </main>
-   
-</article>
+    <!-- Key Achievements -->
+    <section>
+      <h2 class="highlight">Key Achievements</h2>
+      <div class="journey-card">
+        <ul class="achievement-list">
+          <li>
+            <strong>Academic Background:</strong> Ph.D. and Master's in Computer Science, with the Master's degree completed at Boston University.
+          </li>
+          <li>
+            <strong>Professional Experience:</strong> 25 years of research experience, including 7 years at IBM Research with expertise in Responsible AI. Author of 40 publications and 14 granted patents.
+          </li>
+          <li>
+            <strong>International Experience:</strong> Extensive international experience, including participation, presentations, and publications at international conferences, as well as working with global teams at IBM.
+          </li>
+          <li>
+            <strong>Commitment to Responsible AI:</strong> Conducts innovative research to assess and mitigate AI risks, staying updated with advancements and sharing findings in prominent publications, while ensuring the consistent application of Responsible AI policies across technological frameworks.
+          </li>
+          <li>
+            <strong>STEM Advocate:</strong> Co-created the WINDS (Women in Data Science) workshop to promote diversity in tech.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Research Focus -->
+    <section>
+      <h2 class="highlight">My Research Focus</h2>
+      <div class="cards-container">
+        <div class="card highlight-card">
+          <h3>Technology & Society</h3>
+          <p>
+            At the heart of my work is the intersection of technology and society. I study how technologies, including social media and AI, shape human behavior, discourse, and cultural representation.
+          </p>
+        </div>
+
+        <div class="card highlight-card">
+          <h3>Artificial Intelligence</h3>
+            <p> I focus on understanding how people perceive and interact with AI, including its use in therapy, the emergence of personas in large language models, and how LLMs respond to social questions.</p>
+        </div>
+
+
+        <div class="card highlight-card">
+          <h3>AI Governance & Ethics</h3>
+          <p>
+            I study ethical AI governance, combining audits, teaching, and course development. My work aims to ensure that AI technologies are applied responsibly and ethically.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- Industry Experience -->
+    <section>
+      <h2 class="highlight">Industry Experience</h2>
+      <div class="journey-card">
+        <p>
+          During my time as a <strong>Research Scientist at IBM Research Brazil</strong>, I had the opportunity to bridge theory and practice. I conducted advanced analyses of conversational agents (chatbots), improving user interactions, and exploring the impact of language and context on user experience.
+        </p>
+        <p>
+          Additionally, I participated in Tech for Justice projects, analyzing the presence of underrepresented communities on social media. I also developed patents, including a method for auditing bias in AI systems. This experience deepened my understanding of systems and improved my skills in <strong>Human-Computer Interaction (HCI)</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- What Drives Me -->
+    <section>
+      <h2 class="highlight">What Drives Me</h2>
+      <div class="journey-card">
+        <p>
+          I believe in the power of AI to solve complex problems and make a positive impact on society. With a strong foundation in both the theoretical and practical aspects of AI, I'm committed to developing solutions that are not only cutting-edge but also align with the highest ethical standards.  I am passionate about understanding how people perceive and engage with AI, and how these technologies shape society. My work aims to explore the human side of AI, from its use in therapy to the emergence of personas in large language models, always considering its broader social and cultural impact.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- Let's Collaborate -->
+    <section>
+      <h2 class="highlight">Let's Collaborate</h2>
+      <div class="journey-card">
+        <p>
+          If you're interested in exploring how people interact with AI or the societal impact of digital technologies, I'd love to connect! Let's work together to create innovative, human-centered AI solutions.
+        </p>
+        <div style="margin-top: 20px;">
+          <span style="color: #0056b3; font-weight: 600;">
+            #HumanCenteredAI #ResponsibleAI #SocialComputing #ResearchInnovation #STEMAdvocate #DiversityInTech
+          </span>
+        </div>
+      </div>
+    </section>
+
+
+
+</main>
