@@ -1,0 +1,3291 @@
+diff --git a/.DS_Store b/.DS_Store
+deleted file mode 100644
+index ce6632764527a733f9ab22b8b42d3fce5d5a273e..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+HcmV?d00001
+
+literal 6148
+zcmeHKJxc>Y5PhRT1F=Y_<(5`LYMUcO#M&RA<V-}octW(WyT<?EztuN8quiYbb|NwZ
+zyKi=P-t69k+YbOTf4-RkQvhQYMNwzKw0m%9$Ad>i$vM`z!!1tmg3Umpzu2W~pWq55
+zYCNF5{_3Kt%VkwB8KLr=vK+r>qX+Df^+?thPuO;2<+T^Pk8`Z3iRQ1c>O~(i`mL4u
+zpc_p+E6!8mzQ@y9+B`PHLV-{q6bJ=Efgcs%nXNXS7)BimgaV<!mjb#!Bo@WOu`$eB
+z2dn%9AnG+b8-2YjD<?S?j*THlXkt{NQN^DaVs!Q=k1HG-L!(3d@gY9*=i^24?988X
+zIHWL)Iur;6x(e)CbE@b68Go6<M}C(QtxzBo_-6{pXmPoi^P~K1{q}i!)+Ux~7B!7)
+o)S=PuTmsn8edH()+IUi*afM@Js9Cf>(}{5r$bv)_3jBfsACd(^n*aa+
+
+diff --git a/.gitignore b/.gitignore
+index bfb3d90..d8d3173 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -4,6 +4,18 @@ _gh_pages
+ _no-include
+ _original_posts_for_reference
+ 
++# Jekyll build output (built fresh by CI, deployed to gh-pages — never commit to master)
++_site/
++_bibliography/_site/
++
++# Retired duplicate stylesheet directory (superseded by assets/css/)
++public/css/
++
++# Obsolete/backup file patterns
++backup/
++*.old
++*.old_fut
++
+ # extensions
+ *.gem
+ *.diff
+diff --git a/_bibliography/_site/bib_to_yaml.py b/_bibliography/_site/bib_to_yaml.py
+deleted file mode 100644
+index 64aedf0..0000000
+--- a/_bibliography/_site/bib_to_yaml.py
++++ /dev/null
+@@ -1,46 +0,0 @@
+-#!/usr/bin/env python3
+-# -*- coding: utf-8 -*-
+-
+-import bibtexparser
+-import yaml
+-import os
+-
+-# Mapear os arquivos .bib para os arquivos .yml
+-files = {
+-    "publications.bib": "publications.yml",
+-    "journals.bib": "journals.yml",
+-    "patents.bib": "patents.yml"
+-}
+-
+-def bib_to_yaml(bib_file, yml_file):
+-    if not os.path.exists(bib_file):
+-        print("Atenção: {} não encontrado. Pulando.".format(bib_file))
+-        return
+-    
+-    with open(bib_file, encoding='utf-8') as bib:
+-        bib_database = bibtexparser.load(bib)
+-    
+-    yaml_list = []
+-    for entry in bib_database.entries:
+-        item = {
+-            'title': entry.get('title', ''),
+-            'authors': [a.strip() for a in entry.get('author', '').split(' and ')],
+-            'year': int(entry.get('year', 0)) if entry.get('year') else None,
+-            'venue': entry.get('journal', entry.get('booktitle', '')),
+-            'url': entry.get('url', ''),
+-            'pdf': entry.get('file', ''),
+-            'doi': entry.get('doi', ''),
+-            'abstract': entry.get('abstract', '')
+-        }
+-        yaml_list.append(item)
+-    
+-    with open(yml_file, 'w', encoding='utf-8') as yml:
+-        yaml.dump(yaml_list, yml, sort_keys=False, allow_unicode=True)
+-    
+-    print("{} → {} concluído!".format(bib_file, yml_file))
+-
+-
+-# Executar a conversão para todos os arquivos
+-for bib_file, yml_file in files.items():
+-    yml_file = f'../_data/{yml_file}'
+-    bib_to_yaml(bib_file, yml_file)
+diff --git a/_bibliography/_site/item.html b/_bibliography/_site/item.html
+deleted file mode 100644
+index b2a3b1b..0000000
+--- a/_bibliography/_site/item.html
++++ /dev/null
+@@ -1,65 +0,0 @@
+-<!-- _bibliography/item.html -->
+-
+-<div class="publication-item">
+-  {% assign item_type = entry.entry_type | downcase %}
+-
+-  <!-- Ícone por tipo -->
+-  {% if item_type == "inproceedings" %}
+-    <span class="pub-icon">📄</span>
+-  {% elsif item_type == "article" %}
+-    <span class="pub-icon">📰</span>
+-  {% elsif item_type == "patent" %}
+-    <span class="pub-icon">🏆</span>
+-  {% else %}
+-    <span class="pub-icon">🔍</span>
+-  {% endif %}
+-
+-  <!-- Título com link -->
+-  <strong>
+-    {% if entry.url %}
+-      <a href="{{ entry.url }}" target="_blank">{{ entry.title | escape }}</a>
+-    {% else %}
+-      {{ entry.title | escape }}
+-    {% endif %}
+-  </strong>
+-
+-  <!-- Autores (destaque para você) -->
+-  <div class="pub-authors">
+-    {% assign authors = entry.author | split: " and " %}
+-    {% for author in authors %}
+-      {% assign clean_author = author | strip %}
+-      {% if clean_author contains "Marisa Vasconcelos" %}
+-        <strong>{{ clean_author }}</strong>
+-      {% else %}
+-        {{ clean_author }}
+-      {% endif %}
+-      {% unless forloop.last %}, {% endunless %}
+-    {% endfor %}
+-  </div>
+-
+-  <!-- Conferência / Journal / Ano -->
+-  <div class="pub-meta">
+-    {% if entry.journal %}
+-      {{ entry.journal }}
+-    {% elsif entry.booktitle %}
+-      {{ entry.booktitle }}
+-    {% endif %}
+-    {% if entry.year %} — {{ entry.year }}{% endif %}
+-  </div>
+-
+-  <!-- Resumo se houver -->
+-  {% if entry.abstract %}
+-    <div class="pub-abstract">{{ entry.abstract | markdownify }}</div>
+-  {% endif %}
+-
+-  <!-- Links extras -->
+-  <div class="pub-links">
+-    {% if entry.doi %}
+-      <a href="https://doi.org/{{ entry.doi }}" target="_blank">DOI</a>
+-    {% endif %}
+-    {% if entry.pdf %}
+-      <a href="{{ entry.pdf }}" target="_blank">PDF</a>
+-    {% endif %}
+-  </div>
+-</div>
+-<hr>
+diff --git a/_bibliography/_site/journals.bib b/_bibliography/_site/journals.bib
+deleted file mode 100644
+index 099bcbd..0000000
+--- a/_bibliography/_site/journals.bib
++++ /dev/null
+@@ -1,54 +0,0 @@
+-@article{reddy23higher,
+-author={Thania Faria and Marisa Vasconcelos and Regina Bernal and  Gregore Mielke and  Juliana Souza and  Crizian Gomes and  Marcos Gonçalves and Jussara Almeida and  Deborah Malta},
+-title={Improving the mapping of leisure-time physical activity inequities: the use of artificial intelligence to advance estimates of small-areas in Brazil},
+-journal={Public Health},
+-volume={243},
+-year={2025},
+-pages = {105727},
+-series={Public Health}
+-}
+-
+-@article{reddy23higher,
+-author={Michelle Reddy and Júlio Nardelli and Yuri Pereira and Leonardo Oliveira and Thiago Silva, Marisa Vasconcelos and Mark Horowitz},
+-title={Higher education’s influence on social networks and entrepreneurship in Brazil},
+-journal={Social Network Analysis and Mining},
+-volume={13},
+-year={2023},
+-pages={1-21},
+-link={https://link.springer.com/article/10.1007/s13278-022-01011-6},
+-series={SNAM}
+-}
+-
+-@article{guimaraes21characterizing,
+-author={Samuel Guimarães and Julio Reis and Marisa Vasconcelos},
+-title={Characterizing political bias and comments associated with news on Brazilian Facebook},
+-journal={Social Network Analysis and Mining},
+-volume={11},
+-year={2021},
+-pages={1869-5469},
+-link={https://www.researchgate.net/publication/355182644_Characterizing_political_bias_and_comments_associated_with_news_on_Brazilian_Facebook},
+-series={SNAM}
+-}
+-
+-@article{vasconcelos15predicting,
+-author = {Marisa Vasconcelos and Jussara Almeida and Marcos Gon\c{c}alves},
+-title = {{Predicting the Popularity of Micro-Reviews: A Foursquare Case Study}},
+-journal = {Elsevier Information Sciences},
+-volume={325},
+-pages={355-374},
+-year={2015},
+-link={vasconcelos15predicting.pdf},
+-series={Inf.Sci.}
+-}
+-
+-@article{Franciscani:2005:journal,
+-   author = {Franciscani, Fernanda  and Vasconcelos, Marisa  and Couto, Rainer and Loureiro, Antonio},
+-   title = {{(Re)configuration Algorithms for Peer-to-Peer over Ad Hoc Networks}},
+-   journal = {Journal of Parallel Distributed Computing},
+-   volume = {65},
+-   number = {2},
+-   pages={234-245},
+-   year = {2005},
+-   series={JPDC},
+-   label={last}
+-   }
+diff --git a/_bibliography/_site/patents.bib b/_bibliography/_site/patents.bib
+deleted file mode 100644
+index 28f2b2a..0000000
+--- a/_bibliography/_site/patents.bib
++++ /dev/null
+@@ -1,221 +0,0 @@
+-@misc{santana25prompt,
+-title={Prompt Registration and Reuse},
+-author={Vagner De Santana and Marisa Vasconcelos, Melina Guerra and Michael Feffer and Sara Berger},
+-month={July},
+-month_string={July},
+-year={2025},
+-note={US Patent 18408204},
+-howpublished={US Patent}
+-}
+-
+-@misc{santana25responsible,
+-title={Responsible Prompt Recommendation},
+-author={Vagner De Santana and Marisa Vasconcelos, Melina Guerra and Michael Feffer and Sara Berger and Tianyu Su},
+-month={July},
+-month_string={July},
+-year={2025},
+-note={US Patent 18408254},
+-howpublished={US Patent}
+-}
+-
+-@misc{vasconcelos24personalized,
+-title={Personalized alert generation based on information dissemination},
+-author={Marisa Vasconcelos and Mu Qiao and Nicholas Linck and Yuya Ong and Claudio Pinhanez and Rogerio De Paula},
+-month={September},
+-month_string={September},
+-year={2024},
+-note={US Patent 12086817},
+-howpublished={US Patent}
+-}
+-
+-@misc{santana24mediating,
+-title={Mediating between social networks and payed curated content producers in misinformative content mitigation},
+-author={Vagner De Santana and Marisa Vasconcelos and Mauro Pichiliani and Heloisa Candello},
+-month={February},
+-month_string={February},
+-year={2024},
+-note={US Patent 11900480},
+-howpublished={US Patent}
+-}
+-
+-@misc{media2023system,
+-  title={{Media Transactions Consent Management}},
+-  author={Carlos Cardonha and Marisa Vasconcelos and Andrea Lima and Miguel Quinones},
+-  year={2023},
+-  month={September},
+-  month_string={September},
+-  note={US Patent 11768923},
+-  howpublished={US Patent}
+-}
+-
+-@misc{avegliano23artificial,
+-title={Artificial intelligence generated synthetic image data for use with machine language models},
+-author={Priscilla Avegliano and Andrea Lima and Marisa Vasconcelos and Dario Oliveira},
+-month={June},
+-month_string={June},
+-year={2023},
+-note={US Patent 11687620},
+-howpublished={US Patent}
+-}
+-
+-
+-@misc{pichiliani22training,
+-title={Training chatbots for remote troubleshooting},
+-author={Mauro Pichiliani and Heloisa Candello and Marisa Vasconcelos and Vagner De Santana},
+-month={July},
+-month_string={July},
+-year={2022},
+-note={US Patent 11379253},
+-howpublished={US Patent}
+-}
+-
+-
+-
+-
+-
+-@misc{linck22presenting,
+-title={Presenting thought-provoking questions and answers in response to misinformation},
+-author={Nicholas Linck and Mu Qiao and Yuya Ong and Marisa Vasconcelos and Claudio Pinhanez and Rogerio De Paula},
+-month={August},
+-month_string={August},
+-year={2022},
+-note={US Patent App. 17184668},
+-howpublished={US Patent}
+-}
+-
+-
+-@misc{candello2022support,
+-title={Support request assignment using pace of conversation},
+-author={Heloisa Candello and Marisa Vasconcelos and Jaione Azpiroz and Marco Netto},
+-month={February},
+-month_string={February},
+-year={2022},
+-note={US Patent 11252202},
+-howpublished={US Patent}
+-}
+-
+-@misc{system2022bias,
+-  title={{Audit Machine Learning Models Against Bias}},
+-  author={Marisa Vasconcelos and Carlos Cardonha},
+-  month={March},
+-  month_string={March},
+-  year={2022},
+-  note={US Patent 11263550},
+-  howpublished={US Patent}
+-  }
+-
+-@misc{diaz2021system,
+-title={System, method and computer program product for dispatching of medical emergencies and wait time control},
+-author={Carlos Cardonha and Jorge Diaz and Bernardo Goncalves and Marisa Vasconcelos},
+-month={September},
+-month_string={September},
+-year={2021},
+-note={US Patent 1152107},
+-howpublished={US Patent}
+-}
+-
+-@misc{appel2021supply,
+-  title={{Supply Chain Forecasting System}},
+-  author={Ana Appel and Igor Oliveira and Marisa Vasconcelos and Ricardo Franco},
+-  month={September},
+-  month_string={September},
+-  year={2021},
+-  note={US Patent 11126957},
+-  howpublished={US Patent}
+-}
+-
+-@misc{media2021system,
+-  title={{Generating Image Capture Configurations and Compositions}},
+-  author={Marisa Vasconcelos and Carlos Cardonha and Andrea Lima and Miguel Quinones},
+-  month={February},
+-  month_string={February},
+-  year={2021},
+-  note={US Patent 10924661},
+-  howpublished={US Patent}
+-}
+-
+-@misc{appel2020human,
+-  title={{Human steering dashboard to analyze 360-degree market view for merchants based on financial transactions}},
+-  author={Ana Appel and Ricardo Franco and Marisa Vasconcelos},
+-  month={July},
+-  month_string={July},
+-  year={2020},
+-  note={US Patent 10614402},
+-  howpublished={US Patent}
+-}
+-
+-@misc{braz2018system,
+-  title={{System, method and computer program product for assessing the capabilities of a conversation agent via black box testing}},
+-  author={Braz, Alan and Candello, Heloisa and Pinhanez, Claudio and Vasconcelos, Marisa},
+-  year={2020},
+-  month={July},
+-  month_string={July},
+-  note={US Patent 10726827},
+-  howpublished={US Patent}
+-}
+-
+-@misc{vasconcelos20adapting,
+-  title={{Adapting conversational agent communications to different stylistic models}},
+-  author={Marisa Vasconcelos and Paulo Cavalin and Claudio Pinhanez and Heloisa Candello},
+-  year = {2022},
+-  month = {February},
+-  month_string = {February},
+-  note = {US Patent 11238100},
+-  howpublished = {US Patent}
+-}
+-
+-
+-
+-
+-
+-@misc{britto2021adapting,
+-    title={{Adapting communications according to audience profile from social media}},
+-    author={Andrea Lima and Carlos Cardonha and Marisa Vasconcelos and Miguel Quinones},
+-    year={2022},
+-    month={January},
+-    month_string={January},
+-    note={US Patent 11228544},
+-    howpublished={US Patent}
+-  }
+-
+-
+-  @misc{appel2018system,
+-    title={{System and method to recommend mitigation action using conversational agent}},
+-    author={Ana Appel and Heloisa Candello and Ricardo Franco and Claudio Pinhanez and Marisa Vasconcelos},
+-    year={2019},
+-    month={June},
+-    month_string={June},
+-    note={US Patent App. 15/849439},
+-    howpublished={US Patent}
+-  }
+-
+-  @misc{appel2018delivering,
+-    title={{Delivering Personalized Advertising}},
+-    author={Appel, Ana Paula and Candello, Heloisa and Cardonha, Carlos and Vasconcelos, Marisa},
+-    year={2018},
+-    month={July},
+-    month_string={July},
+-    note={US Patent App. 15/399036},
+-    howpublished={US Patent}
+-  }
+-
+-  @misc{appel2018detecting,
+-    title={{Detecting Vulnerabilities in a Supply Chain}},
+-    author={Appel, Ana Paula and Franco, Ricardo and Vasconcelos, Marisa},
+-    year={2018},
+-    month={July},
+-    month_string={July},
+-    note={US Patent App. 15/401222},
+-    howpublished={US Patent},
+-    label={last}
+-  }
+-
+-  @misc{cardonha2018data,
+-    title={Data-driven Urban Interventions Based on Crowdsourcing},
+-    author={Cardonha, Carlos and Goncalves, Bernardo and Diaz, Jorge and Vasconcelos, Marisa},
+-    year={2018},
+-    month={August},
+-    month_string={August},
+-    note={US Patent App. 15/424870},
+-    howpublished={US Patent}
+-  }
+diff --git a/_bibliography/_site/publications.bib b/_bibliography/_site/publications.bib
+deleted file mode 100644
+index 8320611..0000000
+--- a/_bibliography/_site/publications.bib
++++ /dev/null
+@@ -1,394 +0,0 @@
+-@inproceedings{buzelin25analyzing,
+-title={{Analyzing Political Discourse on Discord during the 2024 US Presidential Election}},
+-author={Arthur Buzelin and Pedro Dutenhefner and Marcelo Locatelli and Samira Malaquias and Pedro Bento and Yan Aquino, Lucas Dayrell and Victoria Estanislau and Caio Santana and Pedro Alzamora and Marisa Vasconcelos and Wagner Meira and Virgilio Almeida},
+-year={2025},
+-month={May},
+-booktitle={The Web Science Conference},
+-series={WebSci'25}
+-}
+-
+-
+-@inproceedings{vaz25deteccao,
+-title={{Detecção de Discursos Racistas em Português na Rede Social X}},
+-author={João Vítor Vaz and Fabricio Benevenuto and  Jussara Almeida and Marcos Gonçalves and Marisa Vasconcelos},
+-year={2025},
+-month={July},
+-booktitle={Brazilian Workshop on Social Network Analysis and Mining},
+-series={BraSNAM'25}
+-}
+-
+-@inproceedings{costa2024avaliaccao,
+-  title={Avaliaçao do Desempenho de Abordagens Computacionais para Inferência Automática de Tons de Pele},
+-  author={Costa, Igor and Silva, Thais  and Vasconcelos, Marisa and Reis, Julio  and Almeida, Jussara  and Almeida, Virgilio},
+-  booktitle={Conferência Latino-Americana de Ética em Inteligência Artificial},
+-  month={November},
+-  year={2024},
+-  series={LAAI}
+-}
+-
+-
+-
+-@inproceedings{vasconcelos24disappear,
+-title={{Disappearing Without a Trace: Coverage, Community, Quality, and Temporal Dynamics of Wikipedia Articles on Endangered Brazilian Indigenous Languages}},
+-author={Marisa Vasconcelos and Priscila Rocha and Claudio Pinhanez},
+-year={2024},
+-month={April},
+-booktitle={International AAAI Conference on Web and Social Media},
+-series={ICWSM'24}
+-}
+-
+-@inproceedings{pinhanez23balancing,
+-title={{Balancing Social Impact, Opportunities, and Ethical Constraints of Using AI in the Documentation and Vitalization of Indigenous Languages}},
+-author={Claudio Pinhanez and Paulo Cavalin and Marisa Vasconcelos and Julio Nogima},
+-year={2023},
+-month={August},
+-booktitle={International Joint Conference on Artificial Intelligence},
+-series={IJCAI'23}
+-}
+-
+-@inproceedings{rezende23elaboracao,
+-title={{Elaboraçao de um Conjunto de Dados sobre o Registro de Patentes no Brasil}},
+-author={Nicolas Rezende and Daniel Dalip and Michele Brandão and Marisa Vasconcelos},
+-year={2023},
+-month={September},
+-booktitle={Dataset Showcase Workshop},
+-series={DSW'23}
+-}
+-
+-
+-@inproceedings{vasconcelos22blacktech,
+-title={{Characterizing the Social Ties between Black and Tech
+-Communities on Twitter}},
+-author={Marisa Vasconcelos and  Priscila Rocha and Julio Nogima and Rogerio de Paula},
+-year={2022},
+-month={June},
+-booktitle={The Web Science Conference},
+-series={WebSci'22}
+-}
+-
+-
+-
+-@inproceedings{maros21study,
+-title={{A Study of Misinformation in Audio Messages Shared in WhatsApp Groups}},
+-author={Alexandre Maros and Jussara Almeida and Marisa Vasconcelos},
+-year={2021},
+-month={September},
+-booktitle={Multidisciplinary International Symposium on Disinformation in Open Online Media},
+-series={MISDOOM'21}
+-}
+-
+-
+-@inproceedings{cavalin21towards,
+-title={{Towards a Method to Classify Language Style for Enhancing Conversational Systems}},
+-author={Paulo Cavalin and Victor Ribeiro and Marisa Vasconcelos and Claudio Pinhanez and Julio Nogima and Henrique Ferreira},
+-year={2021},
+-month={July},
+-booktitle={The International Joint Conference on Neural Networks},
+-series={IJCNN'21}
+-}
+-
+-@inproceedings{malagoli21carac,
+-title={{Caracterização do Debate no Twitter sobre a Vacinação contra a COVID-19 no Brasil}},
+-author={Larissa Malagoli and Julia Stancioli and Carlos Ferreira and Marisa Vasconcelos and Ana Paula da Silva and Jussara Almeida},
+-year={2021},
+-month={July},
+-booktitle={Brazilian Workshop on Social Network Analysis and Mining},
+-series={BraSNAM'21}
+-}
+-
+-@inproceedings{malagoli21look,
+-title={{A Look into COVID-19 Vaccination Debate on Twitter}},
+-author={Larissa Malagoli and Julia Stancioli and Carlos Ferreira and Marisa Vasconcelos and Ana Paula da Silva and Jussara Almeida},
+-year={2021},
+-month={June},
+-booktitle={The Web Science Conference},
+-series={WebSci'21}
+-}
+-
+-@inproceedings{vieira21stem,
+-title={{Using Facebook Ads data to Assess Gender Balance in STEM: Evidences from Brazil}},
+-author={Carolina Vieira and Marisa Vasconcelos},
+-year={2021},
+-month={April},
+-booktitle={Workshop Data Science  for  Social  Good},
+-series={DSSGW'21}
+-}
+-
+-@inproceedings{macedo21racial,
+-title={{Connecting Underrepresented Minorities and Qualified Job Positions Using Online Data}},
+-author={Maysa Macedo and Marisa Vasconcelos and Andrea Brito and Rogerio de Paula},
+-year={2021},
+-booktitle={Reframing Diversity in AI: Representation, Inclusion and Power},
+-series={RDAI'21}
+-}
+-
+-@inproceedings{wit,
+- author = {Maysa Macedo and Andrea Britto Mattos and Marisa Vasconcelos and Alexandre Martinazzo and Roseli Lopes},
+- title = {Identificando Influências na Escolha de uma Graduação em Exatas: um Estudo Qualitativo e Comparativo de Gênero},
+- booktitle = {Anais do XII Women in Information Technology},
+- year = {2018},
+- publisher = {SBC},
+- series = {WIT'18},
+- doi = {10.5753/wit.2018.3377},
+- url = {https://sol.sbc.org.br/index.php/wit/article/view/3377}
+-}
+-
+-
+-
+-
+-%%% 2020
+-
+-@inproceedings{cavalin2020disjoint,
+-title={{From Disjoint Sets to Parallel Data to Train Seq2Seq Models for Sentiment Transfer}},
+-author={Paulo Cavalin and Marisa Vasconcelos and Marcelo Grave and Claudio Pinhanez and Victor Ribeiro},
+-year={2020},
+-booktitle={Conference on Empirical Methods in Natural Language Processing},
+-series={EMNLP'20}
+-}
+-
+-@inproceedings{guimaraes2020alternative,
+-title={{Identifying and Characterizing Alternative News Media on Facebook}},
+-author={Samuel Guimarães and Julio Reis and Lucas Lima and Filipe Ribeiro and Marisa Vasconcelos and Jinsun An and Haewoon Kwak and Fabricio Benevenuto},
+-year={2020},
+-booktitle={IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining},
+-series={ASONAM'20}
+-}
+-
+-
+-@inproceedings{cavalin2020creating,
+-title={{Creating Corpora for Seq2Seq Tone Rephrasing Using Social Media Posts}},
+-author={Paulo Cavalin and Marisa Vasconcelos and Marcelo Grave and Claudio Pinhanez},
+-year={2020},
+-booktitle={International Joint Conference on Neural Networks},
+-series={IJCNN'20}
+-}
+-
+-@inproceedings{vasconcelos2020youtube,
+-title={{Analyzing YouTube Videos Shared on Whatsapp in the Early COVID-19 Crisis}},
+-author={Marisa Vasconcelos and Erica Pereira and Samuel Guimarães and Manoel Ribeiro and Philipe Melo and Fabricio Benevenuto},
+-year={2020},
+-booktitle={26th Brazilian Symposium on Multimedia and the Web},
+-series={WebMedia'20}
+-}
+-
+-
+-
+-@inproceedings{maros2020audio,
+-	author = {Alexandre Maros and Jussara Almeida  and Fabricio Benevenuto and Marisa Vasconcelos},
+-	title={{Analyzing the Use of Audio Messages in WhatsApp Groups}},
+-	booktitle={29th The Web Conference},
+- series={TheWebConf'20},
+- month={April},
+-	year={2020}
+-	}
+-
+-
+-@inproceedings{vasconcelos2019soccer,
+-	author = {Marisa Vasconcelos and Jussara Almeida and Paulo Cavalin and Claudio Pinhanez},
+-	title={{Live It Up: Analyzing Emotions and Language Use in Tweets during the Soccer World Cup Final}},
+-	booktitle={11th ACM Conference on Web Science},
+-  series={WebSci'19},
+-	year={2019},
+-	month={July}
+-	}
+-
+-
+-
+-@inproceedings{resende2019spread,
+-	author = {Gustavo Resende and Philipe Melo and Julio Reis and Marisa Vasconcelos and Jussara Almeida and Fabricio Benevenuto},
+-	title={{Analyzing the Spread of Textual Information in Whatsapp Groups}},
+-	booktitle={11th ACM Conference on Web Science},
+-  series={WebSci'19},
+-	year={2019},
+-	month={July}
+-	}
+-
+-
+-@inproceedings{resende2019what,
+-	author = {Gustavo Resende and Philipe Melo and Hugo Sousa and Johnnatan Messias and Marisa Vasconcelos and Jussara Almeida and Fabrício Benevenuto},
+-	title={{(Mis)Information Dissemination in WhatsApp: Gathering, Analyzing and Countermeasures}},
+-	booktitle={28th The Web Conference},
+-	series = {TheWebConf'19},
+-	year={2019},
+-	month={May}
+-	}
+-
+-
+-@inproceedings{candello2019effect,
+-	author = {Heloisa Candello and Claudio Pinhanez and Mauro Pichiliani and Paulo Cavalin and Flavio Figueiredo and Marisa Vasconcelos and Haylla Do Carmo},
+-	title={{The Effect of Audiences on the User Experience with Conversational Interfaces in Physical Spaces}},
+-	booktitle={ACM Conference on Human Factors in Computing},
+-	note={Honorable Mention},
+-	series = {CHI'19},
+-	month={May},
+-	year={2019},
+-
+-	}
+-
+-@inproceedings{candello2019direct,
+-	author = {Heloisa Candello and Claudio Pinhanez and Mauro Pichiliani  and Marisa Vasconcelos and Haylla Do Carmo},
+-	title={{Can Direct Address Affect User Engagement with Chatbots Embodied in Physical Spaces?}},
+-	booktitle={International Conference on Conversational User Interfaces},
+-	series = {CUI'19},
+-	month={August},
+-	year={2019}
+-}
+-
+-
+-
+-@inproceedings{vasconcelos2018modeling,
+-  title={{Modeling Epistemological Principles for Bias Mitigation in AI Systems: An Illustration in Hiring Decisions}},
+-  author={Vasconcelos, Marisa and Cardonha, Carlos and Gon{\c{c}}alves, Bernardo},
+-  booktitle={AAAI/ACM Conference on Artificial Inteligence, Ethics, and Society},
+-  series = {AIES'18},
+-	month={February},
+-  year={2018}
+-}
+-
+-@inproceedings{gatti2018ravel,
+-  title={{Ravel: A MAS orchestration platform for Human-Chatbots Conversations}},
+-  author={Maira de Bayser and Claudio Pinhanez and Heloisa Candello and Marisa Vasconcelos, Mauro Pichiliani and Melina Guerra and Paulo Cavalin and Renan Souza},
+-  booktitle={The 6th International Workshop on Engineering Multi-Agent Systems @AAMAS},
+-  series = {EMAS'18},
+-	month={July},
+-  year={2018}
+-}
+-
+-
+-
+-@inproceedings{resende2018system,
+-  title={{A System for Monitoring Public Political Groups in WhatsApp}},
+-  author={Gustavo Resende and Johnnatan Messias and  M{\'a}rcio Silva and Jussara Almeida and Marisa Vasconcelos and Fabricio Benevenuto},
+-  booktitle={24th Brazilian Symposium on Multimedia and the Web},
+-	series={WebMedia'18},
+-	month={October},
+-  year={2018}
+-}
+-
+-
+-
+-@inproceedings{bottesterchi,
+-	author = {Marisa Vasconcelos and Heloisa Candello and Claudio Pinhanez},
+-	title={{Bottester: Testing Conversational Systems with Simulated Users}},
+-	booktitle={HCI in Practice Workshop co-located with 16th Brazilian Symposium on Human Factors in Computing Systems},
+-	year={2017},
+-	month={October},
+-	note = {Best paper},
+-	series={IHC'17}
+-}
+-
+-
+-@inproceedings{Vasconcelos:2014:cosn,
+- author = {Marisa Vasconcelos and Jussara Almeida and Marcos Gon\c{c}alves},
+- title = {{Popularity Dynamics of Foursquare Micro-Reviews}},
+- booktitle = {ACM Conference on Online Social Networks},
+- year = {2014},
+- month={October},
+- series={COSN'14}
+-}
+-
+-@inproceedings{Vasconcelos:2014:sac,
+- author = {Marisa Vasconcelos and Jussara Almeida and Marcos Gon\c{c}alves},
+- title = {{What Makes Your Opinion Popular? Predicting the Popularity of Micro-Reviews in Foursquare}},
+- booktitle = {ACM Symposium on Applied Computing},
+- year = {2014},
+- month={Marcha},
+- series={SAC'14}
+-}
+-
+-
+-@inproceedings{Moraes:2013:socinfo,
+- author    = {Felipe Moraes and Marisa Vasconcelos and Patrick Prado and Daniel Dalip and Jussara Almeida and Marcos Gon\c{c}alves},
+- title     = {{Polarity Detection of Foursquare Tips}},
+- booktitle = {International Conference on Social Informatics},
+- year      = {2013},
+- month={November},
+- series={SocInfo'13}
+-}
+-
+-
+-@inproceedings{Moraes:2013:webmedia,
+-  author = {Moraes, Felipe and Vasconcelos, Marisa and Prado, Patrick and Almeida, Jussara and Gon\c{c}alves, Marcos},
+-  title = {{Polarity Analysis of Micro Reviews in Foursquare} (original work in Portuguese)},
+-  booktitle = {Brazilian Symposium on Multimedia and the Web},
+-  year = {2013},
+-	series = {WebMedia'13},
+-	month={November}
+-}
+-
+-@inproceedings{Pontes:2012:pinsoda,
+- author = {Pontes, Tatiana and Magno, Gabriel and Vasconcelos, Marisa and Gupta, Aditi and Almeida, Jussara and Kumaraguru, Ponnurangam and Almeida, Virg\'{\i}lio},
+- title = {{Beware of What You Share: Inferring Home Location in Social Networks}},
+- booktitle = {Workshop on Privacy in Social Data},
+- series={PinSoDa'12},
+- year = {2012},
+- month={December}
+-
+-}
+-
+-
+- @inproceedings{Pontes:2012:lbsn,
+-  author = {Tatiana Pontes and Marisa Vasconcelos and  Jussara Almeida and Ponnurangam Kumaraguru and Virg\'{\i}lio Almeida},
+-  title = {{We Know Where You Live: Privacy Characterization of Foursquare Behavior}},
+-  booktitle = {Workshop on Location-Based Social Networks},
+-  year = {2012},
+-	month={November},
+-	series ={LBSN'12}
+-}
+-
+-@inproceedings{Vasconcelos:2012:wsdm,
+- author = {Vasconcelos, Marisa and Ricci, Saulo and Almeida, Jussara and Benevenuto, Fabr\'{\i}cio and Almeida, Virg\'{\i}lio},
+- title = {{Tips, Dones and Todos: Uncovering User Profiles in Foursquare}},
+- booktitle = {ACM International Conference on Web Search and Data Mining},
+- year = {2012},
+- series={WSDM'12},
+- month={February}
+-}
+-
+-@inproceedings{Vasconcelos:2012:sbrc,
+- author = {Vasconcelos, Marisa and Ricci, Saulo and Almeida, Jussara and Benevenuto, Fabr\'{\i}cio and Almeida, Virg\'{\i}lio},
+- title = {{Characterization and Influence of Tips and Dones in Foursquare} (original work in Portuguese)},
+- booktitle = {Brazilian Symposium on Computer Networks},
+- year = {2012},
+- series={SBRC'12},
+- month={April}
+-}
+-
+-
+-@inproceedings{Benevenuto:2006:sac,
+-   author = {Benevenuto, Fabr\'{\i}cio and Costa, Cristiano and Vasconcelos, Marisa and Almeida, Virg\'{\i}lio and Almeida, Jussara and Mowbray, Miranda},
+-   title = {{Impact of Peer Incentives on the Dissemination of Polluted Content}},
+-   booktitle = {ACM Symposium on Applied Computing},
+-	 series={SAC'06},
+-   year = {2006},
+-	 month={April}
+-  }
+-
+-@inproceedings{cristiano:2006:sbrc,
+- author = {Cristiano Costa and Vanessa Soares and Fabrício Benevenuto and Marisa Vasconcelos and Jussara Almeida and Virg\'{\i}lio Almeida and Miranda Mowbray},
+-    title = {{Dissemination of Polluted Content in Peer-to-Peer Networks} (original work in Portuguese)},
+-    booktitle = {Brazilian Symposium on Computer Networks},
+-    year = {2006},
+-		series={SBRC'06},
+-		month={December}
+-}
+-
+-@inproceedings{Franciscani:2003:ipdps,
+-author = {Franciscani, Fernanda  and Vasconcelos, Marisa A. and Couto, Rainer  and Loureiro, Antonio},
+-title = {{Peer-to-Peer over Ad-Hoc Networks: (Re)Configuration Algorithms}},
+-booktitle = {International Symposium on Parallel and Distributed Processing},
+-year = {2003},
+-series = {IPDPS'03},
+-month={April},
+- label={last}
+-}
+-
+-@inproceedings{Vasconcelos:2003:laweb,
+- author = {Vasconcelos, Marisa  and Rocha, Leonardo  and Santos, Juliano and Ismael,Jr., Jos{\'e} and da Mata, Leonardo and Almeida, Jussara and Meira,Jr., Wagner and Almeida, Virg\'{\i}lio},
+- title = {{Quantitative Analysis of Strategies for Streaming Media Distribution}},
+- booktitle = {Latin American Web Congress},
+- year = {2003},
+- series = {LA-WEB'03},
+- month={October},
+-
+-}
+diff --git a/_bibliography/_site/springer-lecture-notes-in-computer-science2.csl b/_bibliography/_site/springer-lecture-notes-in-computer-science2.csl
+deleted file mode 100644
+index f8ca3cd..0000000
+--- a/_bibliography/_site/springer-lecture-notes-in-computer-science2.csl
++++ /dev/null
+@@ -1,188 +0,0 @@
+-﻿<?xml version="1.0" encoding="utf-8"?>
+-<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only" default-locale="en-US">
+-  <!-- This style was edited with the Visual CSL Editor (https://editor.citationstyles.org/visualEditor/) -->
+-  <info>
+-    <title>Springer - Lecture Notes in Computer Science</title>
+-    <title-short>Springer LNCS</title-short>
+-    <id>http://www.zotero.org/styles/springer-lecture-notes-in-computer-science</id>
+-    <link href="http://www.zotero.org/styles/springer-lecture-notes-in-computer-science" rel="self"/>
+-    <link href="http://www.springer.com/computer/lncs?SGWID=0-164-6-793341-0" rel="documentation"/>
+-    <author>
+-      <name>Ammar Memari</name>
+-      <email>memari@wi-ol.de</email>
+-    </author>
+-    <contributor>
+-      <name>Mikko Ronkko</name>
+-    </contributor>
+-    <category citation-format="numeric"/>
+-    <category field="engineering"/>
+-    <updated>2021-06-08T23:22:32+00:00</updated>
+-    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+-  </info>
+-  <locale xml:lang="en">
+-    <terms>
+-      <term name="accessed">last accessed</term>
+-    </terms>
+-  </locale>
+-  <macro name="author">
+-    <group>
+-      <names variable="author" font-weight="normal">
+-        <name form="long" delimiter-precedes-last="always"  name-as-sort-order="" sort-separator=" "/>
+-        <substitute>
+-          <names variable="editor"/>
+-        </substitute>
+-      </names>
+-    </group>
+-  </macro>
+-
+-  <macro name="editor">
+-    <names variable="editor">
+-      <name initialize-with="." delimiter=", " and="text" name-as-sort-order="all" sort-separator=", "/>
+-      <label form="short" prefix=" (" suffix=")"/>
+-    </names>
+-  </macro>
+-  <macro name="title">
+-    <choose>
+-      <if type="bill book graphic legal_case legislation motion_picture report song" match="any">
+-        <text variable="title"/>
+-      </if>
+-      <else>
+-        <text variable="title" font-weight="bold"/>
+-
+-      </else>
+-    </choose>
+-  </macro>
+-  <macro name="publisher">
+-    <text variable="publisher"/>
+-    <text variable="publisher-place" prefix=", "/>
+-  </macro>
+-  <macro name="page">
+-    <group>
+-      <label variable="page" form="short" suffix=" "/>
+-      <text variable="page"/>
+-    </group>
+-  </macro>
+-  <citation et-al-min="3" et-al-use-first="1" collapse="citation-number">
+-    <sort>
+-      <key variable="citation-number"/>
+-    </sort>
+-    <layout prefix="[" suffix="]" delimiter=", ">
+-      <text variable="version"/>
+-    </layout>
+-  </citation>
+-  <bibliography entry-spacing="0" second-field-align="flush">
+-    <layout suffix=".">
+-      <!-- <text variable="collection-title" prefix="[" suffix="]"/> -->
+-      <text macro="author" suffix=": "/>
+-      <choose>
+-        <if type="bill book graphic legal_case legislation motion_picture report song" match="any">
+-          <group delimiter=" ">
+-            <text macro="title" suffix="."/>
+-            <text macro="publisher"/>
+-            <date variable="issued">
+-              <date-part name="year" prefix="(" suffix=")"/>
+-            </date>
+-          </group>
+-        </if>
+-        <else-if type="article-journal">
+-          <group delimiter=" ">
+-            <text macro="title" suffix="."/>
+-            <text variable="container-title" form="short" suffix="."/>
+-            <text variable="volume" suffix=","/>
+-            <text variable="page"/>
+-            <date variable="issued">
+-              <date-part name="year" prefix="(" suffix=")"/>
+-            </date>
+-          </group>
+-        </else-if>
+-        <else-if type="chapter paper-conference" match="any">
+-          <group delimiter=" ">
+-            <text macro="title" suffix="."/>
+-
+-            <choose>
+-              <if variable="container-title">
+-                <text term="in" text-case="capitalize-first" suffix=": "/>
+-                <text macro="editor" suffix=" "/>
+-
+-
+-                <group delimiter=" ">
+-                  <text variable="container-title" />
+-                  <text variable="collection-title" prefix="(" suffix=")." />
+-                  <text macro="page"/>
+-                  <text macro="publisher"/>
+-                </group>
+-
+-              </if>
+-              <else>
+-                <text term="presented at" text-case="capitalize-first" suffix=" "/>
+-                <text variable="event"/>
+-                <text variable="event-place" prefix=", "/>
+-                <date variable="issued" prefix=" ">
+-                  <date-part name="month" suffix=" "/>
+-                  <date-part name="day" suffix=" "/>
+-
+-                </date>
+-              </else>
+-            </choose>
+-
+-            <date variable="issued">
+-              <date-part name="month" form="long" prefix="" text-case="capitalize-first" suffix=" "/>
+-              <date-part name="year" prefix="" suffix="."/>
+-            </date>
+-            <text variable="note" font-style="italic" font-weight="bold" suffix="."/>
+-
+-          </group>
+-        </else-if>
+-        <else-if type="webpage post-weblog post" match="any">
+-          <group delimiter=", ">
+-            <text macro="title"/>
+-            <text variable="URL"/>
+-            <group delimiter=" ">
+-              <text term="accessed"/>
+-              <date variable="accessed">
+-                <date-part name="year"/>
+-                <date-part name="month" form="numeric-leading-zeros" prefix="/"/>
+-                <date-part name="day" form="numeric-leading-zeros" prefix="/"/>
+-              </date>
+-            </group>
+-          </group>
+-        </else-if>
+-        <else-if type="speech">
+-          <group delimiter=" ">
+-            <text macro="title" suffix="."/>
+-            <text variable="event" suffix="."/>
+-            <text variable="event-place" prefix=", "/>
+-            <date variable="issued">
+-              <date-part name="year" prefix="(" suffix=")"/>
+-            </date>
+-          </group>
+-        </else-if>
+-        <else-if type="misc">
+-          <group delimiter=" ">
+-            <text macro="title" suffix="."/>
+-            <text variable="event" suffix="."/>
+-            <text variable="event-place" prefix=", "/>
+-            <date variable="issued">
+-              <date-part name="month" form="long" prefix="" text-case="capitalize-first" suffix=" "/>
+-              <date-part name="day" suffix=", "/>
+-              <date-part name="year" prefix="" suffix="."/>
+-  
+-            </date>
+-            <text variable="note" suffix="."/>
+-          </group>
+-        </else-if>
+-        <else>
+-          <group delimiter=", ">
+-            <text macro="title"/>
+-            <text variable="URL"/>
+-            <date variable="issued">
+-              <date-part name="year" prefix="(" suffix=")."/>
+-            </date>
+-          </group>
+-        </else>
+-      </choose>
+-      <text variable="DOI" prefix=". https://doi.org/"/>
+-    </layout>
+-
+-  </bibliography>
+-</style>
+diff --git a/_config.yml b/_config.yml
+index b31dbfc..54933c8 100644
+--- a/_config.yml
++++ b/_config.yml
+@@ -14,6 +14,12 @@ exclude:
+   - Gemfile
+   - Gemfile.lock
+   - vendor
++  - backup
++  - "*.old"
++  - "*.old_fut"
++  - .DS_Store
++  - _bibliography/bib_to_yaml.py
++  - README.md
+ 
+ collections:
+   pages:
+diff --git a/_includes/head.html.old b/_includes/head.html.old
+deleted file mode 100644
+index 30ed326..0000000
+--- a/_includes/head.html.old
++++ /dev/null
+@@ -1,27 +0,0 @@
+-<head>
+-  <meta charset="UTF-8">
+-  <meta http-equiv='cache-control' content='no-cache'> 
+-  <meta http-equiv='expires' content='0'> 
+-  <meta http-equiv='pragma' content='no-cache'>
+-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Marisa Vasconcelos</title>
+-
+-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+-  <link rel="stylesheet" href="{{ '/public/css/styles_header.css' | relative_url }}">
+-
+-  {% if page.custom_css %}
+-    {% for stylesheet in page.custom_css %}
+-      <link rel="stylesheet" href="{{ '/public/css/' | append: stylesheet | append: '.css' | relative_url }}">
+-    {% endfor %}
+-  {% endif %}
+-
+-  {% if site.google_analytics %}
+-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+-    <script>
+-      window.dataLayer = window.dataLayer || [];
+-      function gtag(){dataLayer.push(arguments);}
+-      gtag('js', new Date());
+-      gtag('config', '{{ site.google_analytics }}');
+-    </script>
+-  {% endif %}
+-</head>
+diff --git a/_includes/header.html b/_includes/header.html
+index d358607..e99c1a0 100644
+--- a/_includes/header.html
++++ b/_includes/header.html
+@@ -4,10 +4,10 @@
+     <hr>
+     <nav class="links">
+       <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a>
+-      <a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">About</a>
+       <a href="{{ '/research/' | relative_url }}" class="{% if page.url == '/research/' %}active{% endif %}">Research</a>
+       <a href="{{ '/publications/' | relative_url }}" class="{% if page.url == '/publications/' %}active{% endif %}">Publications</a>
+-      <a href="{{ '/contact/' | relative_url }}" class="{% if page.url == '/contact/' %}active{% endif %}">Contact</a>
++      <a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">About</a>
++      <!-- CV nav item intentionally omitted until the CV page exists (Phase 7) to avoid a dead link -->
+     </nav>
+   </div>
+ </header>
+diff --git a/_layouts/bib.html b/_layouts/bib.html
+index 4149c2c..1491cbf 100644
+--- a/_layouts/bib.html
++++ b/_layouts/bib.html
+@@ -1,4 +1,16 @@
++{% comment %}
++  STATUS: Currently INACTIVE.
++  No page in _pages uses `layout: bib`. The live Publications page instead
++  reads _data/*.yml (generated from _bibliography/*.bib via bib_to_yaml.py)
++  and renders it client-side via assets/js/publications.js.
+ 
++  This layout, jekyll-scholar, and the CSL file are preserved intentionally
++  pending a decision during the Publications phase on whether to:
++    (a) keep the .bib → YAML → JS workflow,
++    (b) switch to jekyll-scholar, or
++    (c) adopt a hybrid.
++  Do not remove without that decision. See Project_Status.md.
++{% endcomment %}
+ 
+ <body>
+   <header>
+diff --git a/_pages/projects.md b/_pages/projects.md
+deleted file mode 100644
+index 62d7f9b..0000000
+--- a/_pages/projects.md
++++ /dev/null
+@@ -1,14 +0,0 @@
+----
+-layout: page
+-title: "Projects"
+-permalink: /projects/
+-custom_css:
+-    - styles_projects
+----
+-
+-
+-
+-    
+-
+-
+-
+diff --git a/_pages/research.md b/_pages/research.md
+new file mode 100644
+index 0000000..7c1cfa2
+--- /dev/null
++++ b/_pages/research.md
+@@ -0,0 +1,22 @@
++---
++layout: page
++title: "Research"
++permalink: /research/
++custom_css:
++    - styles-global
++---
++<!--
++  Placeholder only. Structural cleanup phase — page content and
++  research-specific styling are implemented in the Research phase
++  (development_workflow.md, Phase 4), per functional_specification.md §5.
++-->
++<!-- TODO (Research phase): Research Vision, Research Map, three editorial
++     areas, Application Domains, Research Evolution, Collaboration -->
++
++
++
++
++    
++
++
++
+diff --git a/assets/css/styles_publications.css b/assets/css/styles-publications.css
+similarity index 100%
+rename from assets/css/styles_publications.css
+rename to assets/css/styles-publications.css
+diff --git a/backup/about.md.old b/backup/about.md.old
+deleted file mode 100644
+index 7119d85..0000000
+--- a/backup/about.md.old
++++ /dev/null
+@@ -1,49 +0,0 @@
+----
+-layout: default
+-title: "About"
+-permalink: /about/
+-custom_css:
+-    - styles_about
+----
+-
+-<article class="page">
+-    <div class="container"></div>
+-        <main>
+-            <section class="about-section">
+-                <p><b>Welcome!</b> I'm Marisa Vasconcelos, a passionate researcher in the dynamic field of Artificial Intelligence. My journey has taken me across both academia and industry, where I've consistently pushed the boundaries of innovation in AI.</p>
+-            </section>
+-            <section class="about-section">
+-                <h3>Key Achievements</h3>
+-                <ul>
+-                    <li><strong>Academic Background</strong>: Ph.D. and Master's in Computer Science, with the Master's degree completed at Boston University.</li>
+-                    <li><strong>Professional Experience</strong>: 25 years of research experience, including 7 years at IBM Research with expertise in Responsible AI. Author of 40 publications and 14 granted patents.</li>
+-                    <li><strong>International Experience</strong>: Extensive international experience, including participation, presentations, and publications at international conferences, as well as working with global teams at IBM.</li>
+-                    <li><strong>Commitment to Responsible AI</strong>: Conducts innovative research to assess and  mitigate AI risks, staying updated with advancements and sharing findings in prominent publications, while ensuring the consistent application of Responsible AI policies across technological frameworks.</li>
+-                    <li><strong>STEM Advocate</strong>: Co-created the WINDS (Women in Data Science) workshop to promote diversity in tech.</li>
+-                </ul>
+-                <hr>
+-            </section>  
+-            <section class="about-section">
+-                <h3>My Research Focus</h3>
+-                <p>At the heart of my work is the intersection of technology and society. My research dives into Social Computing to uncover insights into human behavior and tackle critical issues like misinformation, hate speech, and cultural representation.</p>
+-                <p>I'm particularly passionate about the ethical dimensions of technology. In the realm of <strong>Responsible AI</strong>, I explore key topics like fairness, transparency, and governance, striving to ensure that AI solutions are not only innovative but also ethically sound.</p>
+-                <hr>
+-            </section>
+-            <section class="about-section">
+-                <h3>Industry Experience</h3>
+-                    <p>During my time as a <strong>Research Scientist at IBM Research Brazil</strong>, I had the opportunity to bridge theory and practice. I conducted advanced analyses of conversational agents (chatbots), improving user interactions, and exploring the impact of language and context on user experience. Additionally, I participated in Tech for Justice projects, analyzing the presence of underrepresented communities on social media , I also developed patents, including a method for auditing bias in AI systems. This experience deepened my understanding of systems and improved my skills in <strong>Human-Computer Interaction (HCI)</strong>.</p><hr>
+-            </section>
+-            <section class="about-section">
+-                <h3>What Drives Me</h3>
+-                <p>I believe in the power of AI to solve complex problems and make a positive impact on society. With a strong foundation in both the theoretical and practical aspects of AI, I’m committed to developing solutions that are not only cutting-edge but also align with the highest ethical standards.</p><hr>
+-            </section>
+-            <section class="about-section">
+-                <p style="font-weight: bold;color: #0056b3;">Let's Collaborate</p>
+-                <p>If you're interested in pushing the boundaries of AI, whether in industry or academia, I'd love to connect! Let’s explore how we can work together to create innovative and responsible AI solutions.</p> 
+-                <p class="hashtags">#ResponsibleAI #SocialComputing #MachineLearning #ResearchInnovation #STEMAdvocate #DiversityInTech</p> 
+-
+-            </section>
+-
+-        </main>
+-   
+-</article>
+diff --git a/backup/publications.js b/backup/publications.js
+deleted file mode 100644
+index f1e6d05..0000000
+--- a/backup/publications.js
++++ /dev/null
+@@ -1,77 +0,0 @@
+-document.addEventListener("DOMContentLoaded", function() {
+-
+-    const itemsPerPage = 4;
+-
+-    // Mapeia listId para a classe singular usada no CSS
+-    const typeClassMap = {
+-      conferences: "conference",
+-      journals: "journal",
+-      patents: "patent"
+-  };
+-
+-    function initPagination(listId, dataId) {
+-        const listElement = document.getElementById(`${listId}-list`);
+-        const data = JSON.parse(document.getElementById(`${dataId}-data`).textContent);
+-        let currentPage = 0;
+-
+-        const nextButton = document.getElementById(`${listId}-next`);
+-        const prevButton = document.getElementById(`${listId}-prev`);
+-
+-        // Evento Next
+-        nextButton.addEventListener("click", () => {
+-            currentPage++;
+-            if (currentPage * itemsPerPage >= data.length) {
+-                currentPage = 0; // volta para primeira página se passar do limite
+-            }
+-            renderPage();
+-        });
+-
+-        // Evento Previous
+-        prevButton.addEventListener("click", () => {
+-            currentPage--;
+-            if (currentPage < 0) currentPage = 0;
+-            renderPage();
+-        });
+-
+-        function renderPage() {
+-            listElement.innerHTML = "";
+-            const start = currentPage * itemsPerPage;
+-            const end = start + itemsPerPage;
+-            const pageItems = data.slice(start, end);
+-
+-            pageItems.forEach(item => {
+-                const li = document.createElement("li");
+-                // li.classList.add("publication-item", listId); // adiciona classe para ícone
+-                li.classList.add("publication-item", typeClassMap[listId]);
+-
+-                const authors = item.authors.filter(a => a.trim() !== "");
+-                const authorsHTML = authors.map(a => 
+-                    a === "Marisa Vasconcelos" ? `<strong>${a}</strong>` : a
+-                ).join(", ");
+-
+-                const venue = item.venue || item.note || "";
+-                li.innerHTML = `${item.url ? `<a href="${item.url}" target="_blank">${item.title}</a>` : item.title}. ${authorsHTML}. <em>${venue}</em> (${item.year || ""})`;
+-
+-
+-                listElement.appendChild(li);
+-            });
+-
+-            // botão Next sempre azul
+-            nextButton.classList.add("enabled");
+-            nextButton.disabled = false;
+-
+-            // Mostrar ou esconder botão Previous
+-            if (currentPage === 0) {
+-                prevButton.style.display = "none";
+-            } else {
+-                prevButton.style.display = "inline-block";
+-            }
+-        }
+-
+-        renderPage();
+-    }
+-
+-    initPagination("conferences", "conferences");
+-    initPagination("journals", "journals");
+-    initPagination("patents", "patents");
+-});
+diff --git a/backup/publications.md b/backup/publications.md
+deleted file mode 100644
+index e86c71f..0000000
+--- a/backup/publications.md
++++ /dev/null
+@@ -1,57 +0,0 @@
+----
+-layout: page
+-title: "Publications"
+-permalink: /publications/
+-custom_css:
+-  - styles_publications
+----
+-
+-<main class="container-publications">
+-
+-  <div class="cards-row">
+-
+-    <!-- Conferences -->
+-    <div class="publication-card" id="conferences-card">
+-      <h2>Conferences</h2>
+-        <ul class="publication-list" id="conferences-list"></ul>
+-        <div class="pagination">
+-            <button id="conferences-prev" class="prev" style="display:none">Previous</button>
+-            <button id="conferences-next" class='next'>Next</button>
+-        </div>
+-            
+-        <script type="application/json" id="conferences-data">
+-            {{ site.data.publications | jsonify | replace: '</', '<\/' }}
+-        </script>
+-
+-    </div>
+-        
+-    <!-- Journals -->
+-    <div class="publication-card" id="journals-card">
+-      <h2>Journals</h2>
+-      <ul class="publication-list" id="journals-list"></ul>
+-      <div class="pagination">
+-        <button id="journals-prev" class="prev" style="display:none">Previous</button>
+-        <button id="journals-next" class='next'>Next</button>
+-      </div>
+-      <script type="application/json" id="journals-data">
+-        {{ site.data.journals | jsonify | replace: '</', '<\/' }}
+-      </script>
+-    </div>
+-
+-    <!-- Patents -->
+-    <div class="publication-card" id="patents-card">
+-      <h2>Patents</h2>
+-      <ul class="publication-list" id="patents-list"></ul>
+-      <div class="pagination">
+-        <button id="patents-prev" class="prev" style="display:none">Previous</button>
+-        <button id="patents-next" class='next'>Next</button>
+-      </div>
+-      <script type="application/json" id="patents-data">
+-        {{ site.data.patents | jsonify |  replace: '</', '<\/' }}
+-      </script>
+-    </div>
+-  </div>
+-
+-</main>
+-
+-<script src="{{ '/assets/js/publications.js' | relative_url }}"></script>
+diff --git a/backup/styles_publications.css b/backup/styles_publications.css
+deleted file mode 100644
+index bc250dd..0000000
+--- a/backup/styles_publications.css
++++ /dev/null
+@@ -1,219 +0,0 @@
+-/* styles_publications.css */
+-
+-/* Fonte e layout geral */
+-body {
+-    font-family: Arial, sans-serif;
+-    line-height: 1.6;
+-    color: #333;
+-    margin: 0;
+-    padding: 0;
+-}
+-
+-main {
+-    max-width: 1000px;
+-    margin: 0 auto;
+-    padding: 20px;
+-}
+-
+-.container-publications {
+-    max-width: 1000px;
+-    margin: 0 auto;
+-    padding: 20px;
+-}
+-
+-/* Navbar interna */
+-.navbar-section {
+-    text-align: center;
+-    margin-bottom: 40px;
+-    line-height: 1.6;
+-}
+-
+-.navbar-section a {
+-    text-decoration: none;
+-    margin: 0 10px;
+-    color: #007bff;
+-    font-weight: bold;
+-    transition: color 0.3s ease;
+-}
+-
+-.navbar-section a:hover {
+-    color: #0056b3;
+-}
+-
+-/* Lista de publicações dentro dos cards */
+-.publication-list {
+-    list-style: none;
+-    padding-left: 0;
+-    margin: 0;
+-}
+-
+-.publication-item {
+-    margin-bottom: 8px;
+-    font-size: 0.85em;
+-    line-height: 1.4em;
+-}
+-
+-/* Links das publicações */
+-.publication-item a {
+-    font-weight: bold;
+-    color: #007bff;
+-    text-decoration: none;
+-}
+-
+-.publication-item a:hover {
+-    text-decoration: underline;
+-}
+-
+-/* Autores e destaque */
+-.publication-item strong {
+-    color: #000;
+-}
+-
+-/* Meta info (ano, journal/series) */
+-.publication-item span.meta {
+-    color: #555;
+-}
+-
+-/* Ícones para tipo de publicação */
+-.publication-item.conference::before {
+-    content: "🎤 ";  /* Conferences */
+-}
+-
+-.publication-item.journal::before {
+-    content: "📑 ";  /* Journals */
+-}
+-
+-.publication-item.patent::before {
+-    content: "🔬 ";  /* Patents */
+-}
+-
+-/* Cards de publicações */
+-.publication-cards-container {
+-    display: flex;
+-    flex-wrap: wrap;
+-    justify-content: center;
+-    gap: 20px;
+-    margin: 20px 0;
+-}
+-
+-.publication-card {
+-    background-color: #f9f9f9;
+-    border-radius: 8px;
+-    padding: 20px;
+-    flex: 1 1 calc(33.33% - 20px); /* 3 cards lado a lado com gap */
+-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+-    box-sizing: border-box;
+-}
+-
+-.publication-card h2 {
+-    text-align: center;
+-    font-size: 1.6em;
+-    margin-bottom: 15px;
+-}
+-
+-/* Responsividade */
+-@media (max-width: 900px) {
+-  .publication-card {
+-    flex: 1 1 calc(50% - 20px); /* 2 cards lado a lado em tablets */
+-  }
+-}
+-
+-@media (max-width: 600px) {
+-  .publication-card {
+-    flex: 1 1 100%; /* empilha no celular */
+-  }
+-}
+-
+-
+-/* Footer interno das tags */
+-.c-article__footer { 
+-    padding-bottom: 30px;
+-    text-align: center;
+-    box-sizing: border-box;
+-}
+-
+-.u-clearfix::before, .u-clearfix::after {
+-    content: "";
+-    display: table;
+-    clear: both;
+-}
+-
+-.c-article__footer .c-article__tag {
+-    margin-bottom:5px;
+-    box-sizing: border-box;
+-}
+-
+-.c-article__footer .c-article__tag a {
+-    display: inline-block;
+-    vertical-align: middle;
+-    padding: 5px 10px;
+-    font-size: 10px;
+-    line-height: 10px;
+-    text-transform: uppercase;
+-    background-color:#f4f4f4;
+-    color:#000;
+-    text-decoration: none;
+-    transition: .35s;
+-}
+-
+-.c-article__footer .c-article__tag a:hover {
+-    background-color: rgba(115,138,160,0.6);
+-}
+-
+-.c-article__footer .c-article__tag a:last-child {
+-    margin-right:0;
+-}
+-
+-/* Tabs (se usar futuramente) */
+-.tabs a {
+-    display: inline-block;
+-    margin: 0 10px;
+-    padding: 5px 15px;
+-    background: #f4f4f4;
+-    color: #007bff;
+-    text-decoration: none;
+-    border-radius: 5px;
+-    transition: 0.3s;
+-}
+-
+-.tabs a.active, .tabs a:hover {
+-    background: #007bff;
+-    color: white;
+-}
+-
+-/* Paginação */
+-.pagination {
+-  text-align: center;
+-  margin-top: 15px;
+-}
+-
+-.pagination button {
+-  background: #f4f4f4;
+-  border: none;
+-  padding: 5px 10px;
+-  margin: 0 3px;
+-  border-radius: 4px;
+-  cursor: pointer;
+-  font-size: 0.9em;
+-}
+-
+-.pagination button.active {
+-  background: #007bff;
+-  color: white;
+-}
+-
+-.pagination button:hover:not(.active) {
+-  background: #007bff;
+-  color: white;
+-}
+-
+-.cards-row {
+-  display: flex;
+-  flex-wrap: wrap;
+-  justify-content: space-between;
+-  gap: 20px;
+-  margin: 20px 0;
+- }
+-
+-
+-
+diff --git a/images/PORTRAIT_SPEC.md b/images/PORTRAIT_SPEC.md
+new file mode 100644
+index 0000000..f052ffc
+--- /dev/null
++++ b/images/PORTRAIT_SPEC.md
+@@ -0,0 +1,22 @@
++# Portrait Image — Specification
++
++Status: placeholder in use (`portrait-placeholder.svg`). Replace with final photo when available.
++
++## Recommended master file
++
++- **Aspect ratio:** 4:5 (portrait)
++- **Minimum size:** 1200 × 1500px
++- **Preferred delivery:** 2400 × 3000px (allows downscaling/retina without quality loss)
++- **Format:** JPEG or WebP, sRGB
++- **Crop:** head-and-shoulders, centered, plain/neutral background consistent with the Editorial Scientific direction (canonical_decisions.md §16–18) — no busy backgrounds, no other people, no logos/branding visible
++
++## Usage
++
++The 4:5 master can be cropped down to 1:1 (square) if a given layout (e.g. a compact author byline) needs it — deriving a square crop from a 4:5 original is straightforward; the reverse is not. Do not source a 1:1-only photo.
++
++## Where it's used (per functional_specification.md)
++
++- Home → Hero ("primary portrait")
++- About → Portrait (top of page)
++
++Both usages are implemented in later phases (Phase 3 Home, Phase 5 About) — this file only reserves the asset spec so those phases don't need to renegotiate cropping.
+diff --git a/images/portrait-placeholder.svg b/images/portrait-placeholder.svg
+new file mode 100644
+index 0000000..d7ff9ac
+--- /dev/null
++++ b/images/portrait-placeholder.svg
+@@ -0,0 +1,6 @@
++<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200" width="960" height="1200" role="img" aria-label="Portrait placeholder">
++  <rect width="960" height="1200" fill="#e5e2dc"/>
++  <rect x="1" y="1" width="958" height="1198" fill="none" stroke="#c9c4b8" stroke-width="2"/>
++  <text x="480" y="580" font-family="Georgia, serif" font-size="28" fill="#8a8477" text-anchor="middle">Portrait placeholder</text>
++  <text x="480" y="620" font-family="Georgia, serif" font-size="20" fill="#a39d8f" text-anchor="middle">4:5 — 960 × 1200 min</text>
++</svg>
+diff --git a/index.html.old b/index.html.old
+deleted file mode 100644
+index 1c1236f..0000000
+--- a/index.html.old
++++ /dev/null
+@@ -1,39 +0,0 @@
+----
+-layout: default
+-title: Home
+-permalink: /
+-custom_css:
+-    - styles_index
+----
+-
+-<div class="container"></div>
+-    <main>
+-        <section class="bio">
+-            <h2 class="highlight">Research Scientist</h2>
+-            <p>I'm currently a Visiting Researcher at the <a href="https://dcc.ufmg.br">Department of Computer Science</a> at <a href="https://ufmg.br/">UFMG</a>. My work explores the intersection of technology and society, focusing on Social Computing to address human behavior and societal issues such as misinformation, hate speech, and cultural representation. I'm also passionate about the ethical dimensions of technology, particularly Responsible AI, examining fairness, transparency, and governance in technology.</p>
+-
+-            <p>With a solid background in both academia and industry, I bring a unique perspective to tackle complex challenges and contribute to understanding how technology impacts society.</p>
+-            <hr>
+-        </section>
+-        
+-
+-        <div class="email">
+-            <img src="images/email.png"/>
+-        </div>
+-
+-        <div class="link-section">
+-            <a href="http://br.linkedin.com/pub/marisa-affonso-vasconcelos/6/6b1/11/" title="LinkedIn">
+-                <i class="fa-brands fa-linkedin fa-2xl" style="color:black;padding-top:15px"></i>
+-            </a>
+-                
+-            <a href="https://scholar.google.com.br/citations?user=e5IvuJgAAAAJ&hl=en" title=" Google Scholar">
+-                <img src = "images/google-scholar.svg" alt="Google Scholar" width="30px"/>
+-            </a>
+-                
+-            <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=P093832" title="CNPq">
+-                <img src="images/lattes-trans.png" width="30px" alt = "Lattes"/>
+-            </a>
+-        </div>
+-        
+-    </main>
+-</div>
+\ No newline at end of file
+diff --git a/index.html.old_fut b/index.html.old_fut
+deleted file mode 100644
+index 8a94375..0000000
+--- a/index.html.old_fut
++++ /dev/null
+@@ -1,85 +0,0 @@
+----
+-layout: default
+-title: "Marisa Vasconcelos"
+-custom_css:
+-    - styles_index
+----
+-
+-<div class="floating-shape shape1"></div>
+-<div class="floating-shape shape2"></div>
+-<div class="floating-shape shape3"></div>
+-<div class="floating-shape shape4"></div>
+-
+-<div class="hero">
+-  <!--img src="assets/img/profile.jpg" alt="Photo of Marisa Vasconcelos"-->
+-  <h1>Marisa Vasconcelos</h1>
+-  <h3>Research Scientist in Responsible AI and Social Media</h3>
+-  <p>Ph.D. in Computer Science, bridging academia and industry with over 25 years of experience. Specialist in Responsible AI, ethics in technology, and social media analysis. I work on projects that combine rigorous research with practical innovation, across international contexts.</p>
+-  <p>
+-    <a href="{{ site.baseurl }}/about" class="btn">About</a>
+-    <a href="{{ site.baseurl }}/research" class="btn">Research</a>
+-    <a href="{{ site.baseurl }}/contact" class="btn">Contact</a>
+-  </p>
+-</div>
+-
+-<section>
+-  <h2>Highlights</h2>
+-  <div class="cards-container">
+-    <div class="card"><span class="card-icon">🔬</span><h3>Responsible AI & Governance</h3><p>Algorithm auditing, fairness, inclusion, and AI ethics. Bridging rigorous research and real-world applications.</p></div>
+-    <div class="card"><span class="card-icon">💡</span><h3>Social Media & Human Behavior</h3><p>Analysis of misinformation, political discourse, and online communities, combining academic insight with practical impact.</p></div>
+-    <div class="card"><span class="card-icon">🔬💡</span><h3>Human-Computer Interaction</h3><p>User experience research and intelligent chatbots, connecting scientific research with industrial innovation.</p></div>
+-  </div>
+-</section>
+-
+-<section>
+-  <h2>Recent Publications</h2>
+-  <div class="cards-container">
+-    <div class="card">Analyzing Political Discourse on Discord during the 2024 U.S. Presidential Election — WebSci 2025</div>
+-    <div class="card">Evaluating Computational Approaches for Automatic Skin Tone Inference — LAAI-Ethics 2024</div>
+-    <div class="card">Disappearing Without a Trace: Coverage, Community, Quality, and Temporal Dynamics of Wikipedia Articles on Endangered Brazilian Indigenous Languages — ICWSM 2024</div>
+-  </div>
+-  <p><a href="{{ site.baseurl }}/publications">View full publication list →</a></p>
+-</section>
+-
+-<section>
+-  <h2>Awards & Honors</h2>
+-  <div class="cards-container">
+-    <div class="card">Google Women in Technology Award – Winner (2011)</div>
+-    <div class="card">Honorable Mention – CHI Conference (2019)</div>
+-    <div class="card">IBM Fourth Plateau: Invention Achievement Awards (2020)</div>
+-    <div class="card">Fulbright/CAPES Scholarship for M.A. in the USA (2006–2008)</div>
+-  </div>
+-</section>
+-
+-<section>
+-  <h2>Patents</h2>
+-  <div class="cards-container">
+-    <div class="card">14 granted patents in AI, including algorithm bias auditing, misinformation mitigation, and conversational agent communication.</div>
+-  </div>
+-  <p><a href="{{ site.baseurl }}/patents">View full patent list →</a></p>
+-</section>
+-
+-
+-
+-<section>
+-  <h2>Contact</h2>
+-  <div class="contact-cards">
+-    <div class="contact-card">
+-      <i class="fa-solid fa-envelope fa-lg"></i>
+-      <a href="mailto:marisa.vasconcelos@gmail.com">marisa.vasconcelos@gmail.com</a>
+-    </div>
+-    <div class="contact-card">
+-      <i class="fa-brands fa-google fa-lg"></i>
+-      <a href="https://scholar.google.com.br/citations?user=e5IvuJgAAAAJ" target="_blank">Google Scholar</a>
+-    </div>
+-    <div class="contact-card">
+-      <i class="fa-brands fa-linkedin fa-lg"></i>
+-      <a href="https://www.linkedin.com/in/marisa-vasconcelos/" target="_blank">LinkedIn</a>
+-    </div>
+-    <div class="contact-card">
+-      <i class="fa-brands fa-twitter fa-lg"></i>
+-      <a href="https://twitter.com/marisavas" target="_blank">Twitter/X</a>
+-    </div>
+-  </div>
+-</section>
+-
+diff --git a/public/css/_site/styles_about.css b/public/css/_site/styles_about.css
+deleted file mode 100644
+index 91f5e06..0000000
+--- a/public/css/_site/styles_about.css
++++ /dev/null
+@@ -1,87 +0,0 @@
+-main {
+-    padding: 20px 0;
+-}
+-
+-.highlight {
+-    font-size: 20px;
+-    font-weight: bold;
+-    color: #333;
+-    margin-bottom: 10px;
+-}
+-
+-
+-.about-section {
+-    max-width: 500px;
+-    font-size: 16px;
+-    text-align: left;
+-    margin: 0 auto;
+-    line-height: 1.6;
+-    /* margin-bottom: 40px; */
+-    
+-}
+-
+-
+-.about-section hr { 
+-    width:100%;
+-    height:10px;
+-    color:inherit;
+-    border:0;
+-    border-top:1px solid;
+-    opacity:.25;
+-    margin-top:20px;
+-    margin-bottom:20px;
+-}
+-
+-.about-section h2 {
+-  font-size: 20px;
+-  font-weight: bold;
+-  color: #333;
+-  margin-bottom: 10px;
+-}
+-
+-.about-section h3 {
+-    font-size: 16px;
+-    font-weight: bold;
+-    color: #333;
+-    margin-bottom: 10px;
+-   
+-}
+-
+-.about-section p {
+-    font-size: 16px;
+-    color: #404040;
+-    text-align: justify;
+-    margin-bottom: 20px;
+-    -moz-osx-font-smoothing:grayscale; 
+-}
+-
+-
+-
+-.about-section ul {
+-    list-style-type: disc; /* Change to 'circle', 'square', or 'none' as needed */
+-    padding-left: 20px; /* Adjust the padding to suit your design */
+-    font-size: 16px;
+-    color: #404040;
+-    -moz-osx-font-smoothing:grayscale;
+-    text-align: justify;
+-}
+-
+-.about-section li {
+-    margin-bottom: 10px; /* Add space between list items */
+-    color: #333; /* Change text color if needed */
+-    font-weight: normal; /* Change to 'bold' if you want bold list items */
+-}
+-
+-p.hashtags {
+-    line-height: 1.6;
+-    font-size:0.9em;
+-    color:#666;
+-    font-family: Arial, sans-serif;
+-}
+-
+-
+-
+-
+-
+- 
+-
+diff --git a/public/css/_site/styles_header.css b/public/css/_site/styles_header.css
+deleted file mode 100644
+index 599deec..0000000
+--- a/public/css/_site/styles_header.css
++++ /dev/null
+@@ -1,94 +0,0 @@
+-* {
+-    margin: 0;
+-    padding: 0;
+-    box-sizing: border-box;
+-}
+-
+-body {
+-    font-family: Arial, sans-serif;
+-    line-height: 1.6;
+-}
+-
+-header {
+-    background-color: #f4f4f4;
+-    padding: 10px 0;  
+-    display: flex;
+-    flex-direction: column;
+-    align-items: center;
+-}
+-
+-.container {
+-    max-width: 900px; /* Maximum width for the centralized content */
+-    margin: 0 auto; /* Auto margin left and right to center content */
+-    padding: 20px; /* Add padding to the sides */
+-    text-align: center;
+-}
+-
+-/* .container_header {
+-    margin-right: auto !important;
+-    margin-bottom: auto !important;
+-    margin: 0 auto; 
+-} */
+-
+-.container_header {
+-    display: flex;
+-    flex-direction: column; /* Stack elements vertically */
+-    align-items: center; /* Center horizontally */
+-    justify-content: center; /* Center vertically */
+-    margin: 0 auto; /* Center the container horizontally */
+-    text-align: center; /* Center text */
+-}
+-
+-
+-.name h1 {
+-    margin: 0;
+-    font-size: 32px;
+-    color:#333;
+-    font-weight: bold;;
+-}
+-
+-/* Styling for the hr */
+-.name hr {
+-    width: 100%; /* Full width inside the container */
+-    /* max-width: 200px;  */
+-    margin: 10px auto 20px; /* Add space above and below */
+-}
+-
+-
+-
+-
+-nav.links {
+-    display: flex;
+-    gap: 15px;
+-    /* justify-content: center !important; */
+-    justify-content: center; /* Center horizontally */
+-    /* margin-top: 12px;  */
+-}
+-
+-
+-nav.links a {
+-    text-decoration: none;
+-    color: #666;
+-    transition: color 0.3s ease;
+-}
+-
+-
+-nav.links a.active {
+-    color: #007bff; /* Highlight active link */
+-    font-weight: bold; /* Make the active link bold */
+-}
+-
+-nav.links a:hover {
+-    color: #007bff;
+-}
+-
+-nav.links a.inactive {
+-    pointer-events: none; /* Disable clicking */
+-    color: gray; /* Change the color to gray */
+-    text-decoration: none; /* Remove underline */
+-    cursor: default; /* Show the default cursor instead of the pointer */
+-}
+-
+-
+-
+-
+diff --git a/public/css/_site/styles_index.css b/public/css/_site/styles_index.css
+deleted file mode 100644
+index 817dcd1..0000000
+--- a/public/css/_site/styles_index.css
++++ /dev/null
+@@ -1,65 +0,0 @@
+-main {
+-    padding: 20px 0;
+-}
+-
+-.bio {
+-    max-width: 500px;
+-    font-size: 16px;
+-    text-align: left;
+-    margin: 0 auto;
+-    line-height: 1.6;
+-    /* margin-right: 50px; */
+-}
+-
+-.bio h2 {
+-    margin-bottom: 15px;
+-    font-size: 20px;
+-}
+-
+-.bio p {
+-    font-size: 16px;
+-    color: #404040;
+-    text-align: justify;
+-    margin-bottom: 20px;
+-    -moz-osx-font-smoothing:grayscale;
+-}
+-
+-.bio hr { 
+-    width:100%;
+-    height:10px;
+-    color:inherit;
+-    border:0;
+-    border-top:1px solid;
+-    opacity:.25;
+-    margin-top:20px;
+-    margin-bottom:20px;
+-}
+-
+-
+-
+-.highlight {
+-    font-size: 20px;
+-    font-weight: bold;
+-    color: #333;
+-    margin-bottom: 10px;
+-}
+-
+-.link-section {
+-    margin-top: 20px; /* Space above the links */
+-    display: flex;
+-    justify-content: center;
+-    gap: 20px;
+-    /*width: 100%; Ensures full width */
+-}
+-
+-.link-section a {
+-    margin: 0 10px;
+-}
+-
+-.email {
+-    display: flex;
+-    justify-content: center;
+-    text-align: center; /* Center the email horizontally */
+-    margin-top: 20px; /* Add space between the email and the icons */
+-    font-size: 16px;
+-}
+\ No newline at end of file
+diff --git a/public/css/_site/styles_projects.css b/public/css/_site/styles_projects.css
+deleted file mode 100644
+index 9a6831d..0000000
+--- a/public/css/_site/styles_projects.css
++++ /dev/null
+@@ -1,246 +0,0 @@
+-main {
+-  padding: 20px 0;
+-}
+-
+-.container-publications {
+-  padding: 0px; 
+-}
+-
+-
+-.bottom-three {
+-  margin-bottom: 5px;
+-  margin-top: 7px;
+-}
+-
+-ol.bibliography li {
+-  list-style-type: none;
+-  margin: 0;
+-  padding: 5px; 
+-}
+-
+-ol.bibliography li:before {
+-  content: "";
+-}
+-
+-button {
+-  font-size: 14px;
+-}
+-
+-.my_text {
+-  font-size: 14px;
+-}
+-
+-.leftcell {
+-  float: left;
+-  text-align: right;
+-}
+-
+-.rightcell {
+-  float: left;
+-  text-align: left;
+-  font-size: 14px;
+-  padding-left: 5px; /* Fake cell padding */
+-}
+-
+-.font_bib {
+-  font-family: "Open Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
+-  font-size: 15px;
+-  line-height: 28px;
+-  color: #404040;
+-}
+-
+-th, td {
+-  text-align: left;
+-  padding: 5px 10px;
+-  border-bottom: 1px solid #e5e5e5;
+-}
+-
+-h4 {
+-  color: #494949;
+-  font-size: 20px;
+-  font-family: "Volkhov", "Times New Roman", Times, serif;
+-  font-weight: 400;
+-  line-height: initial;
+-  position: relative;
+-  left: 86px;
+-}
+-
+-tbody > tr:last-child > td {
+-  border-bottom: 0;
+-}
+-
+-/* .hr-publications {
+-  border: none;
+-  border-top: 1px solid #ccc;
+-  margin: 20px 0;
+-} */
+-
+-
+-
+-
+-
+-.c-wrap-content {
+-  max-width: 800px;
+-  margin: 0 auto;
+-  font-family: 'Helvetica Neue', Arial, sans-serif;
+-  line-height: 1.6;
+-  padding: 20px;
+-}
+-
+-/* Publication sections */
+-
+-.navbar-section {
+-  margin-bottom: 40px;
+-  max-width: 600px;
+-  font-size: 16px;
+-  text-align: left;
+-  margin: 0 auto;
+-  line-height: 1.6;
+-}
+-
+-.publication-section {
+-    max-width: 500px;
+-    font-size: 16px;
+-    text-align: left;
+-    margin: 0 auto;
+-    line-height: 1.6;
+-    margin-bottom: 40px;
+-}
+-
+-
+-
+-.publication-section h2 {
+-  font-size: 20px;
+-  font-weight: bold;
+-  color: #333;
+-  /* border-bottom: 2px solid #ddd;
+-  padding-bottom: 10px; */
+-  margin-bottom: 10px;
+-}
+-
+-.publication-section hr { 
+-  width:100%;
+-  height:10px;
+-  color:inherit;
+-  border:0;
+-  border-top:1px solid;
+-  opacity:.25;
+-  margin-top:20px;
+-  margin-bottom:20px;
+-}
+-
+-
+-/* Bibliography styling */
+-.bibliography {
+-  font-size: 14px;
+-  color: #404040;
+-  text-align: justify;
+-  margin: 0 auto;
+-  -moz-osx-font-smoothing: grayscale;
+-}
+-
+-.bibliography a {
+-  color: #007BFF;
+-  text-decoration: none;
+-}
+-
+-.bibliography a:hover {
+-  text-decoration: underline;
+-}
+-
+-.publication-item {
+-  display: inline;
+-  /* padding-bottom: 5px; */
+-}
+-
+-.bibliography-entry {
+-  width: 600px; 
+-  font-size: 14px; 
+-  text-align: justify; 
+-  margin-bottom: 20px;
+-}
+-
+-.bibliography-entry strong {
+-  font-weight: bold;
+-}
+-
+-.bibliography-entry i {
+-  font-style: italic;
+-}
+-
+-/* Ensure table styling matches site */
+-table {
+-  width: 100%;
+-  margin-bottom: 20px;
+-  border-collapse: collapse;
+-}
+-
+-table td {
+-  padding: 10px;
+-  border-bottom: 1px solid #ddd;
+-}
+-
+-
+-.item {
+-  max-width: 500px;
+-  font-size: 16px;
+-  text-align: left;
+-  margin: 0 auto;
+-  line-height: 1.6;
+-  /* margin-right: 50px; */
+-}
+-
+-.item h2 {
+-  margin-bottom: 15px;
+-  font-size: 20px;
+-}
+-
+-.item p {
+-  font-size: 16px;
+-  color: #404040;
+-  text-align: justify;
+-  margin-bottom: 20px;
+-  -moz-osx-font-smoothing:grayscale;
+-}
+-
+-.c-article__footer { 
+-  /* margin: 30px 0 0; */
+-  padding-bottom: 30px;
+-  text-align: center;
+-  /* border-bottom: 1px solid #f0f0f0; */
+-  box-sizing: border-box;
+-}
+-
+-.u-clearfix::before, .u-clearfix::after {
+-  content: "";
+-  display: table;
+-  clear: both;
+-}
+-
+-.c-article__footer .c-article__tag {
+-  margin-bottom:5px;
+-  box-sizing: border-box;
+-}
+-
+-.c-article__footer .c-article__tag a {
+-  display: inline-block;
+-  vertical-align: middle;
+-  padding: 5px 10px;
+-  font-size: 10px;
+-  line-height: 10px;
+-  text-transform: uppercase;
+-  background-color:#f4f4f4;
+-  color:#000;
+-  text-decoration: none;
+-  transition: .35s;
+-  /* margin-bottom:5px;
+-  box-sizing: border-box; */
+-}
+-
+-.c-article__footer .c-article__tag a:hover {
+-  /* background-color:rgba(80,100,118,0.6) */
+-  background-color:rgba(115,138,160,0.6);
+-}
+-.c-article__footer .c-article__tag a:last-child {
+-  margin-right:0
+-}
+\ No newline at end of file
+diff --git a/public/css/_site/styles_publications.css b/public/css/_site/styles_publications.css
+deleted file mode 100644
+index 9a6831d..0000000
+--- a/public/css/_site/styles_publications.css
++++ /dev/null
+@@ -1,246 +0,0 @@
+-main {
+-  padding: 20px 0;
+-}
+-
+-.container-publications {
+-  padding: 0px; 
+-}
+-
+-
+-.bottom-three {
+-  margin-bottom: 5px;
+-  margin-top: 7px;
+-}
+-
+-ol.bibliography li {
+-  list-style-type: none;
+-  margin: 0;
+-  padding: 5px; 
+-}
+-
+-ol.bibliography li:before {
+-  content: "";
+-}
+-
+-button {
+-  font-size: 14px;
+-}
+-
+-.my_text {
+-  font-size: 14px;
+-}
+-
+-.leftcell {
+-  float: left;
+-  text-align: right;
+-}
+-
+-.rightcell {
+-  float: left;
+-  text-align: left;
+-  font-size: 14px;
+-  padding-left: 5px; /* Fake cell padding */
+-}
+-
+-.font_bib {
+-  font-family: "Open Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
+-  font-size: 15px;
+-  line-height: 28px;
+-  color: #404040;
+-}
+-
+-th, td {
+-  text-align: left;
+-  padding: 5px 10px;
+-  border-bottom: 1px solid #e5e5e5;
+-}
+-
+-h4 {
+-  color: #494949;
+-  font-size: 20px;
+-  font-family: "Volkhov", "Times New Roman", Times, serif;
+-  font-weight: 400;
+-  line-height: initial;
+-  position: relative;
+-  left: 86px;
+-}
+-
+-tbody > tr:last-child > td {
+-  border-bottom: 0;
+-}
+-
+-/* .hr-publications {
+-  border: none;
+-  border-top: 1px solid #ccc;
+-  margin: 20px 0;
+-} */
+-
+-
+-
+-
+-
+-.c-wrap-content {
+-  max-width: 800px;
+-  margin: 0 auto;
+-  font-family: 'Helvetica Neue', Arial, sans-serif;
+-  line-height: 1.6;
+-  padding: 20px;
+-}
+-
+-/* Publication sections */
+-
+-.navbar-section {
+-  margin-bottom: 40px;
+-  max-width: 600px;
+-  font-size: 16px;
+-  text-align: left;
+-  margin: 0 auto;
+-  line-height: 1.6;
+-}
+-
+-.publication-section {
+-    max-width: 500px;
+-    font-size: 16px;
+-    text-align: left;
+-    margin: 0 auto;
+-    line-height: 1.6;
+-    margin-bottom: 40px;
+-}
+-
+-
+-
+-.publication-section h2 {
+-  font-size: 20px;
+-  font-weight: bold;
+-  color: #333;
+-  /* border-bottom: 2px solid #ddd;
+-  padding-bottom: 10px; */
+-  margin-bottom: 10px;
+-}
+-
+-.publication-section hr { 
+-  width:100%;
+-  height:10px;
+-  color:inherit;
+-  border:0;
+-  border-top:1px solid;
+-  opacity:.25;
+-  margin-top:20px;
+-  margin-bottom:20px;
+-}
+-
+-
+-/* Bibliography styling */
+-.bibliography {
+-  font-size: 14px;
+-  color: #404040;
+-  text-align: justify;
+-  margin: 0 auto;
+-  -moz-osx-font-smoothing: grayscale;
+-}
+-
+-.bibliography a {
+-  color: #007BFF;
+-  text-decoration: none;
+-}
+-
+-.bibliography a:hover {
+-  text-decoration: underline;
+-}
+-
+-.publication-item {
+-  display: inline;
+-  /* padding-bottom: 5px; */
+-}
+-
+-.bibliography-entry {
+-  width: 600px; 
+-  font-size: 14px; 
+-  text-align: justify; 
+-  margin-bottom: 20px;
+-}
+-
+-.bibliography-entry strong {
+-  font-weight: bold;
+-}
+-
+-.bibliography-entry i {
+-  font-style: italic;
+-}
+-
+-/* Ensure table styling matches site */
+-table {
+-  width: 100%;
+-  margin-bottom: 20px;
+-  border-collapse: collapse;
+-}
+-
+-table td {
+-  padding: 10px;
+-  border-bottom: 1px solid #ddd;
+-}
+-
+-
+-.item {
+-  max-width: 500px;
+-  font-size: 16px;
+-  text-align: left;
+-  margin: 0 auto;
+-  line-height: 1.6;
+-  /* margin-right: 50px; */
+-}
+-
+-.item h2 {
+-  margin-bottom: 15px;
+-  font-size: 20px;
+-}
+-
+-.item p {
+-  font-size: 16px;
+-  color: #404040;
+-  text-align: justify;
+-  margin-bottom: 20px;
+-  -moz-osx-font-smoothing:grayscale;
+-}
+-
+-.c-article__footer { 
+-  /* margin: 30px 0 0; */
+-  padding-bottom: 30px;
+-  text-align: center;
+-  /* border-bottom: 1px solid #f0f0f0; */
+-  box-sizing: border-box;
+-}
+-
+-.u-clearfix::before, .u-clearfix::after {
+-  content: "";
+-  display: table;
+-  clear: both;
+-}
+-
+-.c-article__footer .c-article__tag {
+-  margin-bottom:5px;
+-  box-sizing: border-box;
+-}
+-
+-.c-article__footer .c-article__tag a {
+-  display: inline-block;
+-  vertical-align: middle;
+-  padding: 5px 10px;
+-  font-size: 10px;
+-  line-height: 10px;
+-  text-transform: uppercase;
+-  background-color:#f4f4f4;
+-  color:#000;
+-  text-decoration: none;
+-  transition: .35s;
+-  /* margin-bottom:5px;
+-  box-sizing: border-box; */
+-}
+-
+-.c-article__footer .c-article__tag a:hover {
+-  /* background-color:rgba(80,100,118,0.6) */
+-  background-color:rgba(115,138,160,0.6);
+-}
+-.c-article__footer .c-article__tag a:last-child {
+-  margin-right:0
+-}
+\ No newline at end of file
+diff --git a/public/css/styles_about.css b/public/css/styles_about.css
+deleted file mode 100644
+index 91f5e06..0000000
+--- a/public/css/styles_about.css
++++ /dev/null
+@@ -1,87 +0,0 @@
+-main {
+-    padding: 20px 0;
+-}
+-
+-.highlight {
+-    font-size: 20px;
+-    font-weight: bold;
+-    color: #333;
+-    margin-bottom: 10px;
+-}
+-
+-
+-.about-section {
+-    max-width: 500px;
+-    font-size: 16px;
+-    text-align: left;
+-    margin: 0 auto;
+-    line-height: 1.6;
+-    /* margin-bottom: 40px; */
+-    
+-}
+-
+-
+-.about-section hr { 
+-    width:100%;
+-    height:10px;
+-    color:inherit;
+-    border:0;
+-    border-top:1px solid;
+-    opacity:.25;
+-    margin-top:20px;
+-    margin-bottom:20px;
+-}
+-
+-.about-section h2 {
+-  font-size: 20px;
+-  font-weight: bold;
+-  color: #333;
+-  margin-bottom: 10px;
+-}
+-
+-.about-section h3 {
+-    font-size: 16px;
+-    font-weight: bold;
+-    color: #333;
+-    margin-bottom: 10px;
+-   
+-}
+-
+-.about-section p {
+-    font-size: 16px;
+-    color: #404040;
+-    text-align: justify;
+-    margin-bottom: 20px;
+-    -moz-osx-font-smoothing:grayscale; 
+-}
+-
+-
+-
+-.about-section ul {
+-    list-style-type: disc; /* Change to 'circle', 'square', or 'none' as needed */
+-    padding-left: 20px; /* Adjust the padding to suit your design */
+-    font-size: 16px;
+-    color: #404040;
+-    -moz-osx-font-smoothing:grayscale;
+-    text-align: justify;
+-}
+-
+-.about-section li {
+-    margin-bottom: 10px; /* Add space between list items */
+-    color: #333; /* Change text color if needed */
+-    font-weight: normal; /* Change to 'bold' if you want bold list items */
+-}
+-
+-p.hashtags {
+-    line-height: 1.6;
+-    font-size:0.9em;
+-    color:#666;
+-    font-family: Arial, sans-serif;
+-}
+-
+-
+-
+-
+-
+- 
+-
+diff --git a/public/css/styles_header.css b/public/css/styles_header.css
+deleted file mode 100644
+index 4235c2f..0000000
+--- a/public/css/styles_header.css
++++ /dev/null
+@@ -1,85 +0,0 @@
+-* {
+-    margin: 0;
+-    padding: 0;
+-    box-sizing: border-box;
+-}
+-
+-body {
+-    font-family: Arial, sans-serif;
+-    line-height: 1.6;
+-}
+-
+-header {
+-    background-color: #f4f4f4;
+-    padding: 10px 0;  
+-    display: flex;
+-    flex-direction: column;
+-    align-items: center;
+-}
+-
+-.container {
+-    max-width: 900px; /* Maximum width for the centralized content */
+-    margin: 0 auto; /* Auto margin left and right to center content */
+-    padding: 20px; /* Add padding to the sides */
+-    text-align: center;
+-}
+-
+-/* .container_header {
+-    margin-right: auto !important;
+-    margin-bottom: auto !important;
+-    margin: 0 auto; 
+-} */
+-
+-.container_header {
+-    display: flex;
+-    flex-direction: column; /* Stack elements vertically */
+-    align-items: center; /* Center horizontally */
+-    justify-content: center; /* Center vertically */
+-    margin: 0 auto; /* Center the container horizontally */
+-    text-align: center; /* Center text */
+-}
+-
+-
+-.name h1 {
+-    margin: 0;
+-    font-size: 32px;
+-    color:#333;
+-    font-weight: bold;;
+-}
+-
+-/* Styling for the hr */
+-.name hr {
+-    width: 100%; /* Full width inside the container */
+-    /* max-width: 200px;  */
+-    margin: 10px auto 20px; /* Add space above and below */
+-}
+-
+-
+-
+-
+-nav.links a {
+-    text-decoration: none;
+-    color: #666;
+-    transition: color 0.3s ease;
+-    padding: 6px 10px; /* Pequeno espaçamento para área clicável maior */
+-    border-bottom: 2px solid transparent; /* Espaço para efeito de borda */
+-}
+-
+-nav.links a.active {
+-    color: #007bff; /* Azul */
+-    font-weight: bold;
+-    border-bottom-color: #007bff; /* Linha azul embaixo do link ativo */
+-}
+-
+-nav.links a:hover {
+-    color: #0056b3; /* Azul mais escuro no hover */
+-    border-bottom-color: #0056b3; /* Linha azul no hover */
+-}
+-
+-nav.links a.inactive {
+-    pointer-events: none;
+-    color: gray;
+-    text-decoration: none;
+-    cursor: default;
+-    border-bottom-color: transparent;
+-}
+diff --git a/public/css/styles_index.css b/public/css/styles_index.css
+deleted file mode 100644
+index 817dcd1..0000000
+--- a/public/css/styles_index.css
++++ /dev/null
+@@ -1,65 +0,0 @@
+-main {
+-    padding: 20px 0;
+-}
+-
+-.bio {
+-    max-width: 500px;
+-    font-size: 16px;
+-    text-align: left;
+-    margin: 0 auto;
+-    line-height: 1.6;
+-    /* margin-right: 50px; */
+-}
+-
+-.bio h2 {
+-    margin-bottom: 15px;
+-    font-size: 20px;
+-}
+-
+-.bio p {
+-    font-size: 16px;
+-    color: #404040;
+-    text-align: justify;
+-    margin-bottom: 20px;
+-    -moz-osx-font-smoothing:grayscale;
+-}
+-
+-.bio hr { 
+-    width:100%;
+-    height:10px;
+-    color:inherit;
+-    border:0;
+-    border-top:1px solid;
+-    opacity:.25;
+-    margin-top:20px;
+-    margin-bottom:20px;
+-}
+-
+-
+-
+-.highlight {
+-    font-size: 20px;
+-    font-weight: bold;
+-    color: #333;
+-    margin-bottom: 10px;
+-}
+-
+-.link-section {
+-    margin-top: 20px; /* Space above the links */
+-    display: flex;
+-    justify-content: center;
+-    gap: 20px;
+-    /*width: 100%; Ensures full width */
+-}
+-
+-.link-section a {
+-    margin: 0 10px;
+-}
+-
+-.email {
+-    display: flex;
+-    justify-content: center;
+-    text-align: center; /* Center the email horizontally */
+-    margin-top: 20px; /* Add space between the email and the icons */
+-    font-size: 16px;
+-}
+\ No newline at end of file
+diff --git a/public/css/styles_projects.css b/public/css/styles_projects.css
+deleted file mode 100644
+index 9a6831d..0000000
+--- a/public/css/styles_projects.css
++++ /dev/null
+@@ -1,246 +0,0 @@
+-main {
+-  padding: 20px 0;
+-}
+-
+-.container-publications {
+-  padding: 0px; 
+-}
+-
+-
+-.bottom-three {
+-  margin-bottom: 5px;
+-  margin-top: 7px;
+-}
+-
+-ol.bibliography li {
+-  list-style-type: none;
+-  margin: 0;
+-  padding: 5px; 
+-}
+-
+-ol.bibliography li:before {
+-  content: "";
+-}
+-
+-button {
+-  font-size: 14px;
+-}
+-
+-.my_text {
+-  font-size: 14px;
+-}
+-
+-.leftcell {
+-  float: left;
+-  text-align: right;
+-}
+-
+-.rightcell {
+-  float: left;
+-  text-align: left;
+-  font-size: 14px;
+-  padding-left: 5px; /* Fake cell padding */
+-}
+-
+-.font_bib {
+-  font-family: "Open Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
+-  font-size: 15px;
+-  line-height: 28px;
+-  color: #404040;
+-}
+-
+-th, td {
+-  text-align: left;
+-  padding: 5px 10px;
+-  border-bottom: 1px solid #e5e5e5;
+-}
+-
+-h4 {
+-  color: #494949;
+-  font-size: 20px;
+-  font-family: "Volkhov", "Times New Roman", Times, serif;
+-  font-weight: 400;
+-  line-height: initial;
+-  position: relative;
+-  left: 86px;
+-}
+-
+-tbody > tr:last-child > td {
+-  border-bottom: 0;
+-}
+-
+-/* .hr-publications {
+-  border: none;
+-  border-top: 1px solid #ccc;
+-  margin: 20px 0;
+-} */
+-
+-
+-
+-
+-
+-.c-wrap-content {
+-  max-width: 800px;
+-  margin: 0 auto;
+-  font-family: 'Helvetica Neue', Arial, sans-serif;
+-  line-height: 1.6;
+-  padding: 20px;
+-}
+-
+-/* Publication sections */
+-
+-.navbar-section {
+-  margin-bottom: 40px;
+-  max-width: 600px;
+-  font-size: 16px;
+-  text-align: left;
+-  margin: 0 auto;
+-  line-height: 1.6;
+-}
+-
+-.publication-section {
+-    max-width: 500px;
+-    font-size: 16px;
+-    text-align: left;
+-    margin: 0 auto;
+-    line-height: 1.6;
+-    margin-bottom: 40px;
+-}
+-
+-
+-
+-.publication-section h2 {
+-  font-size: 20px;
+-  font-weight: bold;
+-  color: #333;
+-  /* border-bottom: 2px solid #ddd;
+-  padding-bottom: 10px; */
+-  margin-bottom: 10px;
+-}
+-
+-.publication-section hr { 
+-  width:100%;
+-  height:10px;
+-  color:inherit;
+-  border:0;
+-  border-top:1px solid;
+-  opacity:.25;
+-  margin-top:20px;
+-  margin-bottom:20px;
+-}
+-
+-
+-/* Bibliography styling */
+-.bibliography {
+-  font-size: 14px;
+-  color: #404040;
+-  text-align: justify;
+-  margin: 0 auto;
+-  -moz-osx-font-smoothing: grayscale;
+-}
+-
+-.bibliography a {
+-  color: #007BFF;
+-  text-decoration: none;
+-}
+-
+-.bibliography a:hover {
+-  text-decoration: underline;
+-}
+-
+-.publication-item {
+-  display: inline;
+-  /* padding-bottom: 5px; */
+-}
+-
+-.bibliography-entry {
+-  width: 600px; 
+-  font-size: 14px; 
+-  text-align: justify; 
+-  margin-bottom: 20px;
+-}
+-
+-.bibliography-entry strong {
+-  font-weight: bold;
+-}
+-
+-.bibliography-entry i {
+-  font-style: italic;
+-}
+-
+-/* Ensure table styling matches site */
+-table {
+-  width: 100%;
+-  margin-bottom: 20px;
+-  border-collapse: collapse;
+-}
+-
+-table td {
+-  padding: 10px;
+-  border-bottom: 1px solid #ddd;
+-}
+-
+-
+-.item {
+-  max-width: 500px;
+-  font-size: 16px;
+-  text-align: left;
+-  margin: 0 auto;
+-  line-height: 1.6;
+-  /* margin-right: 50px; */
+-}
+-
+-.item h2 {
+-  margin-bottom: 15px;
+-  font-size: 20px;
+-}
+-
+-.item p {
+-  font-size: 16px;
+-  color: #404040;
+-  text-align: justify;
+-  margin-bottom: 20px;
+-  -moz-osx-font-smoothing:grayscale;
+-}
+-
+-.c-article__footer { 
+-  /* margin: 30px 0 0; */
+-  padding-bottom: 30px;
+-  text-align: center;
+-  /* border-bottom: 1px solid #f0f0f0; */
+-  box-sizing: border-box;
+-}
+-
+-.u-clearfix::before, .u-clearfix::after {
+-  content: "";
+-  display: table;
+-  clear: both;
+-}
+-
+-.c-article__footer .c-article__tag {
+-  margin-bottom:5px;
+-  box-sizing: border-box;
+-}
+-
+-.c-article__footer .c-article__tag a {
+-  display: inline-block;
+-  vertical-align: middle;
+-  padding: 5px 10px;
+-  font-size: 10px;
+-  line-height: 10px;
+-  text-transform: uppercase;
+-  background-color:#f4f4f4;
+-  color:#000;
+-  text-decoration: none;
+-  transition: .35s;
+-  /* margin-bottom:5px;
+-  box-sizing: border-box; */
+-}
+-
+-.c-article__footer .c-article__tag a:hover {
+-  /* background-color:rgba(80,100,118,0.6) */
+-  background-color:rgba(115,138,160,0.6);
+-}
+-.c-article__footer .c-article__tag a:last-child {
+-  margin-right:0
+-}
+\ No newline at end of file
+diff --git a/public/css/styles_publications.css b/public/css/styles_publications.css
+deleted file mode 100644
+index bc250dd..0000000
+--- a/public/css/styles_publications.css
++++ /dev/null
+@@ -1,219 +0,0 @@
+-/* styles_publications.css */
+-
+-/* Fonte e layout geral */
+-body {
+-    font-family: Arial, sans-serif;
+-    line-height: 1.6;
+-    color: #333;
+-    margin: 0;
+-    padding: 0;
+-}
+-
+-main {
+-    max-width: 1000px;
+-    margin: 0 auto;
+-    padding: 20px;
+-}
+-
+-.container-publications {
+-    max-width: 1000px;
+-    margin: 0 auto;
+-    padding: 20px;
+-}
+-
+-/* Navbar interna */
+-.navbar-section {
+-    text-align: center;
+-    margin-bottom: 40px;
+-    line-height: 1.6;
+-}
+-
+-.navbar-section a {
+-    text-decoration: none;
+-    margin: 0 10px;
+-    color: #007bff;
+-    font-weight: bold;
+-    transition: color 0.3s ease;
+-}
+-
+-.navbar-section a:hover {
+-    color: #0056b3;
+-}
+-
+-/* Lista de publicações dentro dos cards */
+-.publication-list {
+-    list-style: none;
+-    padding-left: 0;
+-    margin: 0;
+-}
+-
+-.publication-item {
+-    margin-bottom: 8px;
+-    font-size: 0.85em;
+-    line-height: 1.4em;
+-}
+-
+-/* Links das publicações */
+-.publication-item a {
+-    font-weight: bold;
+-    color: #007bff;
+-    text-decoration: none;
+-}
+-
+-.publication-item a:hover {
+-    text-decoration: underline;
+-}
+-
+-/* Autores e destaque */
+-.publication-item strong {
+-    color: #000;
+-}
+-
+-/* Meta info (ano, journal/series) */
+-.publication-item span.meta {
+-    color: #555;
+-}
+-
+-/* Ícones para tipo de publicação */
+-.publication-item.conference::before {
+-    content: "🎤 ";  /* Conferences */
+-}
+-
+-.publication-item.journal::before {
+-    content: "📑 ";  /* Journals */
+-}
+-
+-.publication-item.patent::before {
+-    content: "🔬 ";  /* Patents */
+-}
+-
+-/* Cards de publicações */
+-.publication-cards-container {
+-    display: flex;
+-    flex-wrap: wrap;
+-    justify-content: center;
+-    gap: 20px;
+-    margin: 20px 0;
+-}
+-
+-.publication-card {
+-    background-color: #f9f9f9;
+-    border-radius: 8px;
+-    padding: 20px;
+-    flex: 1 1 calc(33.33% - 20px); /* 3 cards lado a lado com gap */
+-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+-    box-sizing: border-box;
+-}
+-
+-.publication-card h2 {
+-    text-align: center;
+-    font-size: 1.6em;
+-    margin-bottom: 15px;
+-}
+-
+-/* Responsividade */
+-@media (max-width: 900px) {
+-  .publication-card {
+-    flex: 1 1 calc(50% - 20px); /* 2 cards lado a lado em tablets */
+-  }
+-}
+-
+-@media (max-width: 600px) {
+-  .publication-card {
+-    flex: 1 1 100%; /* empilha no celular */
+-  }
+-}
+-
+-
+-/* Footer interno das tags */
+-.c-article__footer { 
+-    padding-bottom: 30px;
+-    text-align: center;
+-    box-sizing: border-box;
+-}
+-
+-.u-clearfix::before, .u-clearfix::after {
+-    content: "";
+-    display: table;
+-    clear: both;
+-}
+-
+-.c-article__footer .c-article__tag {
+-    margin-bottom:5px;
+-    box-sizing: border-box;
+-}
+-
+-.c-article__footer .c-article__tag a {
+-    display: inline-block;
+-    vertical-align: middle;
+-    padding: 5px 10px;
+-    font-size: 10px;
+-    line-height: 10px;
+-    text-transform: uppercase;
+-    background-color:#f4f4f4;
+-    color:#000;
+-    text-decoration: none;
+-    transition: .35s;
+-}
+-
+-.c-article__footer .c-article__tag a:hover {
+-    background-color: rgba(115,138,160,0.6);
+-}
+-
+-.c-article__footer .c-article__tag a:last-child {
+-    margin-right:0;
+-}
+-
+-/* Tabs (se usar futuramente) */
+-.tabs a {
+-    display: inline-block;
+-    margin: 0 10px;
+-    padding: 5px 15px;
+-    background: #f4f4f4;
+-    color: #007bff;
+-    text-decoration: none;
+-    border-radius: 5px;
+-    transition: 0.3s;
+-}
+-
+-.tabs a.active, .tabs a:hover {
+-    background: #007bff;
+-    color: white;
+-}
+-
+-/* Paginação */
+-.pagination {
+-  text-align: center;
+-  margin-top: 15px;
+-}
+-
+-.pagination button {
+-  background: #f4f4f4;
+-  border: none;
+-  padding: 5px 10px;
+-  margin: 0 3px;
+-  border-radius: 4px;
+-  cursor: pointer;
+-  font-size: 0.9em;
+-}
+-
+-.pagination button.active {
+-  background: #007bff;
+-  color: white;
+-}
+-
+-.pagination button:hover:not(.active) {
+-  background: #007bff;
+-  color: white;
+-}
+-
+-.cards-row {
+-  display: flex;
+-  flex-wrap: wrap;
+-  justify-content: space-between;
+-  gap: 20px;
+-  margin: 20px 0;
+- }
+-
+-
+-
