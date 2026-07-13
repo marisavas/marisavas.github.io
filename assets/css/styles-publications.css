@@ -1,0 +1,119 @@
+/* ===== Container principal ===== */
+.container-publications {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* ===== Linha de cards ===== */
+.cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+/* ===== Cartões de publicações ===== */
+.publication-card {
+    flex: 1 1 calc(30% - 20px); /* 3 cards por linha */
+    background-color: #f0f4ff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #ccc;       /* Borda visível */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;        /* garante que padding não quebre o tamanho */
+}
+
+.publication-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+/* ===== Título do card ===== */
+.publication-card h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #0056b3;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ===== Lista de publicações ===== */
+.publication-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.publication-list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.publication-list li a {
+    text-decoration: none;
+    color: #222;
+    transition: color 0.3s;
+}
+
+.publication-list li a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* ===== Botões de paginação ===== */
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.btn-pagination {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ddd;
+    color: #222;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-pagination:hover {
+    background-color: #bbb;
+}
+
+.btn-pagination.primary {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.btn-pagination.primary:hover {
+    background-color: #003f7d;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 1024px) {
+    .publication-card {
+        flex: 1 1 48%; /* 2 cards por linha */
+    }
+}
+
+@media (max-width: 700px) {
+    .cards-row {
+        flex-direction: column;
+    }
+    .publication-card {
+        flex: 1 1 100%; /* 1 card por linha */
+    }
+}
