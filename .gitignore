@@ -4,6 +4,18 @@ _gh_pages
 _no-include
 _original_posts_for_reference
 
+# Jekyll build output (built fresh by CI, deployed to gh-pages — never commit to master)
+_site/
+_bibliography/_site/
+
+# Retired duplicate stylesheet directory (superseded by assets/css/)
+public/css/
+
+# Obsolete/backup file patterns
+backup/
+*.old
+*.old_fut
+
 # extensions
 *.gem
 *.diff

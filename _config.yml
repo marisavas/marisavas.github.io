@@ -14,6 +14,12 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - backup
+  - "*.old"
+  - "*.old_fut"
+  - .DS_Store
+  - _bibliography/bib_to_yaml.py
+  - README.md
 
 collections:
   pages:
