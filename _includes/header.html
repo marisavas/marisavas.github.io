@@ -1,8 +1,13 @@
 <header class="site-header">
   <div class="container-header">
-    <h1>Marisa Vasconcelos</h1>
+    <h1><a href="{{ '/' | relative_url }}">Marisa Vasconcelos</a></h1>
     <hr>
-    <nav class="links">
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      Menu
+    </button>
+
+    <nav id="primary-nav" class="links">
       <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a>
       <a href="{{ '/research/' | relative_url }}" class="{% if page.url == '/research/' %}active{% endif %}">Research</a>
       <a href="{{ '/publications/' | relative_url }}" class="{% if page.url == '/publications/' %}active{% endif %}">Publications</a>
@@ -10,4 +15,20 @@
       <!-- CV nav item intentionally omitted until the CV page exists (Phase 7) to avoid a dead link -->
     </nav>
   </div>
+  <div class="evidence-rule" role="presentation"></div>
 </header>
+
+<script>
+  // Progressive enhancement only: all nav links remain present and reachable
+  // in the DOM even if this script fails to load — only the collapsed
+  // mobile state depends on it.
+  document.addEventListener('DOMContentLoaded', function () {
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('primary-nav');
+    if (!toggle || !nav) return;
+    toggle.addEventListener('click', function () {
+      var open = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+  });
+</script>

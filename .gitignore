@@ -1,3 +1,6 @@
+.history/
+*.patch
+index2.html
 # docs files & jekyll-built site
 _docs
 _gh_pages

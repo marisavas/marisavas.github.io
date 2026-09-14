@@ -7,7 +7,7 @@ custom_css:
   - about
 ---
 
-<main class="container about-page">
+<div class="container about-page">
 
   <section class="intro-section">
       <div class="welcome-text">Welcome!</div>
@@ -110,4 +110,4 @@ custom_css:
 
 
 
-</main>
+</div>
