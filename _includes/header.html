@@ -1,13 +1,19 @@
-<header class="site-header">
-  <div class="container-header">
-    <h1>Marisa Vasconcelos</h1>
-    <hr>
-    <nav class="links">
-      <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a>
-      <a href="{{ '/research/' | relative_url }}" class="{% if page.url == '/research/' %}active{% endif %}">Research</a>
-      <a href="{{ '/publications/' | relative_url }}" class="{% if page.url == '/publications/' %}active{% endif %}">Publications</a>
-      <a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">About</a>
-      <!-- CV nav item intentionally omitted until the CV page exists (Phase 7) to avoid a dead link -->
-    </nav>
-  </div>
-</header>
+<aside class="site-side">
+  <a class="site-name" href="{{ '/' | relative_url }}">Marisa Vasconcelos</a>
+  <p class="site-role">Research Scientist<br>Postdoctoral Researcher, UFMG</p>
+
+  <nav class="site-nav" aria-label="Main">
+    <ul>
+      <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a></li>
+      <li><a href="{{ '/research/' | relative_url }}" {% if page.url == '/research/' %}aria-current="page"{% endif %}>Research</a></li>
+      <li><a href="{{ '/publications/' | relative_url }}" {% if page.url == '/publications/' %}aria-current="page"{% endif %}>Publications</a></li>
+    </ul>
+  </nav>
+
+  <ul class="site-elsewhere">
+    <li><a href="mailto:marisa.vasconcelos@gmail.com">Email</a></li>
+    <li><a href="https://scholar.google.com/citations?user=e5IvuJgAAAAJ">Google Scholar</a></li>
+    <li><a href="https://orcid.org/0000-0002-1366-6499">ORCID</a></li>
+    <li><a href="https://www.linkedin.com/in/marisa-vasconcelos">LinkedIn</a></li>
+  </ul>
+</aside>
