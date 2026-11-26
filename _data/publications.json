@@ -1,188 +1,6 @@
-[
- {
-  "key": "journals",
-  "label": "Journal articles",
-  "entries": [
-   {
-    "title": "Improving the Mapping of Leisure-time Physical Activity Inequities: the use of Artificial Intelligence to Advance Estimates of Small-areas in Brazil",
-    "authors": [
-     {
-      "name": "T. Faria",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "R. Bernal",
-      "me": false
-     },
-     {
-      "name": "G. Mielke",
-      "me": false
-     },
-     {
-      "name": "J. de Souza",
-      "me": false
-     },
-     {
-      "name": "C. Gomes",
-      "me": false
-     },
-     {
-      "name": "M. Gonçalves",
-      "me": false
-     },
-     {
-      "name": "J. Almeida",
-      "me": false
-     },
-     {
-      "name": "D. Malta",
-      "me": false
-     }
-    ],
-    "venue": "Public Health",
-    "year": 2025,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Higher Education’s Influence on Social Networks and Entrepreneurship in Brazil",
-    "authors": [
-     {
-      "name": "M. Reddy",
-      "me": false
-     },
-     {
-      "name": "J. Nardelli",
-      "me": false
-     },
-     {
-      "name": "Y. Pereira",
-      "me": false
-     },
-     {
-      "name": "L. Oliveira",
-      "me": false
-     },
-     {
-      "name": "T. Silva",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "M. Horowitz",
-      "me": false
-     }
-    ],
-    "venue": "Social Network Analysis and Mining",
-    "year": 2023,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Characterizing Political Bias and Comments Associated with News on Brazilian Facebook",
-    "authors": [
-     {
-      "name": "S. Guimarães",
-      "me": false
-     },
-     {
-      "name": "J. Reis",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     }
-    ],
-    "venue": "Social Network Analysis and Mining",
-    "year": 2021,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Predicting the Popularity of Micro-Reviews: A Foursquare Case Study",
-    "authors": [
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "J. Almeida",
-      "me": false
-     },
-     {
-      "name": "M. Gonçalves",
-      "me": false
-     }
-    ],
-    "venue": "Information Sciences",
-    "year": 2015,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "(Re)configuration Algorithms for Peer-to-Peer over Ad Hoc Networks",
-    "authors": [
-     {
-      "name": "F. Franciscani",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "R. Couto",
-      "me": false
-     },
-     {
-      "name": "A. Loureiro",
-      "me": false
-     }
-    ],
-    "venue": "Journal of Parallel and Distributed Computing",
-    "year": 2005,
-    "award": "",
-    "url": ""
-   }
-  ]
- },
- {
-  "key": "conferences",
-  "label": "Conference papers",
-  "entries": [
-   {
-    "title": "Framing AI on YouTube: A Comparative Analysis of Discourse in Brazil and the United States",
-    "authors": [
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "G. Machado",
-      "me": false
-     },
-     {
-      "name": "I. Costa",
-      "me": false
-     },
-     {
-      "name": "J. Almeida",
-      "me": false
-     }
-    ],
-    "venue": "ACM Web Science Conference (WebSci)",
-    "year": 2026,
-    "award": "",
-    "url": ""
-   },
+{
+ "selected": {
+  "rai": [
    {
     "title": "Responsible AI for Public Health: A Methodological Illustration with a Forecasting Model applied to Respiratory Hospitalizations on SUS Data",
     "authors": [
@@ -218,83 +36,40 @@
     "venue": "Simpósio Brasileiro de Computação Aplicada à Saúde (SBCAS)",
     "year": 2026,
     "award": "",
+    "note": "",
+    "selected": "rai",
     "url": ""
    },
    {
-    "title": "From Inclusion to Contention: Analyzing DEI and “Woke” Narratives on Reddit",
+    "title": "From Principles to Longitudinal AI Governance: An Evidence-Based Framework for Continuous Oversight",
     "authors": [
-     {
-      "name": "M. Locatelli",
-      "me": false
-     },
-     {
-      "name": "A. Costa",
-      "me": false
-     },
-     {
-      "name": "V. Thome",
-      "me": false
-     },
      {
       "name": "M. Vasconcelos",
       "me": true
      },
      {
-      "name": "V. Almeida",
-      "me": false
-     }
-    ],
-    "venue": "International Conference on Advances in Social Networks Analysis and Mining (ASONAM), Lecture Notes in Computer Science, Springer",
-    "year": 2025,
-    "award": "",
-    "url": "https://doi.org/10.1007/978-3-032-13821-7_22"
-   },
-   {
-    "title": "Analyzing Political Discourse on Discord during the 2024 U.S. Presidential Election",
-    "authors": [
-     {
-      "name": "A. Buzelin",
+      "name": "R. G. Pereira",
       "me": false
      },
      {
-      "name": "P. Robles",
+      "name": "L. E. Brito",
       "me": false
      },
      {
-      "name": "M. Locatelli",
+      "name": "M. A. Brandão",
       "me": false
      },
      {
-      "name": "S. Malaquias",
+      "name": "H. T. Marques-Neto",
       "me": false
      },
      {
-      "name": "P. Bento",
+      "name": "J. M. Almeida",
       "me": false
      },
      {
-      "name": "Y. Aquino",
+      "name": "A. P. C. Silva",
       "me": false
-     },
-     {
-      "name": "L. Dayrell",
-      "me": false
-     },
-     {
-      "name": "V. Estanislau",
-      "me": false
-     },
-     {
-      "name": "C. Santana",
-      "me": false
-     },
-     {
-      "name": "P. Alzamora",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
      },
      {
       "name": "W. Meira Jr",
@@ -305,27 +80,12 @@
       "me": false
      }
     ],
-    "venue": "ACM Web Science Conference (WebSci)",
-    "year": 2025,
+    "venue": "Data for Policy 2026 (DfP'26), Book of Abstracts",
+    "year": 2026,
     "award": "",
-    "url": ""
-   },
-   {
-    "title": "Characterizing Global Gender Gaps in STEM Using Facebook Data",
-    "authors": [
-     {
-      "name": "C. Vieira",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     }
-    ],
-    "venue": "Conference on Scientometrics & Informetrics",
-    "year": 2025,
-    "award": "",
-    "url": ""
+    "note": "Full paper under review at Data & Policy (Cambridge University Press)",
+    "selected": "rai",
+    "url": "https://doi.org/10.5281/zenodo.22660429"
    },
    {
     "title": "Performance Evaluation of Computational Approaches for Automatic Skin Tone Inference",
@@ -358,478 +118,8 @@
     "venue": "Latin American Ethics on Artificial Intelligence",
     "year": 2024,
     "award": "",
-    "url": ""
-   },
-   {
-    "title": "Disappearing Without a Trace: Coverage, Community, Quality, and Temporal Dynamics of Wikipedia Articles on Endangered Brazilian Indigenous Languages",
-    "authors": [
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "P. S. Mizukami",
-      "me": false
-     },
-     {
-      "name": "C. Pinhanez",
-      "me": false
-     }
-    ],
-    "venue": "International AAAI Conference on Web and Social Media",
-    "year": 2024,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Balancing Social Impact, Opportunities, and Ethical Constraints of Using AI in the Documentation and Vitalization of Indigenous Languages",
-    "authors": [
-     {
-      "name": "C. Pinhanez",
-      "me": false
-     },
-     {
-      "name": "P. Cavalin",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "J. Nogima",
-      "me": false
-     }
-    ],
-    "venue": "International Joint Conference on Artificial Intelligence",
-    "year": 2023,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Characterizing the Social Ties between Black and Tech Communities on Twitter",
-    "authors": [
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "P. Rocha",
-      "me": false
-     },
-     {
-      "name": "J. Nogima",
-      "me": false
-     },
-     {
-      "name": "R. de Paula",
-      "me": false
-     }
-    ],
-    "venue": "ACM Web Science Conference (WebSci)",
-    "year": 2022,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "A Study of Misinformation in Audio Messages Shared in WhatsApp Groups",
-    "authors": [
-     {
-      "name": "A. Maros",
-      "me": false
-     },
-     {
-      "name": "J. Almeida",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     }
-    ],
-    "venue": "Multidisciplinary International Symposium on Disinformation in Open Online Media",
-    "year": 2021,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Towards a Method to Classify Language Style for Enhancing Conversational Systems",
-    "authors": [
-     {
-      "name": "P. Cavalin",
-      "me": false
-     },
-     {
-      "name": "V. Ribeiro",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "C. Pinhanez",
-      "me": false
-     },
-     {
-      "name": "J. Nogima",
-      "me": false
-     },
-     {
-      "name": "H. Ferreira",
-      "me": false
-     }
-    ],
-    "venue": "The International Joint Conference on Neural Networks (IJCNN)",
-    "year": 2021,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "A Look into COVID-19 Vaccination Debate on Twitter",
-    "authors": [
-     {
-      "name": "L. Malagoli",
-      "me": false
-     },
-     {
-      "name": "J. Stancioli",
-      "me": false
-     },
-     {
-      "name": "C. Ferreira",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "A. Silva",
-      "me": false
-     },
-     {
-      "name": "J. Almeida",
-      "me": false
-     }
-    ],
-    "venue": "ACM Web Science Conference (WebSci)",
-    "year": 2021,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "From Disjoint Sets to Parallel Data to Train Seq2Seq Models for Sentiment Transfer",
-    "authors": [
-     {
-      "name": "P. Cavalin",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "M. Grave",
-      "me": false
-     },
-     {
-      "name": "C. Pinhanez",
-      "me": false
-     },
-     {
-      "name": "V. Ribeiro",
-      "me": false
-     }
-    ],
-    "venue": "EMNLP",
-    "year": 2020,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Identifying and Characterizing Alternative News Media on Facebook",
-    "authors": [
-     {
-      "name": "S. Guimarães",
-      "me": false
-     },
-     {
-      "name": "J. Reis",
-      "me": false
-     },
-     {
-      "name": "L. Lima",
-      "me": false
-     },
-     {
-      "name": "F. Ribeiro",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "J. An",
-      "me": false
-     },
-     {
-      "name": "H. Kwak",
-      "me": false
-     },
-     {
-      "name": "F. Benevenuto",
-      "me": false
-     }
-    ],
-    "venue": "ASONAM",
-    "year": 2020,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Creating Corpora for Seq2Seq Tone Rephrasing Using Social Media Posts",
-    "authors": [
-     {
-      "name": "P. Cavalin",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "M. Grave",
-      "me": false
-     },
-     {
-      "name": "C. Pinhanez",
-      "me": false
-     }
-    ],
-    "venue": "International Joint Conference on Neural Networks (IJCNN)",
-    "year": 2020,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Analyzing YouTube Videos Shared on WhatsApp in the Early COVID-19 Crisis",
-    "authors": [
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "E. Pereira",
-      "me": false
-     },
-     {
-      "name": "S. Guimarães",
-      "me": false
-     },
-     {
-      "name": "M. Ribeiro",
-      "me": false
-     },
-     {
-      "name": "P. Melo",
-      "me": false
-     },
-     {
-      "name": "F. Benevenuto",
-      "me": false
-     }
-    ],
-    "venue": "Brazilian Symposium on Multimedia and the Web",
-    "year": 2020,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Analyzing the Use of Audio Messages in WhatsApp Groups",
-    "authors": [
-     {
-      "name": "A. Maros",
-      "me": false
-     },
-     {
-      "name": "J. Almeida",
-      "me": false
-     },
-     {
-      "name": "F. Benevenuto",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     }
-    ],
-    "venue": "The Web Conference",
-    "year": 2020,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "The Effect of Audience on Interaction with Chatbots in Physical Spaces",
-    "authors": [
-     {
-      "name": "H. Candello",
-      "me": false
-     },
-     {
-      "name": "C. Pinhanez",
-      "me": false
-     },
-     {
-      "name": "M. Pichiliani",
-      "me": false
-     },
-     {
-      "name": "P. Cavalin",
-      "me": false
-     },
-     {
-      "name": "F. Figueiredo",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "H. Carmo",
-      "me": false
-     }
-    ],
-    "venue": "Brazilian Symposium on Human Factors in Computing Systems (IHC)",
-    "year": 2019,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Can Direct Address Affect User Engagement with Chatbots Embodied in Physical Spaces?",
-    "authors": [
-     {
-      "name": "H. Candello",
-      "me": false
-     },
-     {
-      "name": "C. Pinhanez",
-      "me": false
-     },
-     {
-      "name": "M. Pichiliani",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "H. Carmo",
-      "me": false
-     }
-    ],
-    "venue": "Conference on Conversational User Interfaces (CUI)",
-    "year": 2019,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Analyzing Textual (Mis)Information in WhatsApp Groups",
-    "authors": [
-     {
-      "name": "G. Resende",
-      "me": false
-     },
-     {
-      "name": "P. Melo",
-      "me": false
-     },
-     {
-      "name": "J. Reis",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "J. Almeida",
-      "me": false
-     },
-     {
-      "name": "F. Benevenuto",
-      "me": false
-     }
-    ],
-    "venue": "ACM Web Science Conference (WebSci)",
-    "year": 2019,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Live It Up: Analyzing Emotions and Language Use in Tweets during the Soccer World Cup Final",
-    "authors": [
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "J. Almeida",
-      "me": false
-     },
-     {
-      "name": "P. Cavalin",
-      "me": false
-     },
-     {
-      "name": "C. Pinhanez",
-      "me": false
-     }
-    ],
-    "venue": "ACM Web Science Conference (WebSci)",
-    "year": 2019,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "(Mis)Information Dissemination in WhatsApp: Gathering, Analyzing and Countermeasures",
-    "authors": [
-     {
-      "name": "G. Resende",
-      "me": false
-     },
-     {
-      "name": "P. Melo",
-      "me": false
-     },
-     {
-      "name": "H. Sousa",
-      "me": false
-     },
-     {
-      "name": "J. Messias",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "J. Almeida",
-      "me": false
-     },
-     {
-      "name": "F. Benevenuto",
-      "me": false
-     }
-    ],
-    "venue": "The Web Conference",
-    "year": 2019,
-    "award": "",
+    "note": "",
+    "selected": "rai",
     "url": ""
    },
    {
@@ -867,39 +157,8 @@
     "venue": "ACM CHI",
     "year": 2019,
     "award": "Honorable Mention",
-    "url": ""
-   },
-   {
-    "title": "A System for Monitoring Public Political Groups in WhatsApp",
-    "authors": [
-     {
-      "name": "G. Resende",
-      "me": false
-     },
-     {
-      "name": "J. Messias",
-      "me": false
-     },
-     {
-      "name": "M. Silva",
-      "me": false
-     },
-     {
-      "name": "J. Almeida",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "F. Benevenuto",
-      "me": false
-     }
-    ],
-    "venue": "Brazilian Symposium on Multimedia and the Web",
-    "year": 2018,
-    "award": "",
+    "note": "",
+    "selected": "rai",
     "url": ""
    },
    {
@@ -921,351 +180,64 @@
     "venue": "AAAI/ACM AIES",
     "year": 2018,
     "award": "",
+    "note": "",
+    "selected": "rai",
     "url": ""
    },
    {
-    "title": "Popularity Dynamics of Foursquare Micro-Reviews",
+    "title": "BotTester: Testing Conversational Systems with Simulated Users",
     "authors": [
      {
       "name": "M. Vasconcelos",
       "me": true
      },
      {
-      "name": "J. Almeida",
+      "name": "H. Candello",
       "me": false
      },
      {
-      "name": "M. Gonçalves",
+      "name": "C. Pinhanez",
+      "me": false
+     },
+     {
+      "name": "T. dos Santos",
       "me": false
      }
     ],
-    "venue": "ACM Conference on Online Social Networks (COSN)",
-    "year": 2014,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "What Makes Your Opinion Popular? Predicting the Popularity of Micro-Reviews in Foursquare",
-    "authors": [
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "J. Almeida",
-      "me": false
-     },
-     {
-      "name": "M. Gonçalves",
-      "me": false
-     }
-    ],
-    "venue": "ACM Symposium on Applied Computing (SAC)",
-    "year": 2014,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Polarity Detection of Foursquare Tips",
-    "authors": [
-     {
-      "name": "F. Moraes",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "P. Prado",
-      "me": false
-     },
-     {
-      "name": "D. Dalip",
-      "me": false
-     },
-     {
-      "name": "J. Almeida",
-      "me": false
-     },
-     {
-      "name": "M. Gonçalves",
-      "me": false
-     }
-    ],
-    "venue": "International Conference on Social Informatics (SocInfo)",
-    "year": 2013,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Polarity Analysis of Micro Reviews in Foursquare",
-    "authors": [
-     {
-      "name": "F. Moraes",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "P. Prado",
-      "me": false
-     },
-     {
-      "name": "J. Almeida",
-      "me": false
-     },
-     {
-      "name": "M. Gonçalves",
-      "me": false
-     }
-    ],
-    "venue": "Brazilian Symposium on Multimedia and the Web",
-    "year": 2013,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Tips, Dones and Todos: Uncovering User Profiles in Foursquare",
-    "authors": [
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "S. Ricci",
-      "me": false
-     },
-     {
-      "name": "J. Almeida",
-      "me": false
-     },
-     {
-      "name": "F. Benevenuto",
-      "me": false
-     },
-     {
-      "name": "V. Almeida",
-      "me": false
-     }
-    ],
-    "venue": "ACM Conference on Web Search and Data Mining (WSDM)",
-    "year": 2012,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Characterization and Influence of Tips and Dones in Foursquare",
-    "authors": [
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "S. Ricci",
-      "me": false
-     },
-     {
-      "name": "J. Almeida",
-      "me": false
-     },
-     {
-      "name": "F. Benevenuto",
-      "me": false
-     },
-     {
-      "name": "V. Almeida",
-      "me": false
-     }
-    ],
-    "venue": "Brazilian Symposium on Computer Networks (SBRC)",
-    "year": 2012,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Impact of Peer Incentives on the Dissemination of Polluted Content",
-    "authors": [
-     {
-      "name": "F. Benevenuto",
-      "me": false
-     },
-     {
-      "name": "C. Costa",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "V. Almeida",
-      "me": false
-     },
-     {
-      "name": "J. Almeida",
-      "me": false
-     },
-     {
-      "name": "M. Mowbray",
-      "me": false
-     }
-    ],
-    "venue": "ACM Symposium on Applied Computing (SAC)",
-    "year": 2006,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Dissemination of Polluted Content in Peer-to-Peer Networks",
-    "authors": [
-     {
-      "name": "C. Costa",
-      "me": false
-     },
-     {
-      "name": "V. Soares",
-      "me": false
-     },
-     {
-      "name": "F. Benevenuto",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "J. Almeida",
-      "me": false
-     },
-     {
-      "name": "V. Almeida",
-      "me": false
-     },
-     {
-      "name": "M. Mowbray",
-      "me": false
-     }
-    ],
-    "venue": "Brazilian Symposium on Computer Networks (SBRC)",
-    "year": 2006,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Quantitative Analysis of Strategies for Streaming Media Distribution",
-    "authors": [
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "L. Rocha",
-      "me": false
-     },
-     {
-      "name": "J. Santos",
-      "me": false
-     },
-     {
-      "name": "J. J. Ismael",
-      "me": false
-     },
-     {
-      "name": "L. da Mata",
-      "me": false
-     },
-     {
-      "name": "J. Almeida",
-      "me": false
-     },
-     {
-      "name": "J. W. Meira",
-      "me": false
-     },
-     {
-      "name": "V. Almeida",
-      "me": false
-     }
-    ],
-    "venue": "Latin American Web Congress (LA-WEB)",
-    "year": 2003,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Peer-to-Peer over Ad-Hoc Networks: (Re)Configuration Algorithms",
-    "authors": [
-     {
-      "name": "F. Franciscani",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "R. Couto",
-      "me": false
-     },
-     {
-      "name": "A. Loureiro",
-      "me": false
-     }
-    ],
-    "venue": "International Symposium on Parallel and Distributed Processing (IPDPS)",
-    "year": 2003,
-    "award": "",
+    "venue": "HCI in Practice at Brazilian Symposium on Human Factors in Computing Systems",
+    "year": 2017,
+    "award": "Best Short Paper, IHC in Practice Track",
+    "note": "",
+    "selected": "rai",
     "url": ""
    }
-  ]
- },
- {
-  "key": "workshops",
-  "label": "Workshop and short papers",
-  "entries": [
+  ],
+  "sc": [
    {
-    "title": "LEME: assistente RAG em português para normas brasileiras e internacionais sobre saúde e IA Responsável",
+    "title": "Framing AI on YouTube: A Comparative Analysis of Discourse in Brazil and the United States",
     "authors": [
-     {
-      "name": "K. Azevedo",
-      "me": false
-     },
-     {
-      "name": "I. Avelar",
-      "me": false
-     },
-     {
-      "name": "M. Carvalho",
-      "me": false
-     },
-     {
-      "name": "H. C. Lima",
-      "me": false
-     },
-     {
-      "name": "I. Cristina",
-      "me": false
-     },
      {
       "name": "M. Vasconcelos",
       "me": true
      },
      {
-      "name": "M. Brandão",
+      "name": "G. Machado",
       "me": false
      },
      {
-      "name": "W. Meira Jr",
+      "name": "I. Costa",
+      "me": false
+     },
+     {
+      "name": "J. Almeida",
       "me": false
      }
     ],
-    "venue": "Brazilian Symposium on Multimedia and the Web (WebMedia)",
+    "venue": "ACM Web Science Conference (WebSci)",
     "year": 2026,
     "award": "",
+    "note": "",
+    "selected": "sc",
     "url": ""
    },
    {
@@ -1295,240 +267,19 @@
     "venue": "Brazilian Workshop on Social Network Analysis and Mining (BraSNAM)",
     "year": 2025,
     "award": "Best Paper Award",
+    "note": "",
+    "selected": "sc",
     "url": ""
    },
    {
-    "title": "AI and Climate Change Discourse: What Opinions Do Large Language Models Present?",
+    "title": "Disappearing Without a Trace: Coverage, Community, Quality, and Temporal Dynamics of Wikipedia Articles on Endangered Brazilian Indigenous Languages",
     "authors": [
-     {
-      "name": "M. Locatelli",
-      "me": false
-     },
-     {
-      "name": "P. Dutenhefner",
-      "me": false
-     },
-     {
-      "name": "A. Buzelin",
-      "me": false
-     },
-     {
-      "name": "P. Alzamora",
-      "me": false
-     },
-     {
-      "name": "Y. Aquino",
-      "me": false
-     },
-     {
-      "name": "P. Bento",
-      "me": false
-     },
-     {
-      "name": "S. Malaquias",
-      "me": false
-     },
-     {
-      "name": "V. Estanislau",
-      "me": false
-     },
-     {
-      "name": "C. Santana",
-      "me": false
-     },
-     {
-      "name": "L. Dayrell",
-      "me": false
-     },
      {
       "name": "M. Vasconcelos",
       "me": true
      },
      {
-      "name": "W. Meira Jr",
-      "me": false
-     },
-     {
-      "name": "V. Almeida",
-      "me": false
-     }
-    ],
-    "venue": "ClimateNLP Workshop at ACL",
-    "year": 2025,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Responsible AI: Principles and Best Practices for the Implementation of AI-Based Systems",
-    "authors": [
-     {
-      "name": "J. Reis",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "J. Almeida",
-      "me": false
-     },
-     {
-      "name": "W. Meira Jr.",
-      "me": false
-     },
-     {
-      "name": "V. Almeida",
-      "me": false
-     }
-    ],
-    "venue": "Brazilian Symposium on Multimedia and the Web",
-    "year": 2024,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Análise Comparativa dos Artigos de Filmes Indicados ao Oscar em Três Versões da Wikipédia",
-    "authors": [
-     {
-      "name": "C. Pereira",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "A. Silva",
-      "me": false
-     }
-    ],
-    "venue": "Undergraduate Research Work Competition at WebMedia",
-    "year": 2024,
-    "award": "Honorable Mention",
-    "url": ""
-   },
-   {
-    "title": "Development of a Dataset on Patent Registration in Brazil",
-    "authors": [
-     {
-      "name": "N. Rezende",
-      "me": false
-     },
-     {
-      "name": "D. Dalip",
-      "me": false
-     },
-     {
-      "name": "M. Brandão",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     }
-    ],
-    "venue": "Dataset Showcase Workshop",
-    "year": 2023,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Connecting Underrepresented Minorities and Qualified Job Positions Using Online Data",
-    "authors": [
-     {
-      "name": "M. Macedo",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "A. Brito",
-      "me": false
-     },
-     {
-      "name": "R. Paula",
-      "me": false
-     }
-    ],
-    "venue": "RDAI workshop at AAAI",
-    "year": 2021,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Characterization of the Debate on Twitter about COVID-19 Vaccination in Brazil",
-    "authors": [
-     {
-      "name": "L. Malagoli",
-      "me": false
-     },
-     {
-      "name": "J. Stancioli",
-      "me": false
-     },
-     {
-      "name": "C. Ferreira",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "A. Silva",
-      "me": false
-     },
-     {
-      "name": "J. Almeida",
-      "me": false
-     }
-    ],
-    "venue": "Brazilian Workshop on Social Network Analysis and Mining",
-    "year": 2021,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Using Facebook Ads data to Assess Gender Balance in STEM: Evidences from Brazil",
-    "authors": [
-     {
-      "name": "C. Vieira",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     }
-    ],
-    "venue": "Workshop Data Science for Social Good @TheWebConference",
-    "year": 2021,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Slow down, redesign, and accelerate: adaptations and resilience on business sales transformation amid COVID-19 crisis",
-    "authors": [
-     {
-      "name": "H. Candello",
-      "me": false
-     },
-     {
-      "name": "J. Ferreira",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "V. Santana",
-      "me": false
-     },
-     {
-      "name": "R. Paula",
+      "name": "P. S. Mizukami",
       "me": false
      },
      {
@@ -1536,65 +287,18 @@
       "me": false
      }
     ],
-    "venue": "New Future of Work",
-    "year": 2020,
+    "venue": "International AAAI Conference on Web and Social Media",
+    "year": 2024,
     "award": "",
+    "note": "",
+    "selected": "sc",
     "url": ""
    },
    {
-    "title": "Identifying Influences on the Choice of a STEM Undergraduate Degree: A Qualitative and Comparative Gender Study",
+    "title": "Balancing Social Impact, Opportunities, and Ethical Constraints of Using AI in the Documentation and Vitalization of Indigenous Languages",
     "authors": [
-     {
-      "name": "M. Macedo",
-      "me": false
-     },
-     {
-      "name": "A. Mattos",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "A. Martinazzo",
-      "me": false
-     },
-     {
-      "name": "R. Lopes",
-      "me": false
-     }
-    ],
-    "venue": "Workshop Women in Information Technology",
-    "year": 2018,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "Ravel: A MAS orchestration platform for Human-Chatbots Conversations",
-    "authors": [
-     {
-      "name": "M. Bayser",
-      "me": false
-     },
      {
       "name": "C. Pinhanez",
-      "me": false
-     },
-     {
-      "name": "H. Candello",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "M. Pichiliani",
-      "me": false
-     },
-     {
-      "name": "M. Guerra",
       "me": false
      },
      {
@@ -1602,168 +306,19 @@
       "me": false
      },
      {
-      "name": "R. Souza",
-      "me": false
-     }
-    ],
-    "venue": "Workshop on Engineering Multi-Agent Systems @AAMAS",
-    "year": 2018,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "BotTester: Testing Conversational Systems with Simulated Users",
-    "authors": [
-     {
       "name": "M. Vasconcelos",
       "me": true
      },
      {
-      "name": "H. Candello",
-      "me": false
-     },
-     {
-      "name": "C. Pinhanez",
-      "me": false
-     },
-     {
-      "name": "T. dos Santos",
+      "name": "J. Nogima",
       "me": false
      }
     ],
-    "venue": "HCI in Practice at Brazilian Symposium on Human Factors in Computing Systems",
-    "year": 2017,
-    "award": "Best Short Paper, IHC in Practice Track",
-    "url": ""
-   },
-   {
-    "title": "Beware of What You Share: Inferring Home Location in Social Networks",
-    "authors": [
-     {
-      "name": "T. Pontes",
-      "me": false
-     },
-     {
-      "name": "G. Magno",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "A. Gupta",
-      "me": false
-     },
-     {
-      "name": "J. Almeida",
-      "me": false
-     },
-     {
-      "name": "P. Kumaraguru",
-      "me": false
-     },
-     {
-      "name": "V. Almeida",
-      "me": false
-     }
-    ],
-    "venue": "IEEE Workshop on Privacy in Social Data",
-    "year": 2012,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "We Know Where You Live: Privacy Characterization of Foursquare Behavior",
-    "authors": [
-     {
-      "name": "T. Pontes",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "J. Almeida",
-      "me": false
-     },
-     {
-      "name": "P. Kumaraguru",
-      "me": false
-     },
-     {
-      "name": "V. Almeida",
-      "me": false
-     }
-    ],
-    "venue": "Workshop on LBSN",
-    "year": 2012,
-    "award": "",
-    "url": ""
-   }
-  ]
- },
- {
-  "key": "abstracts",
-  "label": "Extended abstracts and posters",
-  "entries": [
-   {
-    "title": "Estimativa de riscos à saúde em pequenas áreas através de clusterização hierárquica",
-    "authors": [
-     {
-      "name": "B. R. G. Barbosa",
-      "me": false
-     },
-     {
-      "name": "S. N. Alves",
-      "me": false
-     },
-     {
-      "name": "T. M. T. R. Faria",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "M. A. Gonçalves",
-      "me": false
-     },
-     {
-      "name": "J. M. d. Almeida",
-      "me": false
-     },
-     {
-      "name": "R. T. I. Bernal",
-      "me": false
-     },
-     {
-      "name": "D. C. Malta",
-      "me": false
-     }
-    ],
-    "venue": "Brazilian Congress of Health Informatics (CBIS)",
-    "year": 2024,
-    "award": "1st Place, Research-in-Progress Extended Abstracts",
-    "url": ""
-   },
-   {
-    "title": "Contrasting Global Gender Gaps in STEM Using Facebook Data and Offline Indicators",
-    "authors": [
-     {
-      "name": "C. Vieira",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     }
-    ],
-    "venue": "ISA World Congress of Sociology",
+    "venue": "International Joint Conference on Artificial Intelligence",
     "year": 2023,
     "award": "",
+    "note": "",
+    "selected": "sc",
     "url": ""
    },
    {
@@ -1798,53 +353,2061 @@
       "me": false
      }
     ],
-    "venue": "International Conference on Computational Social Science",
+    "venue": "The Web Conference",
     "year": 2019,
     "award": "",
+    "note": "",
+    "selected": "sc",
     "url": ""
    },
    {
-    "title": "Evaluating the conversation flow and content quality of a multi-bot conversational system",
-    "authors": [
-     {
-      "name": "H. Candello",
-      "me": false
-     },
-     {
-      "name": "M. Vasconcelos",
-      "me": true
-     },
-     {
-      "name": "C. Pinhanez",
-      "me": false
-     }
-    ],
-    "venue": "Extended abstract at CHI",
-    "year": 2017,
-    "award": "",
-    "url": ""
-   },
-   {
-    "title": "User Generated Micro-Reviews: Characterization and Popularity Prediction",
+    "title": "Tips, Dones and Todos: Uncovering User Profiles in Foursquare",
     "authors": [
      {
       "name": "M. Vasconcelos",
       "me": true
+     },
+     {
+      "name": "S. Ricci",
+      "me": false
      },
      {
       "name": "J. Almeida",
       "me": false
      },
      {
-      "name": "M. Gonçalves",
+      "name": "F. Benevenuto",
+      "me": false
+     },
+     {
+      "name": "V. Almeida",
       "me": false
      }
     ],
-    "venue": "International School and Conference on Network Science",
-    "year": 2015,
+    "venue": "ACM Conference on Web Search and Data Mining (WSDM)",
+    "year": 2012,
     "award": "",
+    "note": "",
+    "selected": "sc",
     "url": ""
    }
   ]
- }
-]
+ },
+ "sections": [
+  {
+   "key": "journals",
+   "label": "Journal articles",
+   "entries": [
+    {
+     "title": "Improving the Mapping of Leisure-time Physical Activity Inequities: the use of Artificial Intelligence to Advance Estimates of Small-areas in Brazil",
+     "authors": [
+      {
+       "name": "T. Faria",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "R. Bernal",
+       "me": false
+      },
+      {
+       "name": "G. Mielke",
+       "me": false
+      },
+      {
+       "name": "J. de Souza",
+       "me": false
+      },
+      {
+       "name": "C. Gomes",
+       "me": false
+      },
+      {
+       "name": "M. Gonçalves",
+       "me": false
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "D. Malta",
+       "me": false
+      }
+     ],
+     "venue": "Public Health",
+     "year": 2025,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Higher Education’s Influence on Social Networks and Entrepreneurship in Brazil",
+     "authors": [
+      {
+       "name": "M. Reddy",
+       "me": false
+      },
+      {
+       "name": "J. Nardelli",
+       "me": false
+      },
+      {
+       "name": "Y. Pereira",
+       "me": false
+      },
+      {
+       "name": "L. Oliveira",
+       "me": false
+      },
+      {
+       "name": "T. Silva",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "M. Horowitz",
+       "me": false
+      }
+     ],
+     "venue": "Social Network Analysis and Mining",
+     "year": 2023,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Characterizing Political Bias and Comments Associated with News on Brazilian Facebook",
+     "authors": [
+      {
+       "name": "S. Guimarães",
+       "me": false
+      },
+      {
+       "name": "J. Reis",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      }
+     ],
+     "venue": "Social Network Analysis and Mining",
+     "year": 2021,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Predicting the Popularity of Micro-Reviews: A Foursquare Case Study",
+     "authors": [
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "M. Gonçalves",
+       "me": false
+      }
+     ],
+     "venue": "Information Sciences",
+     "year": 2015,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "(Re)configuration Algorithms for Peer-to-Peer over Ad Hoc Networks",
+     "authors": [
+      {
+       "name": "F. Franciscani",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "R. Couto",
+       "me": false
+      },
+      {
+       "name": "A. Loureiro",
+       "me": false
+      }
+     ],
+     "venue": "Journal of Parallel and Distributed Computing",
+     "year": 2005,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    }
+   ]
+  },
+  {
+   "key": "conferences",
+   "label": "Conference papers",
+   "entries": [
+    {
+     "title": "Framing AI on YouTube: A Comparative Analysis of Discourse in Brazil and the United States",
+     "authors": [
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "G. Machado",
+       "me": false
+      },
+      {
+       "name": "I. Costa",
+       "me": false
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      }
+     ],
+     "venue": "ACM Web Science Conference (WebSci)",
+     "year": 2026,
+     "award": "",
+     "note": "",
+     "selected": "sc",
+     "url": ""
+    },
+    {
+     "title": "Responsible AI for Public Health: A Methodological Illustration with a Forecasting Model applied to Respiratory Hospitalizations on SUS Data",
+     "authors": [
+      {
+       "name": "R. G. Pereira",
+       "me": false
+      },
+      {
+       "name": "L. E. L. Brito",
+       "me": false
+      },
+      {
+       "name": "I. Avelar",
+       "me": false
+      },
+      {
+       "name": "M. Carvalho",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "M. A. Brandão",
+       "me": false
+      },
+      {
+       "name": "W. Meira Jr",
+       "me": false
+      }
+     ],
+     "venue": "Simpósio Brasileiro de Computação Aplicada à Saúde (SBCAS)",
+     "year": 2026,
+     "award": "",
+     "note": "",
+     "selected": "rai",
+     "url": ""
+    },
+    {
+     "title": "From Inclusion to Contention: Analyzing DEI and “Woke” Narratives on Reddit",
+     "authors": [
+      {
+       "name": "M. Locatelli",
+       "me": false
+      },
+      {
+       "name": "A. Costa",
+       "me": false
+      },
+      {
+       "name": "V. Thome",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "V. Almeida",
+       "me": false
+      }
+     ],
+     "venue": "International Conference on Advances in Social Networks Analysis and Mining (ASONAM), Lecture Notes in Computer Science, Springer",
+     "year": 2025,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": "https://doi.org/10.1007/978-3-032-13821-7_22"
+    },
+    {
+     "title": "Analyzing Political Discourse on Discord during the 2024 U.S. Presidential Election",
+     "authors": [
+      {
+       "name": "A. Buzelin",
+       "me": false
+      },
+      {
+       "name": "P. Robles",
+       "me": false
+      },
+      {
+       "name": "M. Locatelli",
+       "me": false
+      },
+      {
+       "name": "S. Malaquias",
+       "me": false
+      },
+      {
+       "name": "P. Bento",
+       "me": false
+      },
+      {
+       "name": "Y. Aquino",
+       "me": false
+      },
+      {
+       "name": "L. Dayrell",
+       "me": false
+      },
+      {
+       "name": "V. Estanislau",
+       "me": false
+      },
+      {
+       "name": "C. Santana",
+       "me": false
+      },
+      {
+       "name": "P. Alzamora",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "W. Meira Jr",
+       "me": false
+      },
+      {
+       "name": "V. Almeida",
+       "me": false
+      }
+     ],
+     "venue": "ACM Web Science Conference (WebSci)",
+     "year": 2025,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Characterizing Global Gender Gaps in STEM Using Facebook Data",
+     "authors": [
+      {
+       "name": "C. Vieira",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      }
+     ],
+     "venue": "Conference on Scientometrics & Informetrics",
+     "year": 2025,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Performance Evaluation of Computational Approaches for Automatic Skin Tone Inference",
+     "authors": [
+      {
+       "name": "I. Costa",
+       "me": false
+      },
+      {
+       "name": "T. Silva",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "J. Reis",
+       "me": false
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "V. Almeida",
+       "me": false
+      }
+     ],
+     "venue": "Latin American Ethics on Artificial Intelligence",
+     "year": 2024,
+     "award": "",
+     "note": "",
+     "selected": "rai",
+     "url": ""
+    },
+    {
+     "title": "Disappearing Without a Trace: Coverage, Community, Quality, and Temporal Dynamics of Wikipedia Articles on Endangered Brazilian Indigenous Languages",
+     "authors": [
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "P. S. Mizukami",
+       "me": false
+      },
+      {
+       "name": "C. Pinhanez",
+       "me": false
+      }
+     ],
+     "venue": "International AAAI Conference on Web and Social Media",
+     "year": 2024,
+     "award": "",
+     "note": "",
+     "selected": "sc",
+     "url": ""
+    },
+    {
+     "title": "Balancing Social Impact, Opportunities, and Ethical Constraints of Using AI in the Documentation and Vitalization of Indigenous Languages",
+     "authors": [
+      {
+       "name": "C. Pinhanez",
+       "me": false
+      },
+      {
+       "name": "P. Cavalin",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "J. Nogima",
+       "me": false
+      }
+     ],
+     "venue": "International Joint Conference on Artificial Intelligence",
+     "year": 2023,
+     "award": "",
+     "note": "",
+     "selected": "sc",
+     "url": ""
+    },
+    {
+     "title": "Characterizing the Social Ties between Black and Tech Communities on Twitter",
+     "authors": [
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "P. Rocha",
+       "me": false
+      },
+      {
+       "name": "J. Nogima",
+       "me": false
+      },
+      {
+       "name": "R. de Paula",
+       "me": false
+      }
+     ],
+     "venue": "ACM Web Science Conference (WebSci)",
+     "year": 2022,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "A Study of Misinformation in Audio Messages Shared in WhatsApp Groups",
+     "authors": [
+      {
+       "name": "A. Maros",
+       "me": false
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      }
+     ],
+     "venue": "Multidisciplinary International Symposium on Disinformation in Open Online Media",
+     "year": 2021,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Towards a Method to Classify Language Style for Enhancing Conversational Systems",
+     "authors": [
+      {
+       "name": "P. Cavalin",
+       "me": false
+      },
+      {
+       "name": "V. Ribeiro",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "C. Pinhanez",
+       "me": false
+      },
+      {
+       "name": "J. Nogima",
+       "me": false
+      },
+      {
+       "name": "H. Ferreira",
+       "me": false
+      }
+     ],
+     "venue": "The International Joint Conference on Neural Networks (IJCNN)",
+     "year": 2021,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "A Look into COVID-19 Vaccination Debate on Twitter",
+     "authors": [
+      {
+       "name": "L. Malagoli",
+       "me": false
+      },
+      {
+       "name": "J. Stancioli",
+       "me": false
+      },
+      {
+       "name": "C. Ferreira",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "A. Silva",
+       "me": false
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      }
+     ],
+     "venue": "ACM Web Science Conference (WebSci)",
+     "year": 2021,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "From Disjoint Sets to Parallel Data to Train Seq2Seq Models for Sentiment Transfer",
+     "authors": [
+      {
+       "name": "P. Cavalin",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "M. Grave",
+       "me": false
+      },
+      {
+       "name": "C. Pinhanez",
+       "me": false
+      },
+      {
+       "name": "V. Ribeiro",
+       "me": false
+      }
+     ],
+     "venue": "EMNLP",
+     "year": 2020,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Identifying and Characterizing Alternative News Media on Facebook",
+     "authors": [
+      {
+       "name": "S. Guimarães",
+       "me": false
+      },
+      {
+       "name": "J. Reis",
+       "me": false
+      },
+      {
+       "name": "L. Lima",
+       "me": false
+      },
+      {
+       "name": "F. Ribeiro",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "J. An",
+       "me": false
+      },
+      {
+       "name": "H. Kwak",
+       "me": false
+      },
+      {
+       "name": "F. Benevenuto",
+       "me": false
+      }
+     ],
+     "venue": "ASONAM",
+     "year": 2020,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Creating Corpora for Seq2Seq Tone Rephrasing Using Social Media Posts",
+     "authors": [
+      {
+       "name": "P. Cavalin",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "M. Grave",
+       "me": false
+      },
+      {
+       "name": "C. Pinhanez",
+       "me": false
+      }
+     ],
+     "venue": "International Joint Conference on Neural Networks (IJCNN)",
+     "year": 2020,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Analyzing YouTube Videos Shared on WhatsApp in the Early COVID-19 Crisis",
+     "authors": [
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "E. Pereira",
+       "me": false
+      },
+      {
+       "name": "S. Guimarães",
+       "me": false
+      },
+      {
+       "name": "M. Ribeiro",
+       "me": false
+      },
+      {
+       "name": "P. Melo",
+       "me": false
+      },
+      {
+       "name": "F. Benevenuto",
+       "me": false
+      }
+     ],
+     "venue": "Brazilian Symposium on Multimedia and the Web",
+     "year": 2020,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Analyzing the Use of Audio Messages in WhatsApp Groups",
+     "authors": [
+      {
+       "name": "A. Maros",
+       "me": false
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "F. Benevenuto",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      }
+     ],
+     "venue": "The Web Conference",
+     "year": 2020,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "The Effect of Audience on Interaction with Chatbots in Physical Spaces",
+     "authors": [
+      {
+       "name": "H. Candello",
+       "me": false
+      },
+      {
+       "name": "C. Pinhanez",
+       "me": false
+      },
+      {
+       "name": "M. Pichiliani",
+       "me": false
+      },
+      {
+       "name": "P. Cavalin",
+       "me": false
+      },
+      {
+       "name": "F. Figueiredo",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "H. Carmo",
+       "me": false
+      }
+     ],
+     "venue": "Brazilian Symposium on Human Factors in Computing Systems (IHC)",
+     "year": 2019,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Can Direct Address Affect User Engagement with Chatbots Embodied in Physical Spaces?",
+     "authors": [
+      {
+       "name": "H. Candello",
+       "me": false
+      },
+      {
+       "name": "C. Pinhanez",
+       "me": false
+      },
+      {
+       "name": "M. Pichiliani",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "H. Carmo",
+       "me": false
+      }
+     ],
+     "venue": "Conference on Conversational User Interfaces (CUI)",
+     "year": 2019,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Analyzing Textual (Mis)Information in WhatsApp Groups",
+     "authors": [
+      {
+       "name": "G. Resende",
+       "me": false
+      },
+      {
+       "name": "P. Melo",
+       "me": false
+      },
+      {
+       "name": "J. Reis",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "F. Benevenuto",
+       "me": false
+      }
+     ],
+     "venue": "ACM Web Science Conference (WebSci)",
+     "year": 2019,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Live It Up: Analyzing Emotions and Language Use in Tweets during the Soccer World Cup Final",
+     "authors": [
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "P. Cavalin",
+       "me": false
+      },
+      {
+       "name": "C. Pinhanez",
+       "me": false
+      }
+     ],
+     "venue": "ACM Web Science Conference (WebSci)",
+     "year": 2019,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "(Mis)Information Dissemination in WhatsApp: Gathering, Analyzing and Countermeasures",
+     "authors": [
+      {
+       "name": "G. Resende",
+       "me": false
+      },
+      {
+       "name": "P. Melo",
+       "me": false
+      },
+      {
+       "name": "H. Sousa",
+       "me": false
+      },
+      {
+       "name": "J. Messias",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "F. Benevenuto",
+       "me": false
+      }
+     ],
+     "venue": "The Web Conference",
+     "year": 2019,
+     "award": "",
+     "note": "",
+     "selected": "sc",
+     "url": ""
+    },
+    {
+     "title": "The Effect of Audiences on the User Experience with Conversational Interfaces in Physical Spaces",
+     "authors": [
+      {
+       "name": "H. Candello",
+       "me": false
+      },
+      {
+       "name": "C. Pinhanez",
+       "me": false
+      },
+      {
+       "name": "M. Pichiliani",
+       "me": false
+      },
+      {
+       "name": "P. Cavalin",
+       "me": false
+      },
+      {
+       "name": "F. Figueiredo",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "H. Carmo",
+       "me": false
+      }
+     ],
+     "venue": "ACM CHI",
+     "year": 2019,
+     "award": "Honorable Mention",
+     "note": "",
+     "selected": "rai",
+     "url": ""
+    },
+    {
+     "title": "A System for Monitoring Public Political Groups in WhatsApp",
+     "authors": [
+      {
+       "name": "G. Resende",
+       "me": false
+      },
+      {
+       "name": "J. Messias",
+       "me": false
+      },
+      {
+       "name": "M. Silva",
+       "me": false
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "F. Benevenuto",
+       "me": false
+      }
+     ],
+     "venue": "Brazilian Symposium on Multimedia and the Web",
+     "year": 2018,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Modeling Epistemological Principles for Bias Mitigation in AI Systems: An Illustration in Hiring Decisions",
+     "authors": [
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "C. Cardonha",
+       "me": false
+      },
+      {
+       "name": "B. Gonçalves",
+       "me": false
+      }
+     ],
+     "venue": "AAAI/ACM AIES",
+     "year": 2018,
+     "award": "",
+     "note": "",
+     "selected": "rai",
+     "url": ""
+    },
+    {
+     "title": "Popularity Dynamics of Foursquare Micro-Reviews",
+     "authors": [
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "M. Gonçalves",
+       "me": false
+      }
+     ],
+     "venue": "ACM Conference on Online Social Networks (COSN)",
+     "year": 2014,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "What Makes Your Opinion Popular? Predicting the Popularity of Micro-Reviews in Foursquare",
+     "authors": [
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "M. Gonçalves",
+       "me": false
+      }
+     ],
+     "venue": "ACM Symposium on Applied Computing (SAC)",
+     "year": 2014,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Polarity Detection of Foursquare Tips",
+     "authors": [
+      {
+       "name": "F. Moraes",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "P. Prado",
+       "me": false
+      },
+      {
+       "name": "D. Dalip",
+       "me": false
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "M. Gonçalves",
+       "me": false
+      }
+     ],
+     "venue": "International Conference on Social Informatics (SocInfo)",
+     "year": 2013,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Polarity Analysis of Micro Reviews in Foursquare",
+     "authors": [
+      {
+       "name": "F. Moraes",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "P. Prado",
+       "me": false
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "M. Gonçalves",
+       "me": false
+      }
+     ],
+     "venue": "Brazilian Symposium on Multimedia and the Web",
+     "year": 2013,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Tips, Dones and Todos: Uncovering User Profiles in Foursquare",
+     "authors": [
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "S. Ricci",
+       "me": false
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "F. Benevenuto",
+       "me": false
+      },
+      {
+       "name": "V. Almeida",
+       "me": false
+      }
+     ],
+     "venue": "ACM Conference on Web Search and Data Mining (WSDM)",
+     "year": 2012,
+     "award": "",
+     "note": "",
+     "selected": "sc",
+     "url": ""
+    },
+    {
+     "title": "Characterization and Influence of Tips and Dones in Foursquare",
+     "authors": [
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "S. Ricci",
+       "me": false
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "F. Benevenuto",
+       "me": false
+      },
+      {
+       "name": "V. Almeida",
+       "me": false
+      }
+     ],
+     "venue": "Brazilian Symposium on Computer Networks (SBRC)",
+     "year": 2012,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Impact of Peer Incentives on the Dissemination of Polluted Content",
+     "authors": [
+      {
+       "name": "F. Benevenuto",
+       "me": false
+      },
+      {
+       "name": "C. Costa",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "V. Almeida",
+       "me": false
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "M. Mowbray",
+       "me": false
+      }
+     ],
+     "venue": "ACM Symposium on Applied Computing (SAC)",
+     "year": 2006,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Dissemination of Polluted Content in Peer-to-Peer Networks",
+     "authors": [
+      {
+       "name": "C. Costa",
+       "me": false
+      },
+      {
+       "name": "V. Soares",
+       "me": false
+      },
+      {
+       "name": "F. Benevenuto",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "V. Almeida",
+       "me": false
+      },
+      {
+       "name": "M. Mowbray",
+       "me": false
+      }
+     ],
+     "venue": "Brazilian Symposium on Computer Networks (SBRC)",
+     "year": 2006,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Quantitative Analysis of Strategies for Streaming Media Distribution",
+     "authors": [
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "L. Rocha",
+       "me": false
+      },
+      {
+       "name": "J. Santos",
+       "me": false
+      },
+      {
+       "name": "J. J. Ismael",
+       "me": false
+      },
+      {
+       "name": "L. da Mata",
+       "me": false
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "J. W. Meira",
+       "me": false
+      },
+      {
+       "name": "V. Almeida",
+       "me": false
+      }
+     ],
+     "venue": "Latin American Web Congress (LA-WEB)",
+     "year": 2003,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Peer-to-Peer over Ad-Hoc Networks: (Re)Configuration Algorithms",
+     "authors": [
+      {
+       "name": "F. Franciscani",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "R. Couto",
+       "me": false
+      },
+      {
+       "name": "A. Loureiro",
+       "me": false
+      }
+     ],
+     "venue": "International Symposium on Parallel and Distributed Processing (IPDPS)",
+     "year": 2003,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    }
+   ]
+  },
+  {
+   "key": "workshops",
+   "label": "Workshop and short papers",
+   "entries": [
+    {
+     "title": "LEME: assistente RAG em português para normas brasileiras e internacionais sobre saúde e IA Responsável",
+     "authors": [
+      {
+       "name": "K. Azevedo",
+       "me": false
+      },
+      {
+       "name": "I. Avelar",
+       "me": false
+      },
+      {
+       "name": "M. Carvalho",
+       "me": false
+      },
+      {
+       "name": "H. C. Lima",
+       "me": false
+      },
+      {
+       "name": "I. Cristina",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "M. Brandão",
+       "me": false
+      },
+      {
+       "name": "W. Meira Jr",
+       "me": false
+      }
+     ],
+     "venue": "Brazilian Symposium on Multimedia and the Web (WebMedia)",
+     "year": 2026,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Detecção de Discursos Racistas em Português na Rede Social X",
+     "authors": [
+      {
+       "name": "J. Vaz",
+       "me": false
+      },
+      {
+       "name": "F. Benevenuto",
+       "me": false
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "M. Gonçalves",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      }
+     ],
+     "venue": "Brazilian Workshop on Social Network Analysis and Mining (BraSNAM)",
+     "year": 2025,
+     "award": "Best Paper Award",
+     "note": "",
+     "selected": "sc",
+     "url": ""
+    },
+    {
+     "title": "AI and Climate Change Discourse: What Opinions Do Large Language Models Present?",
+     "authors": [
+      {
+       "name": "M. Locatelli",
+       "me": false
+      },
+      {
+       "name": "P. Dutenhefner",
+       "me": false
+      },
+      {
+       "name": "A. Buzelin",
+       "me": false
+      },
+      {
+       "name": "P. Alzamora",
+       "me": false
+      },
+      {
+       "name": "Y. Aquino",
+       "me": false
+      },
+      {
+       "name": "P. Bento",
+       "me": false
+      },
+      {
+       "name": "S. Malaquias",
+       "me": false
+      },
+      {
+       "name": "V. Estanislau",
+       "me": false
+      },
+      {
+       "name": "C. Santana",
+       "me": false
+      },
+      {
+       "name": "L. Dayrell",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "W. Meira Jr",
+       "me": false
+      },
+      {
+       "name": "V. Almeida",
+       "me": false
+      }
+     ],
+     "venue": "ClimateNLP Workshop at ACL",
+     "year": 2025,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Responsible AI: Principles and Best Practices for the Implementation of AI-Based Systems",
+     "authors": [
+      {
+       "name": "J. Reis",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "W. Meira Jr.",
+       "me": false
+      },
+      {
+       "name": "V. Almeida",
+       "me": false
+      }
+     ],
+     "venue": "Brazilian Symposium on Multimedia and the Web",
+     "year": 2024,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Análise Comparativa dos Artigos de Filmes Indicados ao Oscar em Três Versões da Wikipédia",
+     "authors": [
+      {
+       "name": "C. Pereira",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "A. Silva",
+       "me": false
+      }
+     ],
+     "venue": "Undergraduate Research Work Competition at WebMedia",
+     "year": 2024,
+     "award": "Honorable Mention",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Development of a Dataset on Patent Registration in Brazil",
+     "authors": [
+      {
+       "name": "N. Rezende",
+       "me": false
+      },
+      {
+       "name": "D. Dalip",
+       "me": false
+      },
+      {
+       "name": "M. Brandão",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      }
+     ],
+     "venue": "Dataset Showcase Workshop",
+     "year": 2023,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Connecting Underrepresented Minorities and Qualified Job Positions Using Online Data",
+     "authors": [
+      {
+       "name": "M. Macedo",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "A. Brito",
+       "me": false
+      },
+      {
+       "name": "R. Paula",
+       "me": false
+      }
+     ],
+     "venue": "RDAI workshop at AAAI",
+     "year": 2021,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Characterization of the Debate on Twitter about COVID-19 Vaccination in Brazil",
+     "authors": [
+      {
+       "name": "L. Malagoli",
+       "me": false
+      },
+      {
+       "name": "J. Stancioli",
+       "me": false
+      },
+      {
+       "name": "C. Ferreira",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "A. Silva",
+       "me": false
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      }
+     ],
+     "venue": "Brazilian Workshop on Social Network Analysis and Mining",
+     "year": 2021,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Using Facebook Ads data to Assess Gender Balance in STEM: Evidences from Brazil",
+     "authors": [
+      {
+       "name": "C. Vieira",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      }
+     ],
+     "venue": "Workshop Data Science for Social Good @TheWebConference",
+     "year": 2021,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Slow down, redesign, and accelerate: adaptations and resilience on business sales transformation amid COVID-19 crisis",
+     "authors": [
+      {
+       "name": "H. Candello",
+       "me": false
+      },
+      {
+       "name": "J. Ferreira",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "V. Santana",
+       "me": false
+      },
+      {
+       "name": "R. Paula",
+       "me": false
+      },
+      {
+       "name": "C. Pinhanez",
+       "me": false
+      }
+     ],
+     "venue": "New Future of Work",
+     "year": 2020,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Identifying Influences on the Choice of a STEM Undergraduate Degree: A Qualitative and Comparative Gender Study",
+     "authors": [
+      {
+       "name": "M. Macedo",
+       "me": false
+      },
+      {
+       "name": "A. Mattos",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "A. Martinazzo",
+       "me": false
+      },
+      {
+       "name": "R. Lopes",
+       "me": false
+      }
+     ],
+     "venue": "Workshop Women in Information Technology",
+     "year": 2018,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Ravel: A MAS orchestration platform for Human-Chatbots Conversations",
+     "authors": [
+      {
+       "name": "M. Bayser",
+       "me": false
+      },
+      {
+       "name": "C. Pinhanez",
+       "me": false
+      },
+      {
+       "name": "H. Candello",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "M. Pichiliani",
+       "me": false
+      },
+      {
+       "name": "M. Guerra",
+       "me": false
+      },
+      {
+       "name": "P. Cavalin",
+       "me": false
+      },
+      {
+       "name": "R. Souza",
+       "me": false
+      }
+     ],
+     "venue": "Workshop on Engineering Multi-Agent Systems @AAMAS",
+     "year": 2018,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "BotTester: Testing Conversational Systems with Simulated Users",
+     "authors": [
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "H. Candello",
+       "me": false
+      },
+      {
+       "name": "C. Pinhanez",
+       "me": false
+      },
+      {
+       "name": "T. dos Santos",
+       "me": false
+      }
+     ],
+     "venue": "HCI in Practice at Brazilian Symposium on Human Factors in Computing Systems",
+     "year": 2017,
+     "award": "Best Short Paper, IHC in Practice Track",
+     "note": "",
+     "selected": "rai",
+     "url": ""
+    },
+    {
+     "title": "Beware of What You Share: Inferring Home Location in Social Networks",
+     "authors": [
+      {
+       "name": "T. Pontes",
+       "me": false
+      },
+      {
+       "name": "G. Magno",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "A. Gupta",
+       "me": false
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "P. Kumaraguru",
+       "me": false
+      },
+      {
+       "name": "V. Almeida",
+       "me": false
+      }
+     ],
+     "venue": "IEEE Workshop on Privacy in Social Data",
+     "year": 2012,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "We Know Where You Live: Privacy Characterization of Foursquare Behavior",
+     "authors": [
+      {
+       "name": "T. Pontes",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "P. Kumaraguru",
+       "me": false
+      },
+      {
+       "name": "V. Almeida",
+       "me": false
+      }
+     ],
+     "venue": "Workshop on LBSN",
+     "year": 2012,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    }
+   ]
+  },
+  {
+   "key": "abstracts",
+   "label": "Extended abstracts and posters",
+   "entries": [
+    {
+     "title": "From Principles to Longitudinal AI Governance: An Evidence-Based Framework for Continuous Oversight",
+     "authors": [
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "R. G. Pereira",
+       "me": false
+      },
+      {
+       "name": "L. E. Brito",
+       "me": false
+      },
+      {
+       "name": "M. A. Brandão",
+       "me": false
+      },
+      {
+       "name": "H. T. Marques-Neto",
+       "me": false
+      },
+      {
+       "name": "J. M. Almeida",
+       "me": false
+      },
+      {
+       "name": "A. P. C. Silva",
+       "me": false
+      },
+      {
+       "name": "W. Meira Jr",
+       "me": false
+      },
+      {
+       "name": "V. Almeida",
+       "me": false
+      }
+     ],
+     "venue": "Data for Policy 2026 (DfP'26), Book of Abstracts",
+     "year": 2026,
+     "award": "",
+     "note": "Full paper under review at Data & Policy (Cambridge University Press)",
+     "selected": "rai",
+     "url": "https://doi.org/10.5281/zenodo.22660429"
+    },
+    {
+     "title": "Estimativa de riscos à saúde em pequenas áreas através de clusterização hierárquica",
+     "authors": [
+      {
+       "name": "B. R. G. Barbosa",
+       "me": false
+      },
+      {
+       "name": "S. N. Alves",
+       "me": false
+      },
+      {
+       "name": "T. M. T. R. Faria",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "M. A. Gonçalves",
+       "me": false
+      },
+      {
+       "name": "J. M. d. Almeida",
+       "me": false
+      },
+      {
+       "name": "R. T. I. Bernal",
+       "me": false
+      },
+      {
+       "name": "D. C. Malta",
+       "me": false
+      }
+     ],
+     "venue": "Brazilian Congress of Health Informatics (CBIS)",
+     "year": 2024,
+     "award": "1st Place, Research-in-Progress Extended Abstracts",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Contrasting Global Gender Gaps in STEM Using Facebook Data and Offline Indicators",
+     "authors": [
+      {
+       "name": "C. Vieira",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      }
+     ],
+     "venue": "ISA World Congress of Sociology",
+     "year": 2023,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "(Mis)Information Dissemination in WhatsApp: Gathering, Analyzing and Countermeasures",
+     "authors": [
+      {
+       "name": "G. Resende",
+       "me": false
+      },
+      {
+       "name": "P. Melo",
+       "me": false
+      },
+      {
+       "name": "H. Sousa",
+       "me": false
+      },
+      {
+       "name": "J. Messias",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "F. Benevenuto",
+       "me": false
+      }
+     ],
+     "venue": "International Conference on Computational Social Science",
+     "year": 2019,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Evaluating the conversation flow and content quality of a multi-bot conversational system",
+     "authors": [
+      {
+       "name": "H. Candello",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "C. Pinhanez",
+       "me": false
+      }
+     ],
+     "venue": "Extended abstract at CHI",
+     "year": 2017,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "User Generated Micro-Reviews: Characterization and Popularity Prediction",
+     "authors": [
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "J. Almeida",
+       "me": false
+      },
+      {
+       "name": "M. Gonçalves",
+       "me": false
+      }
+     ],
+     "venue": "International School and Conference on Network Science",
+     "year": 2015,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    }
+   ]
+  }
+ ]
+}

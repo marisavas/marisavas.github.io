@@ -3,6 +3,12 @@
 
 Run from the _bibliography folder:  python3 build_data.py
 No extra packages needed. Each .bib file becomes one section on the Publications page.
+
+Optional fields read from each entry:
+  selected = {rai} or {sc}   puts the entry in Selected publications
+                             (rai: Responsible AI and AI governance; sc: social computing)
+  note     = {...}           short line shown after the venue (e.g. under review)
+  award    = {...}           award shown next to the venue
 """
 import json
 import re
@@ -21,6 +27,7 @@ ACCENTS = {"'": "\u0301", "`": "\u0300", "^": "\u0302", "~": "\u0303", '"': "\u0
 
 
 def latex_to_text(s):
+    s = re.sub(r"\\textcolor\{[^}]*\}", "", s)
     s = re.sub(r"\\i\b", "i", s)
 
     def repl(m):
@@ -28,6 +35,7 @@ def latex_to_text(s):
         return unicodedata.normalize("NFC", letter + ACCENTS[mark])
     s = re.sub(r"\\([\'`^~\"c])\s*\{?\s*([A-Za-z])\s*\}?", repl, s)
     s = s.replace("\\&", "&").replace("--", "\u2013")
+    s = re.sub(r"\\[A-Za-z]+", "", s)
     s = s.replace("{", "").replace("}", "")
     return " ".join(s.split())
 
@@ -85,27 +93,43 @@ def parse(path):
         doi = field(chunk, "doi")
         url = field(chunk, "url") or ("https://doi.org/" + doi if doi else "")
         year = field(chunk, "year")
+        award = latex_to_text(field(chunk, "award"))
+        note = latex_to_text(field(chunk, "note"))
+        if re.search(r"award|mention|best paper", note, re.I):
+            note = ""  # old notes that only repeated an award
         items.append({
             "title": latex_to_text(field(chunk, "title")).rstrip("."),
             "authors": authors,
             "venue": latex_to_text(field(chunk, "booktitle") or field(chunk, "journal")),
             "year": int(re.sub(r"\D", "", year) or 0),
-            "award": latex_to_text(field(chunk, "award")),
+            "award": award,
+            "note": note,
+            "selected": field(chunk, "selected").lower(),
             "url": url,
         })
     items.sort(key=lambda x: -x["year"])
     return items
 
 
-data = []
+sections = []
+selected = {"rai": [], "sc": []}
 for key, label, path in SECTIONS:
     try:
         entries = parse(path)
     except FileNotFoundError:
         print("Skipping " + path + " (not found)")
         continue
-    data.append({"key": key, "label": label, "entries": entries})
+    sections.append({"key": key, "label": label, "entries": entries})
+    for e in entries:
+        if e["selected"] in selected:
+            selected[e["selected"]].append(e)
     print(label + ": " + str(len(entries)))
+
+for group in selected.values():
+    group.sort(key=lambda x: -x["year"])
+print("Selected: " + str(len(selected["rai"])) + " Responsible AI, " + str(len(selected["sc"])) + " social computing")
+
+data = {"selected": selected, "sections": sections}
 
 with open(OUTPUT, "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=1)
