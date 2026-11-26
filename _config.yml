@@ -22,7 +22,6 @@ exclude:
   - "*.old"
   - "*.old_fut"
   - backup
-  - images/PORTRAIT_SPEC.md
   - _bibliography
 
 google_analytics: G-2ZK8Y6NZWJ

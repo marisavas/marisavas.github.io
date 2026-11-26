@@ -9,7 +9,7 @@ custom_css:
 <h1>Research</h1>
 
 <div class="intro">
-  <p>My research follows two lines. One asks how institutions can govern and audit AI systems over time. The other uses data from online platforms to study how information circulates, who is represented, and how people talk about AI.</p>
+  <p>My research sits at the intersection of technology and society. In social computing, I use large-scale data from online platforms to study human behavior: how information and misinformation spread, how hate speech targets social groups, which cultures and communities are represented or left out, and how people talk about AI. In Responsible AI, I develop methods to evaluate, audit and govern AI systems over time, so that institutions can show with evidence that their AI is used responsibly.</p>
 </div>
 
 <section aria-labelledby="rai">
@@ -20,7 +20,7 @@ custom_css:
     <p>FIAR (Framework for Institutional AI Responsibility) treats accountability as a continuous process. It combines a governance maturity model with evidence collected across the AI lifecycle, informed by LGPD, the EU AI Act and ISO/IEC 42001. I proposed and lead FIAR at UFMG, where we apply it to health AI projects at NIAR-Saúde, in partnership with Brazil's Ministry of Health.</p>
     <ul class="refs">
       <li><a href="https://github.com/niar-saude-ufmg/FIAR-Saude">FIAR-Saúde framework</a> and <a href="https://github.com/niar-saude-ufmg/FIAR-Audit-Template">audit templates</a> on GitHub</li>
-      <li>From Principles to Longitudinal AI Governance. <span class="venue">Data for Policy 2026,</span> <a href="https://doi.org/10.5281/zenodo.22660429">book of abstracts</a></li>
+      <li><a href="https://doi.org/10.5281/zenodo.22660429">From Principles to Longitudinal AI Governance</a>. <span class="venue">Data for Policy 2026, book of abstracts</span></li>
       <li>Responsible AI for Public Health: a forecasting case study on SUS data. <span class="venue">SBCAS 2026</span></li>
     </ul>
   </div>
@@ -51,8 +51,8 @@ custom_css:
     <h3>Misinformation</h3>
     <p>With colleagues at UFMG, I studied how misinformation spreads in public WhatsApp groups in Brazil during elections and the COVID-19 pandemic, across text, audio, images and video.</p>
     <ul class="refs">
-      <li>(Mis)Information Dissemination in WhatsApp: Gathering, Analyzing and Countermeasures. <span class="venue">The Web Conference 2019</span></li>
-      <li>Analyzing the Use of Audio Messages in WhatsApp Groups. <span class="venue">The Web Conference 2020</span></li>
+      <li><a href="https://homepages.dcc.ufmg.br/~fabricio/download/resende-www2019.pdf">(Mis)Information Dissemination in WhatsApp: Gathering, Analyzing and Countermeasures</a>. <span class="venue">The Web Conference 2019</span></li>
+      <li><a href="https://homepages.dcc.ufmg.br/~fabricio/download/www20-maros.pdf">Analyzing the Use of Audio Messages in WhatsApp Groups</a>. <span class="venue">The Web Conference 2020</span></li>
     </ul>
   </div>
 
@@ -60,17 +60,49 @@ custom_css:
     <h3>Hate speech and underrepresentation</h3>
     <p>I study racist speech in Portuguese, the ties between Black and tech communities online, and gender gaps in STEM measured through advertising data.</p>
     <ul class="refs">
-      <li>Detecção de Discursos Racistas em Português na Rede Social X. <span class="venue">BraSNAM 2025, Best Paper Award</span></li>
-      <li>Characterizing the Social Ties between Black and Tech Communities on Twitter. <span class="venue">ACM WebSci 2022</span></li>
-      <li>From Inclusion to Contention: Analyzing DEI and "Woke" Narratives on Reddit. <span class="venue">ASONAM 2025,</span> <a href="https://doi.org/10.1007/978-3-032-13821-7_22">paper</a></li>
+      <li><a href="https://sol.sbc.org.br/index.php/brasnam/article/view/36381">Detecção de Discursos Racistas em Português na Rede Social X</a>. <span class="venue">BraSNAM 2025, Best Paper Award</span></li>
+      <li><a href="https://dl.acm.org/doi/10.1145/3501247.3531544">Characterizing the Social Ties between Black and Tech Communities on Twitter</a>. <span class="venue">ACM WebSci 2022</span></li>
+      <li><a href="https://doi.org/10.1007/978-3-032-13821-7_22">From Inclusion to Contention: Analyzing DEI and "Woke" Narratives on Reddit</a>. <span class="venue">ASONAM 2025</span></li>
     </ul>
   </div>
+
 
   <div class="topic">
     <h3>Cultural representation</h3>
     <p>I look at how endangered Brazilian Indigenous languages are covered on Wikipedia, and at the opportunities and ethical limits of using AI to document and revitalize them.</p>
     <ul class="refs">
+      <li><a href="https://ojs.aaai.org/index.php/ICWSM/article/view/31407/33567">Disappearing Without a Trace: Wikipedia Articles on Endangered Brazilian Indigenous Languages</a>. <span class="venue">ICWSM 2024</span></li>
+      <li><a href="https://ijcai.org/proceedings/2023/685">Balancing Social Impact, Opportunities, and Ethical Constraints of Using AI in the Documentation and Vitalization of Indigenous Languages</a>. <span class="venue">IJCAI 2023</span></li>
+    </ul>
+  </div>
 
+  <div class="topic">
+    <h3>AI in public discourse</h3>
+    <p>I study how AI is framed in public discourse across languages and media, and which opinions large language models present on social questions.</p>
+    <ul class="refs">
+      <li><a href="https://doi.org/10.1145/3795766.3799781">Framing AI on YouTube: A Comparative Analysis of Discourse in Brazil and the United States</a>. <span class="venue">ACM WebSci 2026</span></li>
+      <li><a href="https://aclanthology.org/2025.climatenlp-1.8/">AI and Climate Change Discourse: What Opinions Do Large Language Models Present?</a>. <span class="venue">ClimateNLP 2025</span></li>
+    </ul>
+  </div>
+</section>
+
+
+
+<section aria-labelledby="press">
+  <h2 id="press">In the press</h2>
+    <ul class="refs">
+    <li><a href="https://www.niar.dcc.ufmg.br/en/news/niar-na-data-for-policy-2026/">NIAR-Saúde presents AI governance framework at Data for Policy 2026</a> <span class="venue">NIAR-Saúde, 2026</span></li>
+    <li><a href="https://dcc.ufmg.br/love-data-day-brasil-2026-mobiliza-instituicoes-e-promove-debate-sobre-uso-responsavel-de-dados/">Love Data Day Brasil 2026 mobiliza instituições e promove debate sobre uso responsável de dados</a> <span class="venue">DCC/UFMG, 2026</span></li>
+    <li><a href="https://dcc.ufmg.br/19916-2/">Inteligência Artificial responsável é tema de palestra no DCC/UFMG</a> <span class="venue">DCC/UFMG, 2025</span></li>
+    <li><a href="https://dcc.ufmg.br/pesquisadores-do-dcc-ufmg-vencem-premio-de-melhores-artigos-no-brasnam-2025/">Pesquisadores do DCC/UFMG vencem prêmio de melhores artigos no BraSNAM 2025</a> <span class="venue">DCC/UFMG, 2025</span></li>
+    <li><a href="https://sbis.org.br/noticia/trabalhos-premiados-no-cbis24/">Trabalhos premiados no CBIS 2024</a> <span class="venue">SBIS, 2024</span></li>
+    <li><a href="https://www2.ufjf.br/midiadigital/?p=1774">WebMedia 2024 premia melhores trabalhos</a> <span class="venue">UFJF, 2024</span></li>
+    <li><a href="https://dcc.ufmg.br/professores-e-alunos-do-dcc-publicam-numero-recorde-de-artigos-na-icwsm/">Professores e alunos do DCC publicam número recorde de artigos na ICWSM</a> <span class="venue">DCC/UFMG, 2024</span></li>
+    <li><a href="https://dcc.ufmg.br/ex-aluna-do-dcc-ufmg-afirma-que-o-segredo-de-uma-carreira-de-sucesso-e-a-base-solida-recebida-durante-os-estudos/">Ex-aluna do DCC/UFMG afirma que o segredo de uma carreira de sucesso é a base sólida recebida durante os estudos</a> <span class="venue">DCC/UFMG, 2022</span></li>
+    <li><a href="https://jornal.usp.br/noticias/projeto-que-utiliza-inteligencia-artificial-pretende-fortalecer-linguas-indigenas-no-brasil/">Projeto de IA pretende fortalecer línguas indígenas no Brasil</a> <span class="venue">Jornal da USP</span></li>
+    <li><a href="https://dcc.ufmg.br/tild-iar/">TILD IAR: Iniciativa de Inteligência Artificial</a> <span class="venue">DCC/UFMG</span></li>
+  </ul>
+</section>
 
 
 
