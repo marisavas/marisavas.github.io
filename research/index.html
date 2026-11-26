@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research</title>
+  <title>Research | Marisa Vasconcelos</title>
+  <meta name="description" content="Marisa Vasconcelos, research scientist working on Responsible AI, AI governance and social computing.">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
+  <!-- Font Awesome: still used by the current Publications page. Remove after that page is redone. -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
   <!-- CSS -->
@@ -19,21 +22,28 @@
 
 
 <body>
-  <header class="site-header">
-  <div class="container-header">
-    <h1>Marisa Vasconcelos</h1>
-    <hr>
-    <nav class="links">
-      <a href="/" class="">Home</a>
-      <a href="/research/" class="active">Research</a>
-      <a href="/publications/" class="">Publications</a>
-      <a href="/about/" class="">About</a>
-      <!-- CV nav item intentionally omitted until the CV page exists (Phase 7) to avoid a dead link -->
-    </nav>
-  </div>
-</header>
+  <div class="site-layout">
+    <aside class="site-side">
+  <a class="site-name" href="/">Marisa Vasconcelos</a>
+  <p class="site-role">Research Scientist<br>Postdoctoral Researcher, UFMG</p>
 
-  <article class="page">
+  <nav class="site-nav" aria-label="Main">
+    <ul>
+      <li><a href="/" >Home</a></li>
+      <li><a href="/research/" aria-current="page">Research</a></li>
+      <li><a href="/publications/" >Publications</a></li>
+    </ul>
+  </nav>
+
+  <ul class="site-elsewhere">
+    <li><a href="mailto:marisa.vasconcelos@gmail.com">Email</a></li>
+    <li><a href="https://scholar.google.com/citations?user=e5IvuJgAAAAJ">Google Scholar</a></li>
+    <li><a href="https://orcid.org/0000-0002-1366-6499">ORCID</a></li>
+    <li><a href="https://www.linkedin.com/in/marisa-vasconcelos">LinkedIn</a></li>
+  </ul>
+</aside>
+    <main class="site-main">
+      <article class="page">
 <!-- <h1 class="post-title page-title">Research</h1> -->
     <!--
   Placeholder only. Structural cleanup phase — page content and
@@ -46,10 +56,10 @@
 
 </article> 
   
+    </main>
+  </div>
 </body>
 </html>
-
-
 
 
 
