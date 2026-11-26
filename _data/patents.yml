@@ -1,280 +1,54 @@
-- title: Prompt Registration and Reuse
-  authors:
-  - Vagner De Santana
-  - Marisa Vasconcelos, Melina Guerra
-  - Michael Feffer
-  - Sara Berger
-  year: 2025
-  venue: ''
-  note: US Patent 18408204
-  url: ''
-  pdf: ''
-  doi: ''
-  abstract: ''
-- title: Responsible Prompt Recommendation
-  authors:
-  - Vagner De Santana
-  - Marisa Vasconcelos, Melina Guerra
-  - Michael Feffer
-  - Sara Berger
-  - Tianyu Su
-  year: 2025
-  venue: ''
-  note: US Patent 18408254
-  url: ''
-  pdf: ''
-  doi: ''
-  abstract: ''
-- title: Personalized alert generation based on information dissemination
-  authors:
-  - Marisa Vasconcelos
-  - Mu Qiao
-  - Nicholas Linck
-  - Yuya Ong
-  - Claudio Pinhanez
-  - Rogerio De Paula
-  year: 2024
-  venue: ''
-  note: US Patent 12086817
-  url: ''
-  pdf: ''
-  doi: ''
-  abstract: ''
-- title: Mediating between social networks and payed curated content producers in
-    misinformative content mitigation
-  authors:
-  - Vagner De Santana
-  - Marisa Vasconcelos
-  - Mauro Pichiliani
-  - Heloisa Candello
-  year: 2024
-  venue: ''
-  note: US Patent 11900480
-  url: ''
-  pdf: ''
-  doi: ''
-  abstract: ''
-- title: Media Transactions Consent Management
-  authors:
-  - Carlos Cardonha
-  - Marisa Vasconcelos
-  - Andrea Lima
-  - Miguel Quinones
-  year: 2023
-  venue: ''
-  note: US Patent 11768923
-  url: ''
-  pdf: ''
-  doi: ''
-  abstract: ''
-- title: Artificial intelligence generated synthetic image data for use with machine
-    language models
-  authors:
-  - Priscilla Avegliano
-  - Andrea Lima
-  - Marisa Vasconcelos
-  - Dario Oliveira
-  year: 2023
-  venue: ''
-  note: US Patent 11687620
-  url: ''
-  pdf: ''
-  doi: ''
-  abstract: ''
-- title: Training chatbots for remote troubleshooting
-  authors:
-  - Mauro Pichiliani
-  - Heloisa Candello
-  - Marisa Vasconcelos
-  - Vagner De Santana
-  year: 2022
-  venue: ''
-  note: US Patent 11379253
-  url: ''
-  pdf: ''
-  doi: ''
-  abstract: ''
-- title: Presenting thought-provoking questions and answers in response to misinformation
-  authors:
-  - Nicholas Linck
-  - Mu Qiao
-  - Yuya Ong
-  - Marisa Vasconcelos
-  - Claudio Pinhanez
-  - Rogerio De Paula
-  year: 2022
-  venue: ''
-  note: US Patent App. 17184668
-  url: ''
-  pdf: ''
-  doi: ''
-  abstract: ''
-- title: Support request assignment using pace of conversation
-  authors:
-  - Heloisa Candello
-  - Marisa Vasconcelos
-  - Jaione Azpiroz
-  - Marco Netto
-  year: 2022
-  venue: ''
-  note: US Patent 11252202
-  url: ''
-  pdf: ''
-  doi: ''
-  abstract: ''
-- title: Audit Machine Learning Models Against Bias
-  authors:
-  - Marisa Vasconcelos
-  - Carlos Cardonha
-  year: 2022
-  venue: ''
-  note: US Patent 11263550
-  url: ''
-  pdf: ''
-  doi: ''
-  abstract: ''
-- title: System, method and computer program product for dispatching of medical emergencies
-    and wait time control
-  authors:
-  - Carlos Cardonha
-  - Jorge Diaz
-  - Bernardo Goncalves
-  - Marisa Vasconcelos
-  year: 2021
-  venue: ''
-  note: US Patent 1152107
-  url: ''
-  pdf: ''
-  doi: ''
-  abstract: ''
-- title: Supply Chain Forecasting System
-  authors:
-  - Ana Appel
-  - Igor Oliveira
-  - Marisa Vasconcelos
-  - Ricardo Franco
-  year: 2021
-  venue: ''
-  note: US Patent 11126957
-  url: ''
-  pdf: ''
-  doi: ''
-  abstract: ''
-- title: Generating Image Capture Configurations and Compositions
-  authors:
-  - Marisa Vasconcelos
-  - Carlos Cardonha
-  - Andrea Lima
-  - Miguel Quinones
-  year: 2021
-  venue: ''
-  note: US Patent 10924661
-  url: ''
-  pdf: ''
-  doi: ''
-  abstract: ''
-- title: Human steering dashboard to analyze 360-degree market view for merchants
-    based on financial transactions
-  authors:
-  - Ana Appel
-  - Ricardo Franco
-  - Marisa Vasconcelos
-  year: 2020
-  venue: ''
-  note: US Patent 10614402
-  url: ''
-  pdf: ''
-  doi: ''
-  abstract: ''
-- title: System, method and computer program product for assessing the capabilities
-    of a conversation agent via black box testing
-  authors:
-  - Alan Braz
-  - Heloisa Candello
-  - Claudio Pinhanez
-  - Marisa Vasconcelos
-  year: 2020
-  venue: ''
-  note: US Patent 10726827
-  url: ''
-  pdf: ''
-  doi: ''
-  abstract: ''
-- title: Adapting conversational agent communications to different stylistic models
-  authors:
-  - Marisa Vasconcelos
-  - Paulo Cavalin
-  - Claudio Pinhanez
-  - Heloisa Candello
-  year: 2022
-  venue: ''
-  note: US Patent 11238100
-  url: ''
-  pdf: ''
-  doi: ''
-  abstract: ''
-- title: Adapting communications according to audience profile from social media
-  authors:
-  - Andrea Lima
-  - Carlos Cardonha
-  - Marisa Vasconcelos
-  - Miguel Quinones
-  year: 2022
-  venue: ''
-  note: US Patent 11228544
-  url: ''
-  pdf: ''
-  doi: ''
-  abstract: ''
-- title: System and method to recommend mitigation action using conversational agent
-  authors:
-  - Ana Appel
-  - Heloisa Candello
-  - Ricardo Franco
-  - Claudio Pinhanez
-  - Marisa Vasconcelos
-  year: 2019
-  venue: ''
-  note: US Patent App. 15/849439
-  url: ''
-  pdf: ''
-  doi: ''
-  abstract: ''
-- title: Delivering Personalized Advertising
-  authors:
-  - Ana Paula Appel
-  - Heloisa Candello
-  - Carlos Cardonha
-  - Marisa Vasconcelos
-  year: 2018
-  venue: ''
-  note: US Patent App. 15/399036
-  url: ''
-  pdf: ''
-  doi: ''
-  abstract: ''
-- title: Detecting Vulnerabilities in a Supply Chain
-  authors:
-  - Ana Paula Appel
-  - Ricardo Franco
-  - Marisa Vasconcelos
-  year: 2018
-  venue: ''
-  note: US Patent App. 15/401222
-  url: ''
-  pdf: ''
-  doi: ''
-  abstract: ''
-- title: Data-driven Urban Interventions Based on Crowdsourcing
-  authors:
-  - Carlos Cardonha
-  - Bernardo Goncalves
-  - Jorge Diaz
-  - Marisa Vasconcelos
-  year: 2018
-  venue: ''
-  note: US Patent App. 15/424870
-  url: ''
-  pdf: ''
-  doi: ''
-  abstract: ''
+granted:
+  - title: Responsible prompt recommendation
+    number: US 12,619,822
+    year: 2026
+  - title: Personalized alert generation based on information dissemination
+    number: US 12,086,817
+    year: 2024
+  - title: Mediating between social networks and payed curated content producers in misinformative content mitigation
+    number: US 11,900,480
+    year: 2024
+  - title: Media transactions consent management
+    number: US 11,768,923
+    year: 2023
+  - title: Artificial intelligence generated synthetic image data for use with machine language models
+    number: US 11,687,620
+    year: 2023
+  - title: Training chatbots for remote troubleshooting
+    number: US 11,379,253
+    year: 2022
+  - title: Audit machine learning models against bias
+    number: US 11,263,550
+    year: 2022
+  - title: Support request assignment using pace of conversation
+    number: US 11,252,202
+    year: 2022
+  - title: Adapting conversational agent communications to different stylistic models
+    number: US 11,238,100
+    year: 2022
+  - title: Adapting communications according to audience profile from social media
+    number: US 11,228,544
+    year: 2022
+  - title: Dispatching of medical emergencies and wait time control
+    number: US 11,152,107
+    year: 2021
+  - title: Supply chain forecasting system
+    number: US 11,126,957
+    year: 2021
+  - title: Generating image capture configurations and compositions
+    number: US 10,924,661
+    year: 2021
+  - title: Assessing the capabilities of a conversation agent via black box testing
+    number: US 10,726,827
+    year: 2020
+  - title: Human steering dashboard to analyze 360-degree market view for merchants based on financial transactions
+    number: US 10,614,402
+    year: 2020
+  - title: Assessing the capabilities of a conversation agent via black box testing
+    number: US 10,102,846
+    year: 2018
+
+pending:
+  - title: Prompt registration and reuse
+    number: US 2025/0225158
+    year: 2025

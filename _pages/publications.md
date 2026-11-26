@@ -1,59 +1,73 @@
 ---
 layout: page
-title: "Publications"
+title: Publications
 permalink: /publications/
 custom_css:
   - styles-global
-  - styles-publications
 ---
 
+<h1>Publications</h1>
 
+<p class="page-note">Full list with citation counts on <a href="https://scholar.google.com/citations?user=e5IvuJgAAAAJ">Google Scholar</a>.</p>
 
-<main class="container-publications">
+<nav class="page-index" aria-label="Sections">
+  <ul>
+    {% for section in site.data.publications %}
+    <li><a href="#{{ section.key }}">{{ section.label }}</a></li>
+    {% endfor %}
+    <li><a href="#patents">Patents</a></li>
+  </ul>
+</nav>
 
-  <div class="cards-row">
-
-    <!-- Conferences -->
-    <div class="publication-card">
-      <h2><i class="fa-solid fa-microphone"></i> Conferences</h2>
-      <ul class="publication-list" id="conferences-list"></ul>
-      <div class="pagination">
-        <button id="conferences-prev" class="btn-pagination" style="display:none">Previous</button>
-        <button id="conferences-next" class="btn-pagination primary">Next</button>
+{% for section in site.data.publications %}
+<section id="{{ section.key }}" aria-labelledby="{{ section.key }}-title">
+  <h2 id="{{ section.key }}-title">{{ section.label }}</h2>
+  <ul class="dated pubs">
+    {% assign prev_year = "" %}
+    {% for e in section.entries %}
+    <li>
+      <time>{% if e.year != prev_year %}{{ e.year }}{% endif %}</time>
+      <div>
+        <span class="pub-title">{% if e.url != "" %}<a href="{{ e.url }}">{{ e.title }}</a>{% else %}{{ e.title }}{% endif %}</span>
+        <span class="pub-authors">{% for a in e.authors %}{% if a.me %}<strong>{{ a.name }}</strong>{% else %}{{ a.name }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
+        <span class="pub-venue">{{ e.venue }}{% if e.award != "" %} <span class="pub-award">{{ e.award }}</span>{% endif %}</span>
       </div>
-      <script type="application/json" id="conferences-data">
-        {{ site.data.publications | jsonify | replace: '</', '<\/' }}
-      </script>
-    </div>
+    </li>
+    {% assign prev_year = e.year %}
+    {% endfor %}
+  </ul>
+</section>
+{% endfor %}
 
-    <!-- Journals -->
-    <div class="publication-card">
-      <h2><i class="fa-solid fa-book-open"></i> Journals</h2>
-      <ul class="publication-list" id="journals-list"></ul>
-      <div class="pagination">
-        <button id="journals-prev" class="btn-pagination" style="display:none">Previous</button>
-        <button id="journals-next" class="btn-pagination primary">Next</button>
+<section id="patents" aria-labelledby="patents-title">
+  <h2 id="patents-title">Patents</h2>
+  <p class="page-note">{{ site.data.patents.granted | size }} granted US patents, filed at IBM Research.</p>
+  <ul class="dated pubs">
+    {% assign prev_year = "" %}
+    {% for p in site.data.patents.granted %}
+    <li>
+      <time>{% if p.year != prev_year %}{{ p.year }}{% endif %}</time>
+      <div>
+        <span class="pub-title">{{ p.title }}</span>
+        <span class="pub-venue">{{ p.number }}</span>
       </div>
-      <script type="application/json" id="journals-data">
-        {{ site.data.journals | jsonify | replace: '</', '<\/' }}
-      </script>
-    </div>
+    </li>
+    {% assign prev_year = p.year %}
+    {% endfor %}
+  </ul>
 
-    <!-- Patents -->
-    <div class="publication-card">
-      <h2><i class="fa-solid fa-lightbulb"></i> Patents</h2>
-      <ul class="publication-list" id="patents-list"></ul>
-      <div class="pagination">
-        <button id="patents-prev" class="btn-pagination" style="display:none">Previous</button>
-        <button id="patents-next" class="btn-pagination primary">Next</button>
+  {% if site.data.patents.pending %}
+  <h3 class="sub">Pending</h3>
+  <ul class="dated pubs">
+    {% for p in site.data.patents.pending %}
+    <li>
+      <time>{{ p.year }}</time>
+      <div>
+        <span class="pub-title">{{ p.title }}</span>
+        <span class="pub-venue">{{ p.number }}</span>
       </div>
-      <script type="application/json" id="patents-data">
-        {{ site.data.patents | jsonify | replace: '</', '<\/' }}
-      </script>
-    </div>
-
-  </div>
-
-</main>
-
-<script src="{{ '/assets/js/publications.js' | relative_url }}"></script>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</section>
