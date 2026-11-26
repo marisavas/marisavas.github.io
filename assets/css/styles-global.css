@@ -159,3 +159,24 @@ img { max-width: 100%; height: auto; }
   }
   .bio p { font-size: 1.05rem; }
 }
+
+/* ===== Research page ===== */
+.intro p { font-size: 1.12rem; line-height: 1.6; }
+
+.topic { margin: 0 0 2.25rem; }
+.topic:last-child { margin-bottom: 0; }
+
+.site-main h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 .4rem;
+}
+
+.refs {
+  list-style: none;
+  margin: .25rem 0 0;
+  padding: 0 0 0 1rem;
+  border-left: 2px solid var(--rule);
+}
+.refs li { margin: 0 0 .35rem; font-size: .94rem; }
+.refs .venue { color: var(--muted); }
