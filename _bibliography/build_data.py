@@ -18,7 +18,9 @@ SECTIONS = [
     ("journals", "Journal articles", "journals.bib"),
     ("conferences", "Conference papers", "conferences.bib"),
     ("workshops", "Workshop and short papers", "workshops.bib"),
+    ("preprints", "Preprints", "preprints.bib"),
     ("abstracts", "Extended abstracts and posters", "abstracts.bib"),
+    ("theses", "Theses", "theses.bib"),
 ]
 OUTPUT = "../_data/publications.json"
 ME = "Vasconcelos"
@@ -63,6 +65,8 @@ def field(body, name):
 
 def short_name(a):
     a = " ".join(a.split())
+    if a.lower() == "others":
+        return "et al.", False
     if "," in a:
         last, first = [x.strip() for x in a.split(",", 1)]
     else:
@@ -75,7 +79,9 @@ def short_name(a):
         last, first = " ".join(toks[k:]), " ".join(toks[:k])
     if ME in last:
         return "M. Vasconcelos", True
-    initials = " ".join(p[0] + "." for p in first.replace("-", " ").split() if p)
+    particles = ("de", "da", "do", "dos", "das")
+    initials = " ".join(p[0] + "." for p in first.replace("-", " ").split()
+                        if p and p.lower() not in particles)
     return (initials + " " + last).strip(), False
 
 
@@ -100,7 +106,8 @@ def parse(path):
         items.append({
             "title": latex_to_text(field(chunk, "title")).rstrip("."),
             "authors": authors,
-            "venue": latex_to_text(field(chunk, "booktitle") or field(chunk, "journal")),
+            "venue": latex_to_text(field(chunk, "booktitle") or field(chunk, "journal")
+                                   or field(chunk, "school") or field(chunk, "institution")),
             "year": int(re.sub(r"\D", "", year) or 0),
             "award": award,
             "note": note,

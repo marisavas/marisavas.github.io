@@ -2210,6 +2210,172 @@
    ]
   },
   {
+   "key": "preprints",
+   "label": "Preprints",
+   "entries": [
+    {
+     "title": "Harnessing the Power of Artificial Intelligence to Vitalize Endangered Indigenous Languages: Technologies and Experiences",
+     "authors": [
+      {
+       "name": "C. Pinhanez",
+       "me": false
+      },
+      {
+       "name": "P. Cavalin",
+       "me": false
+      },
+      {
+       "name": "L. Storto",
+       "me": false
+      },
+      {
+       "name": "T. Finbow",
+       "me": false
+      },
+      {
+       "name": "A. Cobbinah",
+       "me": false
+      },
+      {
+       "name": "J. Nogima",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "P. Domingues",
+       "me": false
+      },
+      {
+       "name": "P. S. Mizukami",
+       "me": false
+      },
+      {
+       "name": "N. Grell",
+       "me": false
+      },
+      {
+       "name": "et al.",
+       "me": false
+      }
+     ],
+     "venue": "arXiv preprint arXiv:2407.12620",
+     "year": 2024,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": "https://arxiv.org/abs/2407.12620"
+    },
+    {
+     "title": "Towards a New Science of Disinformation",
+     "authors": [
+      {
+       "name": "C. S. Pinhanez",
+       "me": false
+      },
+      {
+       "name": "G. H. Flores",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "M. Qiao",
+       "me": false
+      },
+      {
+       "name": "N. Linck",
+       "me": false
+      },
+      {
+       "name": "R. de Paula",
+       "me": false
+      },
+      {
+       "name": "Y. J. Ong",
+       "me": false
+      }
+     ],
+     "venue": "arXiv preprint arXiv:2204.01489",
+     "year": 2022,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": "https://arxiv.org/abs/2204.01489"
+    },
+    {
+     "title": "Different but Equal: Comparing User Collaboration with Digital Personal Assistants vs. Teams of Expert Agents",
+     "authors": [
+      {
+       "name": "C. S. Pinhanez",
+       "me": false
+      },
+      {
+       "name": "H. Candello",
+       "me": false
+      },
+      {
+       "name": "M. C. Pichiliani",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "M. Guerra",
+       "me": false
+      },
+      {
+       "name": "M. G. de Bayser",
+       "me": false
+      },
+      {
+       "name": "P. Cavalin",
+       "me": false
+      }
+     ],
+     "venue": "arXiv preprint arXiv:1808.08157",
+     "year": 2018,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": "https://arxiv.org/abs/1808.08157"
+    },
+    {
+     "title": "Combining Textual Content and Structure to Improve Dialog Similarity",
+     "authors": [
+      {
+       "name": "A. P. Appel",
+       "me": false
+      },
+      {
+       "name": "P. R. Cavalin",
+       "me": false
+      },
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      },
+      {
+       "name": "C. S. Pinhanez",
+       "me": false
+      }
+     ],
+     "venue": "arXiv preprint arXiv:1802.07117",
+     "year": 2018,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": "https://arxiv.org/abs/1802.07117"
+    }
+   ]
+  },
+  {
    "key": "abstracts",
    "label": "Extended abstracts and posters",
    "entries": [
@@ -2284,7 +2450,7 @@
        "me": false
       },
       {
-       "name": "J. M. d. Almeida",
+       "name": "J. M. Almeida",
        "me": false
       },
       {
@@ -2402,6 +2568,57 @@
      ],
      "venue": "International School and Conference on Network Science",
      "year": 2015,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    }
+   ]
+  },
+  {
+   "key": "theses",
+   "label": "Theses",
+   "entries": [
+    {
+     "title": "User Generated Micro Reviews: Characterization and Popularity Prediction",
+     "authors": [
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      }
+     ],
+     "venue": "Ph.D. thesis, Universidade Federal de Minas Gerais. Advisor: Jussara M. Almeida",
+     "year": 2015,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Extracting Location from Contact Traces",
+     "authors": [
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      }
+     ],
+     "venue": "M.A. thesis, Boston University. Advisor: Mark Crovella",
+     "year": 2009,
+     "award": "",
+     "note": "",
+     "selected": "",
+     "url": ""
+    },
+    {
+     "title": "Análise da Distribuição de Streaming Media em Arquiteturas do Tipo Peer-to-Peer",
+     "authors": [
+      {
+       "name": "M. Vasconcelos",
+       "me": true
+      }
+     ],
+     "venue": "M.Sc. thesis, Universidade Federal de Minas Gerais. Advisor: Virgílio A. F. Almeida",
+     "year": 2003,
      "award": "",
      "note": "",
      "selected": "",
