@@ -1,3 +1,9 @@
+# Editor local history (VS Code extension)
+.history/
+
+# Working patches
+*.patch
+
 # docs files & jekyll-built site
 _docs
 _gh_pages

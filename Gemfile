@@ -1,8 +1,10 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-ruby '3.3.4'
-gem "jekyll"
-gem 'csv'
-gem 'base64'
-gem "jekyll-scholar"
-gem 'observer'
+ruby "3.3.4"
+
+gem "jekyll", "~> 4.3"
+
+# Gems that newer Ruby versions no longer bundle by default
+gem "csv"
+gem "base64"
+gem "observer"
