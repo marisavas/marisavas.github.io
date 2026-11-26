@@ -11,14 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome: still used by the current Publications page. Remove after that page is redone. -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
   <!-- CSS -->
   
   <link rel="stylesheet" href="/assets/css/styles-global.css">
-  
-  <link rel="stylesheet" href="/assets/css/styles-publications.css">
   
 </head>
 
@@ -47,55 +42,824 @@
     <main class="site-main">
       <article class="page">
 <!-- <h1 class="post-title page-title">Publications</h1> -->
-    <main class="container-publications">
+    <h1>Publications</h1>
 
-  <div class="cards-row">
+<p class="page-note">Full list with citation counts on <a href="https://scholar.google.com/citations?user=e5IvuJgAAAAJ">Google Scholar</a>.</p>
 
-    <!-- Conferences -->
-    <div class="publication-card">
-      <h2><i class="fa-solid fa-microphone"></i> Conferences</h2>
-      <ul class="publication-list" id="conferences-list"></ul>
-      <div class="pagination">
-        <button id="conferences-prev" class="btn-pagination" style="display:none">Previous</button>
-        <button id="conferences-next" class="btn-pagination primary">Next</button>
+<nav class="page-index" aria-label="Sections">
+  <ul>
+    
+    <li><a href="#journals">Journal articles</a></li>
+    
+    <li><a href="#conferences">Conference papers</a></li>
+    
+    <li><a href="#workshops">Workshop and short papers</a></li>
+    
+    <li><a href="#abstracts">Extended abstracts and posters</a></li>
+    
+    <li><a href="#patents">Patents</a></li>
+  </ul>
+</nav>
+
+<section id="journals" aria-labelledby="journals-title">
+  <h2 id="journals-title">Journal articles</h2>
+  <ul class="dated pubs">
+    
+    
+    <li>
+      <time>2025</time>
+      <div>
+        <span class="pub-title">Improving the Mapping of Leisure-time Physical Activity Inequities: the use of Artificial Intelligence to Advance Estimates of Small-areas in Brazil</span>
+        <span class="pub-authors">T. Faria, <strong>M. Vasconcelos</strong>, R. Bernal, G. Mielke, J. de Souza, C. Gomes, M. Gonçalves, J. Almeida, D. Malta</span>
+        <span class="pub-venue">Public Health</span>
       </div>
-      <script type="application/json" id="conferences-data">
-        [{"title":"Analyzing Political Discourse on Discord during the 2024 US Presidential Election","authors":["Arthur Buzelin","Pedro Dutenhefner","Marcelo Locatelli","Samira Malaquias","Pedro Bento","Yan Aquino","Lucas Dayrell","Victoria Estanislau","Caio Santana","Pedro Alzamora","Marisa Vasconcelos","Wagner Meira","Virgilio Almeida"],"year":2025,"venue":"WebSci'25","note":"","url":"https://arxiv.org/pdf/2502.03433","pdf":"","doi":"","abstract":""},{"title":"Detecção de Discursos Racistas em Português na Rede Social X","authors":["João Vítor Vaz","Fabricio Benevenuto","Jussara Almeida","Marcos Gonçalves","Marisa Vasconcelos"],"year":2025,"venue":"BraSNAM'25","note":"","url":"https://sol.sbc.org.br/index.php/brasnam/article/view/36381/36168","pdf":"","doi":"","abstract":""},{"title":"Avaliação do Desempenho de Abordagens Computacionais para Inferência Automática de Tons de Pele","authors":["Igor Costa","Thais Silva","Marisa Vasconcelos","Julio Reis","Jussara Almeida and Virgilio Almeida"],"year":2024,"venue":"LAAI","note":"","url":"https://sol.sbc.org.br/index.php/laai-ethics/article/view/32463/32260","pdf":"","doi":"","abstract":""},{"title":"Disappearing Without a Trace: Coverage, Community, Quality, and Temporal Dynamics of Wikipedia Articles on Endangered Brazilian Indigenous Languages","authors":["Marisa Vasconcelos","Priscila Rocha","Claudio Pinhanez"],"year":2024,"venue":"ICWSM'24","note":"","url":"https://ojs.aaai.org/index.php/ICWSM/article/view/31407/33567","pdf":"","doi":"","abstract":""},{"title":"Balancing Social Impact, Opportunities, and Ethical Constraints of Using AI in the Documentation and Vitalization of Indigenous Languages","authors":["Claudio Pinhanez","Paulo Cavalin","Marisa Vasconcelos","Julio Nogima"],"year":2023,"venue":"IJCAI'23","note":"","url":"https://www.ijcai.org/proceedings/2023/0685.pdf","pdf":"","doi":"","abstract":""},{"title":"Elaboraçao de um Conjunto de Dados sobre o Registro de Patentes no Brasil","authors":["Nicolas Rezende","Daniel Dalip","Michele Brandão","Marisa Vasconcelos"],"year":2023,"venue":"DSW'23","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Characterizing the Social Ties between Black and Tech\nCommunities on Twitter","authors":["Marisa Vasconcelos","Priscila Rocha","Julio Nogima","Rogerio de Paula"],"year":2022,"venue":"WebSci'22","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"A Study of Misinformation in Audio Messages Shared in WhatsApp Groups","authors":["Alexandre Maros","Jussara Almeida","Marisa Vasconcelos"],"year":2021,"venue":"MISDOOM'21","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Towards a Method to Classify Language Style for Enhancing Conversational Systems","authors":["Paulo Cavalin","Victor Ribeiro","Marisa Vasconcelos","Claudio Pinhanez","Julio Nogima","Henrique Ferreira"],"year":2021,"venue":"IJCNN'21","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Caracterização do Debate no Twitter sobre a Vacinação contra a COVID-19 no Brasil","authors":["Larissa Malagoli","Julia Stancioli","Carlos Ferreira","Marisa Vasconcelos","Ana Paula da Silva","Jussara Almeida"],"year":2021,"venue":"BraSNAM'21","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"A Look into COVID-19 Vaccination Debate on Twitter","authors":["Larissa Malagoli","Julia Stancioli","Carlos Ferreira","Marisa Vasconcelos","Ana Paula da Silva","Jussara Almeida"],"year":2021,"venue":"WebSci'21","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Using Facebook Ads data to Assess Gender Balance in STEM: Evidences from Brazil","authors":["Carolina Vieira","Marisa Vasconcelos"],"year":2021,"venue":"DSSGW'21","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Connecting Underrepresented Minorities and Qualified Job Positions Using Online Data","authors":["Maysa Macedo","Marisa Vasconcelos","Andrea Brito","Rogerio de Paula"],"year":2021,"venue":"RDAI'21","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Identificando Influências na Escolha de uma Graduação em Exatas: um Estudo Qualitativo e Comparativo de Gênero","authors":["Maysa Macedo","Andrea Britto Mattos","Marisa Vasconcelos","Alexandre Martinazzo","Roseli Lopes"],"year":2018,"venue":"WIT'18","note":"","url":"https://sol.sbc.org.br/index.php/wit/article/view/3377","pdf":"","doi":"10.5753/wit.2018.3377","abstract":""},{"title":"From Disjoint Sets to Parallel Data to Train Seq2Seq Models for Sentiment Transfer","authors":["Paulo Cavalin","Marisa Vasconcelos","Marcelo Grave","Claudio Pinhanez","Victor Ribeiro"],"year":2020,"venue":"EMNLP'20","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Identifying and Characterizing Alternative News Media on Facebook","authors":["Samuel Guimarães","Julio Reis","Lucas Lima","Filipe Ribeiro","Marisa Vasconcelos","Jinsun An","Haewoon Kwak","Fabricio Benevenuto"],"year":2020,"venue":"ASONAM'20","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Creating Corpora for Seq2Seq Tone Rephrasing Using Social Media Posts","authors":["Paulo Cavalin","Marisa Vasconcelos","Marcelo Grave","Claudio Pinhanez"],"year":2020,"venue":"IJCNN'20","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Analyzing YouTube Videos Shared on Whatsapp in the Early COVID-19 Crisis","authors":["Marisa Vasconcelos","Erica Pereira","Samuel Guimarães","Manoel Ribeiro","Philipe Melo","Fabricio Benevenuto"],"year":2020,"venue":"WebMedia'20","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Analyzing the Use of Audio Messages in WhatsApp Groups","authors":["Alexandre Maros","Jussara Almeida","Fabricio Benevenuto","Marisa Vasconcelos"],"year":2020,"venue":"TheWebConf'20","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Live It Up: Analyzing Emotions and Language Use in Tweets during the Soccer World Cup Final","authors":["Marisa Vasconcelos","Jussara Almeida","Paulo Cavalin","Claudio Pinhanez"],"year":2019,"venue":"WebSci'19","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Analyzing the Spread of Textual Information in Whatsapp Groups","authors":["Gustavo Resende","Philipe Melo","Julio Reis","Marisa Vasconcelos","Jussara Almeida","Fabricio Benevenuto"],"year":2019,"venue":"WebSci'19","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"(Mis)Information Dissemination in WhatsApp: Gathering, Analyzing and Countermeasures","authors":["Gustavo Resende","Philipe Melo","Hugo Sousa","Johnnatan Messias","Marisa Vasconcelos","Jussara Almeida","Fabrício Benevenuto"],"year":2019,"venue":"TheWebConf'19","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"The Effect of Audiences on the User Experience with Conversational Interfaces in Physical Spaces","authors":["Heloisa Candello","Claudio Pinhanez","Mauro Pichiliani","Paulo Cavalin","Flavio Figueiredo","Marisa Vasconcelos","Haylla Do Carmo"],"year":2019,"venue":"CHI'19","note":"Honorable Mention","url":"","pdf":"","doi":"","abstract":""},{"title":"Can Direct Address Affect User Engagement with Chatbots Embodied in Physical Spaces?","authors":["Heloisa Candello","Claudio Pinhanez","Mauro Pichiliani","Marisa Vasconcelos","Haylla Do Carmo"],"year":2019,"venue":"CUI'19","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Ravel: A MAS orchestration platform for Human-Chatbots Conversations","authors":["Maira de Bayser","Claudio Pinhanez","Heloisa Candello","Marisa Vasconcelos, Mauro Pichiliani","Melina Guerra","Paulo Cavalin","Renan Souza"],"year":2018,"venue":"EMAS'18","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"A System for Monitoring Public Political Groups in WhatsApp","authors":["Gustavo Resende","Johnnatan Messias","M{\\'a}rcio Silva","Jussara Almeida","Marisa Vasconcelos","Fabricio Benevenuto"],"year":2018,"venue":"WebMedia'18","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Bottester: Testing Conversational Systems with Simulated Users","authors":["Marisa Vasconcelos","Heloisa Candello","Claudio Pinhanez"],"year":2017,"venue":"IHC'17","note":"Best paper","url":"","pdf":"","doi":"","abstract":""},{"title":"Popularity Dynamics of Foursquare Micro-Reviews","authors":["Marisa Vasconcelos","Jussara Almeida","Marcos Gon\\c{c}alves"],"year":2014,"venue":"COSN'14","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"What Makes Your Opinion Popular? Predicting the Popularity of Micro-Reviews in Foursquare","authors":["Marisa Vasconcelos","Jussara Almeida","Marcos Gon\\c{c}alves"],"year":2014,"venue":"SAC'14","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Polarity Detection of Foursquare Tips","authors":["Felipe Moraes","Marisa Vasconcelos","Patrick Prado","Daniel Dalip","Jussara Almeida","Marcos Gon\\c{c}alves"],"year":2013,"venue":"SocInfo'13","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Beware of What You Share: Inferring Home Location in Social Networks","authors":["Tatiana Pontes","Gabriel Magno","Marisa Vasconcelos","Aditi Gupta","Jusara Almeida","Ponnurangam Kumaraguru","Virgilio Almeida"],"year":2012,"venue":"PinSoDa'12","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"We Know Where You Live: Privacy Characterization of Foursquare Behavior","authors":["Tatiana Pontes","Marisa Vasconcelos","Jussara Almeida","Ponnurangam Kumaraguru","Virgilio Almeida"],"year":2012,"venue":"LBSN'12","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Tips, Dones and Todos: Uncovering User Profiles in Foursquare","authors":["Vasconcelos, Marisa","Ricci, Saulo","Almeida, Jussara","Benevenuto, Fabr\\'{\\i}cio","Almeida, Virg\\'{\\i}lio"],"year":2012,"venue":"WSDM'12","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Impact of Peer Incentives on the Dissemination of Polluted Content","authors":["Benevenuto, Fabr\\'{\\i}cio","Costa, Cristiano","Vasconcelos, Marisa","Almeida, Virg\\'{\\i}lio","Almeida, Jussara","Mowbray, Miranda"],"year":2006,"venue":"SAC'06","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Peer-to-Peer over Ad-Hoc Networks: (Re)Configuration Algorithms","authors":["Franciscani, Fernanda","Vasconcelos, Marisa A.","Couto, Rainer","Loureiro, Antonio"],"year":2003,"venue":"IPDPS'03","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Quantitative Analysis of Strategies for Streaming Media Distribution","authors":["Vasconcelos, Marisa","Rocha, Leonardo","Santos, Juliano","Ismael,Jr., Jos{\\'e}","da Mata, Leonardo","Almeida, Jussara","Meira,Jr., Wagner","Almeida, Virg\\'{\\i}lio"],"year":2003,"venue":"LA-WEB'03","note":"","url":"","pdf":"","doi":"","abstract":""}]
-      </script>
-    </div>
-
-    <!-- Journals -->
-    <div class="publication-card">
-      <h2><i class="fa-solid fa-book-open"></i> Journals</h2>
-      <ul class="publication-list" id="journals-list"></ul>
-      <div class="pagination">
-        <button id="journals-prev" class="btn-pagination" style="display:none">Previous</button>
-        <button id="journals-next" class="btn-pagination primary">Next</button>
+    </li>
+    
+    
+    <li>
+      <time>2023</time>
+      <div>
+        <span class="pub-title">Higher Education’s Influence on Social Networks and Entrepreneurship in Brazil</span>
+        <span class="pub-authors">M. Reddy, J. Nardelli, Y. Pereira, L. Oliveira, T. Silva, <strong>M. Vasconcelos</strong>, M. Horowitz</span>
+        <span class="pub-venue">Social Network Analysis and Mining</span>
       </div>
-      <script type="application/json" id="journals-data">
-        [{"title":"Improving the mapping of leisure-time physical activity inequities: the use of artificial intelligence to advance estimates of small-areas in Brazil","authors":["Thania Faria","Marisa Vasconcelos","Regina Bernal","Gregore Mielke","Juliana Souza","Crizian Gomes","Marcos Gonçalves","Jussara Almeida","Deborah Malta"],"year":2025,"venue":"Public Health","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Higher education’s influence on social networks and entrepreneurship in Brazil","authors":["Michelle Reddy","Júlio Nardelli","Yuri Pereira","Leonardo Oliveira","Thiago Silva","Marisa Vasconcelos","Mark Horowitz"],"year":2023,"venue":"SNAM","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Characterizing political bias and comments associated with news on Brazilian Facebook","authors":["Samuel Guimarães","Julio Reis","Marisa Vasconcelos"],"year":2021,"venue":"SNAM","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"Predicting the Popularity of Micro-Reviews: A Foursquare Case Study","authors":["Marisa Vasconcelos","Jussara Almeida","Marcos Gonçalves"],"year":2015,"venue":"Inf.Sci.","note":"","url":"","pdf":"","doi":"","abstract":""},{"title":"(Re)configuration Algorithms for Peer-to-Peer over Ad Hoc Networks","authors":["Fernanda Franciscani","Marisa Vasconcelos","Rainer Couto","Antonio Loureiro"],"year":2005,"venue":"JPDC","note":"","url":"","pdf":"","doi":"","abstract":""}]
-      </script>
-    </div>
-
-    <!-- Patents -->
-    <div class="publication-card">
-      <h2><i class="fa-solid fa-lightbulb"></i> Patents</h2>
-      <ul class="publication-list" id="patents-list"></ul>
-      <div class="pagination">
-        <button id="patents-prev" class="btn-pagination" style="display:none">Previous</button>
-        <button id="patents-next" class="btn-pagination primary">Next</button>
+    </li>
+    
+    
+    <li>
+      <time>2021</time>
+      <div>
+        <span class="pub-title">Characterizing Political Bias and Comments Associated with News on Brazilian Facebook</span>
+        <span class="pub-authors">S. Guimarães, J. Reis, <strong>M. Vasconcelos</strong></span>
+        <span class="pub-venue">Social Network Analysis and Mining</span>
       </div>
-      <script type="application/json" id="patents-data">
-        [{"title":"Prompt Registration and Reuse","authors":["Vagner De Santana","Marisa Vasconcelos, Melina Guerra","Michael Feffer","Sara Berger"],"year":2025,"venue":"","note":"US Patent 18408204","url":"","pdf":"","doi":"","abstract":""},{"title":"Responsible Prompt Recommendation","authors":["Vagner De Santana","Marisa Vasconcelos, Melina Guerra","Michael Feffer","Sara Berger","Tianyu Su"],"year":2025,"venue":"","note":"US Patent 18408254","url":"","pdf":"","doi":"","abstract":""},{"title":"Personalized alert generation based on information dissemination","authors":["Marisa Vasconcelos","Mu Qiao","Nicholas Linck","Yuya Ong","Claudio Pinhanez","Rogerio De Paula"],"year":2024,"venue":"","note":"US Patent 12086817","url":"","pdf":"","doi":"","abstract":""},{"title":"Mediating between social networks and payed curated content producers in misinformative content mitigation","authors":["Vagner De Santana","Marisa Vasconcelos","Mauro Pichiliani","Heloisa Candello"],"year":2024,"venue":"","note":"US Patent 11900480","url":"","pdf":"","doi":"","abstract":""},{"title":"Media Transactions Consent Management","authors":["Carlos Cardonha","Marisa Vasconcelos","Andrea Lima","Miguel Quinones"],"year":2023,"venue":"","note":"US Patent 11768923","url":"","pdf":"","doi":"","abstract":""},{"title":"Artificial intelligence generated synthetic image data for use with machine language models","authors":["Priscilla Avegliano","Andrea Lima","Marisa Vasconcelos","Dario Oliveira"],"year":2023,"venue":"","note":"US Patent 11687620","url":"","pdf":"","doi":"","abstract":""},{"title":"Training chatbots for remote troubleshooting","authors":["Mauro Pichiliani","Heloisa Candello","Marisa Vasconcelos","Vagner De Santana"],"year":2022,"venue":"","note":"US Patent 11379253","url":"","pdf":"","doi":"","abstract":""},{"title":"Presenting thought-provoking questions and answers in response to misinformation","authors":["Nicholas Linck","Mu Qiao","Yuya Ong","Marisa Vasconcelos","Claudio Pinhanez","Rogerio De Paula"],"year":2022,"venue":"","note":"US Patent App. 17184668","url":"","pdf":"","doi":"","abstract":""},{"title":"Support request assignment using pace of conversation","authors":["Heloisa Candello","Marisa Vasconcelos","Jaione Azpiroz","Marco Netto"],"year":2022,"venue":"","note":"US Patent 11252202","url":"","pdf":"","doi":"","abstract":""},{"title":"Audit Machine Learning Models Against Bias","authors":["Marisa Vasconcelos","Carlos Cardonha"],"year":2022,"venue":"","note":"US Patent 11263550","url":"","pdf":"","doi":"","abstract":""},{"title":"System, method and computer program product for dispatching of medical emergencies and wait time control","authors":["Carlos Cardonha","Jorge Diaz","Bernardo Goncalves","Marisa Vasconcelos"],"year":2021,"venue":"","note":"US Patent 1152107","url":"","pdf":"","doi":"","abstract":""},{"title":"Supply Chain Forecasting System","authors":["Ana Appel","Igor Oliveira","Marisa Vasconcelos","Ricardo Franco"],"year":2021,"venue":"","note":"US Patent 11126957","url":"","pdf":"","doi":"","abstract":""},{"title":"Generating Image Capture Configurations and Compositions","authors":["Marisa Vasconcelos","Carlos Cardonha","Andrea Lima","Miguel Quinones"],"year":2021,"venue":"","note":"US Patent 10924661","url":"","pdf":"","doi":"","abstract":""},{"title":"Human steering dashboard to analyze 360-degree market view for merchants based on financial transactions","authors":["Ana Appel","Ricardo Franco","Marisa Vasconcelos"],"year":2020,"venue":"","note":"US Patent 10614402","url":"","pdf":"","doi":"","abstract":""},{"title":"System, method and computer program product for assessing the capabilities of a conversation agent via black box testing","authors":["Alan Braz","Heloisa Candello","Claudio Pinhanez","Marisa Vasconcelos"],"year":2020,"venue":"","note":"US Patent 10726827","url":"","pdf":"","doi":"","abstract":""},{"title":"Adapting conversational agent communications to different stylistic models","authors":["Marisa Vasconcelos","Paulo Cavalin","Claudio Pinhanez","Heloisa Candello"],"year":2022,"venue":"","note":"US Patent 11238100","url":"","pdf":"","doi":"","abstract":""},{"title":"Adapting communications according to audience profile from social media","authors":["Andrea Lima","Carlos Cardonha","Marisa Vasconcelos","Miguel Quinones"],"year":2022,"venue":"","note":"US Patent 11228544","url":"","pdf":"","doi":"","abstract":""},{"title":"System and method to recommend mitigation action using conversational agent","authors":["Ana Appel","Heloisa Candello","Ricardo Franco","Claudio Pinhanez","Marisa Vasconcelos"],"year":2019,"venue":"","note":"US Patent App. 15/849439","url":"","pdf":"","doi":"","abstract":""},{"title":"Delivering Personalized Advertising","authors":["Ana Paula Appel","Heloisa Candello","Carlos Cardonha","Marisa Vasconcelos"],"year":2018,"venue":"","note":"US Patent App. 15/399036","url":"","pdf":"","doi":"","abstract":""},{"title":"Detecting Vulnerabilities in a Supply Chain","authors":["Ana Paula Appel","Ricardo Franco","Marisa Vasconcelos"],"year":2018,"venue":"","note":"US Patent App. 15/401222","url":"","pdf":"","doi":"","abstract":""},{"title":"Data-driven Urban Interventions Based on Crowdsourcing","authors":["Carlos Cardonha","Bernardo Goncalves","Jorge Diaz","Marisa Vasconcelos"],"year":2018,"venue":"","note":"US Patent App. 15/424870","url":"","pdf":"","doi":"","abstract":""}]
-      </script>
-    </div>
+    </li>
+    
+    
+    <li>
+      <time>2015</time>
+      <div>
+        <span class="pub-title">Predicting the Popularity of Micro-Reviews: A Foursquare Case Study</span>
+        <span class="pub-authors"><strong>M. Vasconcelos</strong>, J. Almeida, M. Gonçalves</span>
+        <span class="pub-venue">Information Sciences</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2005</time>
+      <div>
+        <span class="pub-title">(Re)configuration Algorithms for Peer-to-Peer over Ad Hoc Networks</span>
+        <span class="pub-authors">F. Franciscani, <strong>M. Vasconcelos</strong>, R. Couto, A. Loureiro</span>
+        <span class="pub-venue">Journal of Parallel and Distributed Computing</span>
+      </div>
+    </li>
+    
+    
+  </ul>
+</section>
 
-  </div>
+<section id="conferences" aria-labelledby="conferences-title">
+  <h2 id="conferences-title">Conference papers</h2>
+  <ul class="dated pubs">
+    
+    
+    <li>
+      <time>2026</time>
+      <div>
+        <span class="pub-title">Framing AI on YouTube: A Comparative Analysis of Discourse in Brazil and the United States</span>
+        <span class="pub-authors"><strong>M. Vasconcelos</strong>, G. Machado, I. Costa, J. Almeida</span>
+        <span class="pub-venue">ACM Web Science Conference (WebSci)</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Responsible AI for Public Health: A Methodological Illustration with a Forecasting Model applied to Respiratory Hospitalizations on SUS Data</span>
+        <span class="pub-authors">R. G. Pereira, L. E. L. Brito, I. Avelar, M. Carvalho, <strong>M. Vasconcelos</strong>, M. A. Brandão, W. Meira Jr</span>
+        <span class="pub-venue">Simpósio Brasileiro de Computação Aplicada à Saúde (SBCAS)</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2025</time>
+      <div>
+        <span class="pub-title"><a href="https://doi.org/10.1007/978-3-032-13821-7_22">From Inclusion to Contention: Analyzing DEI and “Woke” Narratives on Reddit</a></span>
+        <span class="pub-authors">M. Locatelli, A. Costa, V. Thome, <strong>M. Vasconcelos</strong>, V. Almeida</span>
+        <span class="pub-venue">International Conference on Advances in Social Networks Analysis and Mining (ASONAM), Lecture Notes in Computer Science, Springer</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Analyzing Political Discourse on Discord during the 2024 U.S. Presidential Election</span>
+        <span class="pub-authors">A. Buzelin, P. Robles, M. Locatelli, S. Malaquias, P. Bento, Y. Aquino, L. Dayrell, V. Estanislau, C. Santana, P. Alzamora, <strong>M. Vasconcelos</strong>, W. Meira Jr, V. Almeida</span>
+        <span class="pub-venue">ACM Web Science Conference (WebSci)</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Characterizing Global Gender Gaps in STEM Using Facebook Data</span>
+        <span class="pub-authors">C. Vieira, <strong>M. Vasconcelos</strong></span>
+        <span class="pub-venue">Conference on Scientometrics &amp; Informetrics</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2024</time>
+      <div>
+        <span class="pub-title">Performance Evaluation of Computational Approaches for Automatic Skin Tone Inference</span>
+        <span class="pub-authors">I. Costa, T. Silva, <strong>M. Vasconcelos</strong>, J. Reis, J. Almeida, V. Almeida</span>
+        <span class="pub-venue">Latin American Ethics on Artificial Intelligence</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Disappearing Without a Trace: Coverage, Community, Quality, and Temporal Dynamics of Wikipedia Articles on Endangered Brazilian Indigenous Languages</span>
+        <span class="pub-authors"><strong>M. Vasconcelos</strong>, P. S. Mizukami, C. Pinhanez</span>
+        <span class="pub-venue">International AAAI Conference on Web and Social Media</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2023</time>
+      <div>
+        <span class="pub-title">Balancing Social Impact, Opportunities, and Ethical Constraints of Using AI in the Documentation and Vitalization of Indigenous Languages</span>
+        <span class="pub-authors">C. Pinhanez, P. Cavalin, <strong>M. Vasconcelos</strong>, J. Nogima</span>
+        <span class="pub-venue">International Joint Conference on Artificial Intelligence</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2022</time>
+      <div>
+        <span class="pub-title">Characterizing the Social Ties between Black and Tech Communities on Twitter</span>
+        <span class="pub-authors"><strong>M. Vasconcelos</strong>, P. Rocha, J. Nogima, R. de Paula</span>
+        <span class="pub-venue">ACM Web Science Conference (WebSci)</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2021</time>
+      <div>
+        <span class="pub-title">A Study of Misinformation in Audio Messages Shared in WhatsApp Groups</span>
+        <span class="pub-authors">A. Maros, J. Almeida, <strong>M. Vasconcelos</strong></span>
+        <span class="pub-venue">Multidisciplinary International Symposium on Disinformation in Open Online Media</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Towards a Method to Classify Language Style for Enhancing Conversational Systems</span>
+        <span class="pub-authors">P. Cavalin, V. Ribeiro, <strong>M. Vasconcelos</strong>, C. Pinhanez, J. Nogima, H. Ferreira</span>
+        <span class="pub-venue">The International Joint Conference on Neural Networks (IJCNN)</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">A Look into COVID-19 Vaccination Debate on Twitter</span>
+        <span class="pub-authors">L. Malagoli, J. Stancioli, C. Ferreira, <strong>M. Vasconcelos</strong>, A. Silva, J. Almeida</span>
+        <span class="pub-venue">ACM Web Science Conference (WebSci)</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2020</time>
+      <div>
+        <span class="pub-title">From Disjoint Sets to Parallel Data to Train Seq2Seq Models for Sentiment Transfer</span>
+        <span class="pub-authors">P. Cavalin, <strong>M. Vasconcelos</strong>, M. Grave, C. Pinhanez, V. Ribeiro</span>
+        <span class="pub-venue">EMNLP</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Identifying and Characterizing Alternative News Media on Facebook</span>
+        <span class="pub-authors">S. Guimarães, J. Reis, L. Lima, F. Ribeiro, <strong>M. Vasconcelos</strong>, J. An, H. Kwak, F. Benevenuto</span>
+        <span class="pub-venue">ASONAM</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Creating Corpora for Seq2Seq Tone Rephrasing Using Social Media Posts</span>
+        <span class="pub-authors">P. Cavalin, <strong>M. Vasconcelos</strong>, M. Grave, C. Pinhanez</span>
+        <span class="pub-venue">International Joint Conference on Neural Networks (IJCNN)</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Analyzing YouTube Videos Shared on WhatsApp in the Early COVID-19 Crisis</span>
+        <span class="pub-authors"><strong>M. Vasconcelos</strong>, E. Pereira, S. Guimarães, M. Ribeiro, P. Melo, F. Benevenuto</span>
+        <span class="pub-venue">Brazilian Symposium on Multimedia and the Web</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Analyzing the Use of Audio Messages in WhatsApp Groups</span>
+        <span class="pub-authors">A. Maros, J. Almeida, F. Benevenuto, <strong>M. Vasconcelos</strong></span>
+        <span class="pub-venue">The Web Conference</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2019</time>
+      <div>
+        <span class="pub-title">The Effect of Audience on Interaction with Chatbots in Physical Spaces</span>
+        <span class="pub-authors">H. Candello, C. Pinhanez, M. Pichiliani, P. Cavalin, F. Figueiredo, <strong>M. Vasconcelos</strong>, H. Carmo</span>
+        <span class="pub-venue">Brazilian Symposium on Human Factors in Computing Systems (IHC)</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Can Direct Address Affect User Engagement with Chatbots Embodied in Physical Spaces?</span>
+        <span class="pub-authors">H. Candello, C. Pinhanez, M. Pichiliani, <strong>M. Vasconcelos</strong>, H. Carmo</span>
+        <span class="pub-venue">Conference on Conversational User Interfaces (CUI)</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Analyzing Textual (Mis)Information in WhatsApp Groups</span>
+        <span class="pub-authors">G. Resende, P. Melo, J. Reis, <strong>M. Vasconcelos</strong>, J. Almeida, F. Benevenuto</span>
+        <span class="pub-venue">ACM Web Science Conference (WebSci)</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Live It Up: Analyzing Emotions and Language Use in Tweets during the Soccer World Cup Final</span>
+        <span class="pub-authors"><strong>M. Vasconcelos</strong>, J. Almeida, P. Cavalin, C. Pinhanez</span>
+        <span class="pub-venue">ACM Web Science Conference (WebSci)</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">(Mis)Information Dissemination in WhatsApp: Gathering, Analyzing and Countermeasures</span>
+        <span class="pub-authors">G. Resende, P. Melo, H. Sousa, J. Messias, <strong>M. Vasconcelos</strong>, J. Almeida, F. Benevenuto</span>
+        <span class="pub-venue">The Web Conference</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">The Effect of Audiences on the User Experience with Conversational Interfaces in Physical Spaces</span>
+        <span class="pub-authors">H. Candello, C. Pinhanez, M. Pichiliani, P. Cavalin, F. Figueiredo, <strong>M. Vasconcelos</strong>, H. Carmo</span>
+        <span class="pub-venue">ACM CHI <span class="pub-award">Honorable Mention</span></span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2018</time>
+      <div>
+        <span class="pub-title">A System for Monitoring Public Political Groups in WhatsApp</span>
+        <span class="pub-authors">G. Resende, J. Messias, M. Silva, J. Almeida, <strong>M. Vasconcelos</strong>, F. Benevenuto</span>
+        <span class="pub-venue">Brazilian Symposium on Multimedia and the Web</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Modeling Epistemological Principles for Bias Mitigation in AI Systems: An Illustration in Hiring Decisions</span>
+        <span class="pub-authors"><strong>M. Vasconcelos</strong>, C. Cardonha, B. Gonçalves</span>
+        <span class="pub-venue">AAAI/ACM AIES</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2014</time>
+      <div>
+        <span class="pub-title">Popularity Dynamics of Foursquare Micro-Reviews</span>
+        <span class="pub-authors"><strong>M. Vasconcelos</strong>, J. Almeida, M. Gonçalves</span>
+        <span class="pub-venue">ACM Conference on Online Social Networks (COSN)</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">What Makes Your Opinion Popular? Predicting the Popularity of Micro-Reviews in Foursquare</span>
+        <span class="pub-authors"><strong>M. Vasconcelos</strong>, J. Almeida, M. Gonçalves</span>
+        <span class="pub-venue">ACM Symposium on Applied Computing (SAC)</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2013</time>
+      <div>
+        <span class="pub-title">Polarity Detection of Foursquare Tips</span>
+        <span class="pub-authors">F. Moraes, <strong>M. Vasconcelos</strong>, P. Prado, D. Dalip, J. Almeida, M. Gonçalves</span>
+        <span class="pub-venue">International Conference on Social Informatics (SocInfo)</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Polarity Analysis of Micro Reviews in Foursquare</span>
+        <span class="pub-authors">F. Moraes, <strong>M. Vasconcelos</strong>, P. Prado, J. Almeida, M. Gonçalves</span>
+        <span class="pub-venue">Brazilian Symposium on Multimedia and the Web</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2012</time>
+      <div>
+        <span class="pub-title">Tips, Dones and Todos: Uncovering User Profiles in Foursquare</span>
+        <span class="pub-authors"><strong>M. Vasconcelos</strong>, S. Ricci, J. Almeida, F. Benevenuto, V. Almeida</span>
+        <span class="pub-venue">ACM Conference on Web Search and Data Mining (WSDM)</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Characterization and Influence of Tips and Dones in Foursquare</span>
+        <span class="pub-authors"><strong>M. Vasconcelos</strong>, S. Ricci, J. Almeida, F. Benevenuto, V. Almeida</span>
+        <span class="pub-venue">Brazilian Symposium on Computer Networks (SBRC)</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2006</time>
+      <div>
+        <span class="pub-title">Impact of Peer Incentives on the Dissemination of Polluted Content</span>
+        <span class="pub-authors">F. Benevenuto, C. Costa, <strong>M. Vasconcelos</strong>, V. Almeida, J. Almeida, M. Mowbray</span>
+        <span class="pub-venue">ACM Symposium on Applied Computing (SAC)</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Dissemination of Polluted Content in Peer-to-Peer Networks</span>
+        <span class="pub-authors">C. Costa, V. Soares, F. Benevenuto, <strong>M. Vasconcelos</strong>, J. Almeida, V. Almeida, M. Mowbray</span>
+        <span class="pub-venue">Brazilian Symposium on Computer Networks (SBRC)</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2003</time>
+      <div>
+        <span class="pub-title">Quantitative Analysis of Strategies for Streaming Media Distribution</span>
+        <span class="pub-authors"><strong>M. Vasconcelos</strong>, L. Rocha, J. Santos, J. J. Ismael, L. da Mata, J. Almeida, J. W. Meira, V. Almeida</span>
+        <span class="pub-venue">Latin American Web Congress (LA-WEB)</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Peer-to-Peer over Ad-Hoc Networks: (Re)Configuration Algorithms</span>
+        <span class="pub-authors">F. Franciscani, <strong>M. Vasconcelos</strong>, R. Couto, A. Loureiro</span>
+        <span class="pub-venue">International Symposium on Parallel and Distributed Processing (IPDPS)</span>
+      </div>
+    </li>
+    
+    
+  </ul>
+</section>
 
-</main>
+<section id="workshops" aria-labelledby="workshops-title">
+  <h2 id="workshops-title">Workshop and short papers</h2>
+  <ul class="dated pubs">
+    
+    
+    <li>
+      <time>2026</time>
+      <div>
+        <span class="pub-title">LEME: assistente RAG em português para normas brasileiras e internacionais sobre saúde e IA Responsável</span>
+        <span class="pub-authors">K. Azevedo, I. Avelar, M. Carvalho, H. C. Lima, I. Cristina, <strong>M. Vasconcelos</strong>, M. Brandão, W. Meira Jr</span>
+        <span class="pub-venue">Brazilian Symposium on Multimedia and the Web (WebMedia)</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2025</time>
+      <div>
+        <span class="pub-title">Detecção de Discursos Racistas em Português na Rede Social X</span>
+        <span class="pub-authors">J. Vaz, F. Benevenuto, J. Almeida, M. Gonçalves, <strong>M. Vasconcelos</strong></span>
+        <span class="pub-venue">Brazilian Workshop on Social Network Analysis and Mining (BraSNAM) <span class="pub-award">Best Paper Award</span></span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">AI and Climate Change Discourse: What Opinions Do Large Language Models Present?</span>
+        <span class="pub-authors">M. Locatelli, P. Dutenhefner, A. Buzelin, P. Alzamora, Y. Aquino, P. Bento, S. Malaquias, V. Estanislau, C. Santana, L. Dayrell, <strong>M. Vasconcelos</strong>, W. Meira Jr, V. Almeida</span>
+        <span class="pub-venue">ClimateNLP Workshop at ACL</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2024</time>
+      <div>
+        <span class="pub-title">Responsible AI: Principles and Best Practices for the Implementation of AI-Based Systems</span>
+        <span class="pub-authors">J. Reis, <strong>M. Vasconcelos</strong>, J. Almeida, W. Meira Jr., V. Almeida</span>
+        <span class="pub-venue">Brazilian Symposium on Multimedia and the Web</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Análise Comparativa dos Artigos de Filmes Indicados ao Oscar em Três Versões da Wikipédia</span>
+        <span class="pub-authors">C. Pereira, <strong>M. Vasconcelos</strong>, A. Silva</span>
+        <span class="pub-venue">Undergraduate Research Work Competition at WebMedia <span class="pub-award">Honorable Mention</span></span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2023</time>
+      <div>
+        <span class="pub-title">Development of a Dataset on Patent Registration in Brazil</span>
+        <span class="pub-authors">N. Rezende, D. Dalip, M. Brandão, <strong>M. Vasconcelos</strong></span>
+        <span class="pub-venue">Dataset Showcase Workshop</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2021</time>
+      <div>
+        <span class="pub-title">Connecting Underrepresented Minorities and Qualified Job Positions Using Online Data</span>
+        <span class="pub-authors">M. Macedo, <strong>M. Vasconcelos</strong>, A. Brito, R. Paula</span>
+        <span class="pub-venue">RDAI workshop at AAAI</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Characterization of the Debate on Twitter about COVID-19 Vaccination in Brazil</span>
+        <span class="pub-authors">L. Malagoli, J. Stancioli, C. Ferreira, <strong>M. Vasconcelos</strong>, A. Silva, J. Almeida</span>
+        <span class="pub-venue">Brazilian Workshop on Social Network Analysis and Mining</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Using Facebook Ads data to Assess Gender Balance in STEM: Evidences from Brazil</span>
+        <span class="pub-authors">C. Vieira, <strong>M. Vasconcelos</strong></span>
+        <span class="pub-venue">Workshop Data Science for Social Good @TheWebConference</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2020</time>
+      <div>
+        <span class="pub-title">Slow down, redesign, and accelerate: adaptations and resilience on business sales transformation amid COVID-19 crisis</span>
+        <span class="pub-authors">H. Candello, J. Ferreira, <strong>M. Vasconcelos</strong>, V. Santana, R. Paula, C. Pinhanez</span>
+        <span class="pub-venue">New Future of Work</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2018</time>
+      <div>
+        <span class="pub-title">Identifying Influences on the Choice of a STEM Undergraduate Degree: A Qualitative and Comparative Gender Study</span>
+        <span class="pub-authors">M. Macedo, A. Mattos, <strong>M. Vasconcelos</strong>, A. Martinazzo, R. Lopes</span>
+        <span class="pub-venue">Workshop Women in Information Technology</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Ravel: A MAS orchestration platform for Human-Chatbots Conversations</span>
+        <span class="pub-authors">M. Bayser, C. Pinhanez, H. Candello, <strong>M. Vasconcelos</strong>, M. Pichiliani, M. Guerra, P. Cavalin, R. Souza</span>
+        <span class="pub-venue">Workshop on Engineering Multi-Agent Systems @AAMAS</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2017</time>
+      <div>
+        <span class="pub-title">BotTester: Testing Conversational Systems with Simulated Users</span>
+        <span class="pub-authors"><strong>M. Vasconcelos</strong>, H. Candello, C. Pinhanez, T. dos Santos</span>
+        <span class="pub-venue">HCI in Practice at Brazilian Symposium on Human Factors in Computing Systems <span class="pub-award">Best Short Paper, IHC in Practice Track</span></span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2012</time>
+      <div>
+        <span class="pub-title">Beware of What You Share: Inferring Home Location in Social Networks</span>
+        <span class="pub-authors">T. Pontes, G. Magno, <strong>M. Vasconcelos</strong>, A. Gupta, J. Almeida, P. Kumaraguru, V. Almeida</span>
+        <span class="pub-venue">IEEE Workshop on Privacy in Social Data</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">We Know Where You Live: Privacy Characterization of Foursquare Behavior</span>
+        <span class="pub-authors">T. Pontes, <strong>M. Vasconcelos</strong>, J. Almeida, P. Kumaraguru, V. Almeida</span>
+        <span class="pub-venue">Workshop on LBSN</span>
+      </div>
+    </li>
+    
+    
+  </ul>
+</section>
 
-<script src="/assets/js/publications.js"></script>
+<section id="abstracts" aria-labelledby="abstracts-title">
+  <h2 id="abstracts-title">Extended abstracts and posters</h2>
+  <ul class="dated pubs">
+    
+    
+    <li>
+      <time>2024</time>
+      <div>
+        <span class="pub-title">Estimativa de riscos à saúde em pequenas áreas através de clusterização hierárquica</span>
+        <span class="pub-authors">B. R. G. Barbosa, S. N. Alves, T. M. T. R. Faria, <strong>M. Vasconcelos</strong>, M. A. Gonçalves, J. M. d. Almeida, R. T. I. Bernal, D. C. Malta</span>
+        <span class="pub-venue">Brazilian Congress of Health Informatics (CBIS) <span class="pub-award">1st Place, Research-in-Progress Extended Abstracts</span></span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2023</time>
+      <div>
+        <span class="pub-title">Contrasting Global Gender Gaps in STEM Using Facebook Data and Offline Indicators</span>
+        <span class="pub-authors">C. Vieira, <strong>M. Vasconcelos</strong></span>
+        <span class="pub-venue">ISA World Congress of Sociology</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2019</time>
+      <div>
+        <span class="pub-title">(Mis)Information Dissemination in WhatsApp: Gathering, Analyzing and Countermeasures</span>
+        <span class="pub-authors">G. Resende, P. Melo, H. Sousa, J. Messias, <strong>M. Vasconcelos</strong>, J. Almeida, F. Benevenuto</span>
+        <span class="pub-venue">International Conference on Computational Social Science</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2017</time>
+      <div>
+        <span class="pub-title">Evaluating the conversation flow and content quality of a multi-bot conversational system</span>
+        <span class="pub-authors">H. Candello, <strong>M. Vasconcelos</strong>, C. Pinhanez</span>
+        <span class="pub-venue">Extended abstract at CHI</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2015</time>
+      <div>
+        <span class="pub-title">User Generated Micro-Reviews: Characterization and Popularity Prediction</span>
+        <span class="pub-authors"><strong>M. Vasconcelos</strong>, J. Almeida, M. Gonçalves</span>
+        <span class="pub-venue">International School and Conference on Network Science</span>
+      </div>
+    </li>
+    
+    
+  </ul>
+</section>
 
+<section id="patents" aria-labelledby="patents-title">
+  <h2 id="patents-title">Patents</h2>
+  <p class="page-note">16 granted US patents, filed at IBM Research.</p>
+  <ul class="dated pubs">
+    
+    
+    <li>
+      <time>2026</time>
+      <div>
+        <span class="pub-title">Responsible prompt recommendation</span>
+        <span class="pub-venue">US 12,619,822</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2024</time>
+      <div>
+        <span class="pub-title">Personalized alert generation based on information dissemination</span>
+        <span class="pub-venue">US 12,086,817</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Mediating between social networks and payed curated content producers in misinformative content mitigation</span>
+        <span class="pub-venue">US 11,900,480</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2023</time>
+      <div>
+        <span class="pub-title">Media transactions consent management</span>
+        <span class="pub-venue">US 11,768,923</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Artificial intelligence generated synthetic image data for use with machine language models</span>
+        <span class="pub-venue">US 11,687,620</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2022</time>
+      <div>
+        <span class="pub-title">Training chatbots for remote troubleshooting</span>
+        <span class="pub-venue">US 11,379,253</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Audit machine learning models against bias</span>
+        <span class="pub-venue">US 11,263,550</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Support request assignment using pace of conversation</span>
+        <span class="pub-venue">US 11,252,202</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Adapting conversational agent communications to different stylistic models</span>
+        <span class="pub-venue">US 11,238,100</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Adapting communications according to audience profile from social media</span>
+        <span class="pub-venue">US 11,228,544</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2021</time>
+      <div>
+        <span class="pub-title">Dispatching of medical emergencies and wait time control</span>
+        <span class="pub-venue">US 11,152,107</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Supply chain forecasting system</span>
+        <span class="pub-venue">US 11,126,957</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Generating image capture configurations and compositions</span>
+        <span class="pub-venue">US 10,924,661</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2020</time>
+      <div>
+        <span class="pub-title">Assessing the capabilities of a conversation agent via black box testing</span>
+        <span class="pub-venue">US 10,726,827</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time></time>
+      <div>
+        <span class="pub-title">Human steering dashboard to analyze 360-degree market view for merchants based on financial transactions</span>
+        <span class="pub-venue">US 10,614,402</span>
+      </div>
+    </li>
+    
+    
+    <li>
+      <time>2018</time>
+      <div>
+        <span class="pub-title">Assessing the capabilities of a conversation agent via black box testing</span>
+        <span class="pub-venue">US 10,102,846</span>
+      </div>
+    </li>
+    
+    
+  </ul>
+
+  
+  <h3 class="sub">Pending</h3>
+  <ul class="dated pubs">
+    
+    <li>
+      <time>2025</time>
+      <div>
+        <span class="pub-title">Prompt registration and reuse</span>
+        <span class="pub-venue">US 2025/0225158</span>
+      </div>
+    </li>
+    
+  </ul>
+  
+</section>
 
 </article> 
   
